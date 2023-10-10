@@ -4,10 +4,12 @@
   | default @import url()
   |============================
 */
-@import url('./reset.css');
-@import url('./home.css');
-@import url('./header.css');
+
 @import url('./fonts.css');
+@import url('./header.css');
+@import url('./home.css');
+@import url('./reset.css');
+
 @import 'node_modules/modern-normalize/modern-normalize.css';
 
 /*-----    замінити :root   ------------*/
