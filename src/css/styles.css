@@ -13,8 +13,16 @@
 /* @import url('./node_modules/.vite/deps/my-dep.js?v=f3sf2ebd'); */
 /*-----    замінити :root   ------------*/
 :root {
-  /* font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
+  --primary-text-color-light-theme: #111;
+  --primary-text-color-dark-theme: #fff;
+  --second-black-color-light-theme: rgba(17, 17, 17, 0.6);
+  --second-black-color-dark-theme: rgba(255, 255, 255, 0.6);
+  --primary-title-color: #b4afaf;
+  --violet-color: #4f2ee8;
+  --yellow-color: #eac645;
+  --black-color: #202024;
+}
+/* font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
   font-size: 16px;
   line-height: 24px;
   font-weight: 400;*/
-}
