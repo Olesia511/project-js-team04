@@ -14,7 +14,8 @@ const CATEGORY = 'books/category';
 // ==== Отримання списку категорій книг та додавання до localStorage
 
 async function getCategoryListArr() {
-  const resp = await axios.get(`${BASE_URL}${CATEGORY_LIST}`);
+  const respList = await axios.get(`${BASE_URL}${CATEGORY_LIST}`);
+  const respTop = await axios.get(`${BASE_URL}${TOP_BOOKS}`);
 
   const categoryList = await resp.data;
   localStorage.setItem('category-list', JSON.stringify(categoryList));
@@ -56,4 +57,4 @@ async function getBook(book) {
   return categoryList;
 }
 
-// ===
+// === Отримання списку ТОП категорій книг
