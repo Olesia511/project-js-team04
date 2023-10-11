@@ -4,7 +4,9 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
     <title>Page 2</title>
+    <link rel="stylesheet" href="/project-js-team04/assets/styles-70216e68.css">
   </head>
   <body>
     <section>
@@ -14,7 +16,113 @@
     <!------    Header    ------->
     
 
+    <main>
+      <div class="shop-list-page">
+        <div class="sidebar"></div>
+        <section class="shopping-list">
+          <h1 class="shop-list-titel">Shopping <span>List</span></h1>
+
+          <div class="shop-list-placeholder">
+            <p class="shop-list-placeholder-text">
+              This page is empty, add some books and proceed to order.
+            </p>
+            <picture>
+              <source
+                srcset="
+                  ./img/shop-list-desctop.png    1x,
+                  ./img/shop-list-desctop-2x.png 2x
+                "
+                media="(min-width: 1440px)"
+              />
+              <source
+                srcset="/project-js-team04/assets/shop-list-tabl-9df1ae0d.png 1x, /project-js-team04/assets/shop-list-tabl-2x-67146ce4.png 2x"
+                media="(min-width: 768px)"
+              />
+              <source
+                srcset="/project-js-team04/assets/shop-list-mob-d95c6e59.png 1x, /project-js-team04/assets/shop-list-mob-2x-fb3f20c4.png 2x"
+                media="(max-width: 767px)"
+              />
+              <img
+                class="shop-list-placeholder-img"
+                src="/project-js-team04/assets/shop-list-mob-d95c6e59.png"
+                alt="books"
+              />
+            </picture>
+          </div>
+
+          <ul class="shop-list-list">
+            <li class="shop-list-item">
+              <button type="button" class="delete-btn">
+                <svg class="delete-btn-icon" width="16" height="16">
+                  <use href="/project-js-team04/assets/icon-0abd2e01.svg#icon-shop-list-delete"></use>
+                </svg>
+              </button>
+              <div class="book-cover"></div>
+              <div class="book-info">
+                <h2 class="book-name">Book name</h2>
+                <p class="book-category">Category</p>
+                <p class="book-description">Description.</p>
+                <p class="book-author">Author</p>
+
+                <div class="link-container">
+                  <a class="amazon-icon" href="#">
+                    <picture>
+                      <source
+                        srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAD4AAAAUCAMAAADiKH4mAAABFFBMVEUAAAAiHx8hHx8gHx8iHx8iHh4eHBwhHh4hHh4gHh4gHBwhHh4iHx8hHx8iHh4iHh4iICAiHx8iHh4gHx8hHBwlHx8cGRkiHx8hHx8hHh4hHh4iHR0hHh4fHBz/mQAhHh7/mQAiHh4iHR3/mgAiHx//mQAgHR3/mAAfHh7/mwAxMTH/mQAhHh7/mQAhHh4hHh4fHR3/mQD/lwD/nQAiIiL/oAD/mQAiHh4hHh4iHh4iHx8hHh4hHR0iHh4hHR3/lwAiHR3/lgD/mQD/lgD/mgAiHx//mQAhHh7/mQD/mAD/mQD/mQAiHh4iICD/lQD/mQD/mgD/mgD/mQD/mAD/mgD/mAD/mwD/mQD/lwD/lgAiHx//mQCDAOcnAAAAWnRSTlMAr+kX9HQQ5n45Kaecevv3WEOYMS4aDO/PyZSHaSXz4t3XcV1UU0s/IRMF+916bWRIOiQOBwTUxL26pI9hXk9INCkeCfjrz7Syq5iMgEAg6cO6o4N0cm5pZTMdDXfBAAACK0lEQVQ4y5WSiVLiQBCG/0AMIYZggoDcl4igiCh4rSfe597Xn/d/j50etpYtdBf9qpJ0z8xX6Z4ZKJxifcUCUHKilr9pIbOpXgprZe4wBSCzqIkCWD3elI/llOAsyxzShkdy3QEidJfIpVRNpWngOEvFO8CnpoBOPklGisAGWVThAwCXnmGQhugxKmrjtekY1wM1EMdpNpv1yAQS5F6NyVPMUS81o0COB/KqiH4ZXyazvk8a8JPeKlQ6Byk6yUpGLchhcMkD0Y3oPinldzpWPMeY6NeAxz2JDOkZpbr8VKGa8pEibeCapuinOJTKVCNqjmN9HjDF1LrjmqTWpeoAOCLr0iyjSk9jQet5cn556bm+WmGtbmu9ZOq9PNR6ILp6tC5dGcD+c12ZDnzRpfRHAI+6+HlyMNHjcjaDGM1p/YC0pMk8eiSTFbeU8biPToW7mOglj7EjQ45qSs+TwUaEjKRdavbkjBMBuTDRdTFMPpgxf0p3siR3AxqWmyscLdi5XURr44v0t24V84UU5AYW7RVgwz7+HTmFfM/q9DKwBsN2W+VApucGagaLdkLltp3GH1rn+AdP9+UwLPfxX7Z2vuFlWs1W/0vYxAy/Wu2O8BLtbvNneIYZbN+H5ZvmaHq0cXtxtdWoYjZnH8IwrH7qnpzJRgxHJ927nbWw/OMcHxt4Da3bcqhZu1gbBztf26qEO7yS9vebqpjC+6vPrSHeyvCpf9JoNPtb25jBL5engeO/N2cgAAAAAElFTkSuQmCC 1x, data:image/png;base64,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 2x"
+                      />
+                      <img
+                        src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAD4AAAAUCAMAAADiKH4mAAABFFBMVEUAAAAiHx8hHx8gHx8iHx8iHh4eHBwhHh4hHh4gHh4gHBwhHh4iHx8hHx8iHh4iHh4iICAiHx8iHh4gHx8hHBwlHx8cGRkiHx8hHx8hHh4hHh4iHR0hHh4fHBz/mQAhHh7/mQAiHh4iHR3/mgAiHx//mQAgHR3/mAAfHh7/mwAxMTH/mQAhHh7/mQAhHh4hHh4fHR3/mQD/lwD/nQAiIiL/oAD/mQAiHh4hHh4iHh4iHx8hHh4hHR0iHh4hHR3/lwAiHR3/lgD/mQD/lgD/mgAiHx//mQAhHh7/mQD/mAD/mQD/mQAiHh4iICD/lQD/mQD/mgD/mgD/mQD/mAD/mgD/mAD/mwD/mQD/lwD/lgAiHx//mQCDAOcnAAAAWnRSTlMAr+kX9HQQ5n45Kaecevv3WEOYMS4aDO/PyZSHaSXz4t3XcV1UU0s/IRMF+916bWRIOiQOBwTUxL26pI9hXk9INCkeCfjrz7Syq5iMgEAg6cO6o4N0cm5pZTMdDXfBAAACK0lEQVQ4y5WSiVLiQBCG/0AMIYZggoDcl4igiCh4rSfe597Xn/d/j50etpYtdBf9qpJ0z8xX6Z4ZKJxifcUCUHKilr9pIbOpXgprZe4wBSCzqIkCWD3elI/llOAsyxzShkdy3QEidJfIpVRNpWngOEvFO8CnpoBOPklGisAGWVThAwCXnmGQhugxKmrjtekY1wM1EMdpNpv1yAQS5F6NyVPMUS81o0COB/KqiH4ZXyazvk8a8JPeKlQ6Byk6yUpGLchhcMkD0Y3oPinldzpWPMeY6NeAxz2JDOkZpbr8VKGa8pEibeCapuinOJTKVCNqjmN9HjDF1LrjmqTWpeoAOCLr0iyjSk9jQet5cn556bm+WmGtbmu9ZOq9PNR6ILp6tC5dGcD+c12ZDnzRpfRHAI+6+HlyMNHjcjaDGM1p/YC0pMk8eiSTFbeU8biPToW7mOglj7EjQ45qSs+TwUaEjKRdavbkjBMBuTDRdTFMPpgxf0p3siR3AxqWmyscLdi5XURr44v0t24V84UU5AYW7RVgwz7+HTmFfM/q9DKwBsN2W+VApucGagaLdkLltp3GH1rn+AdP9+UwLPfxX7Z2vuFlWs1W/0vYxAy/Wu2O8BLtbvNneIYZbN+H5ZvmaHq0cXtxtdWoYjZnH8IwrH7qnpzJRgxHJ927nbWw/OMcHxt4Da3bcqhZu1gbBztf26qEO7yS9vebqpjC+6vPrSHeyvCpf9JoNPtb25jBL5engeO/N2cgAAAAAElFTkSuQmCC"
+                        alt="Amazon"
+                        width="32"
+                        height="11"
+                      />
+                    </picture>
+                  </a>
+                  <a class="apple-icon" href="#">
+                    <picture>
+                      <source
+                        srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACEAAAAgCAMAAACrZuH4AAABEVBMVEUAAAD9ngT7bxr8iQ37fBP8kgn7gRL8hA/8jgv5dBj/mwL6dBj+mgX7bxj6eBb9lwn5bxn+nwL8mAT9hxH7hQ36cxj+mwX6chj/nAX6cRj+nQX5ehX+lQj+lgf7ehX6bxr8nAP6cRv8nQP5dhX8dxj////7ehT+nQT+lwf7eBX6dhb6dRf+mgb6cxj6cRn9kwn9lQj7fRT+mQf7gBL8hg/8iQ39jQz9kAr9tHj9t3f9u3b8gxH/+PD+5c7+vnX9v2z8qGf+6dj+5MP9uof8rmb8q2b9sGX+uV/8mEf9oS38hyb9nyP8gyL+7db+4Mn9vY39voz9yID9wnj9s2X9sWD9s1j9tlb8nFT9sEn9sEf9mBYxiLRJAAAAJXRSTlMAfn6+vb2+vr0oJ93cfpWUeHdOLiD7+vHv0dC2ta+uY2JfXlRJqNwV9gAAATNJREFUOMutiudWg0AQhdH0Yrq9lxBii4SaACFFTbV33/9BHGB2zypwzI98MHPu3vm4BZI+KC6xFI/Sv+9bNT/ZCiNs1IJYK1Mjex5MlgilpiAIzSYObC9DKqGRF8LIo7Fz5fA9tO1PN33Z9vvUTbtoxBrAk1kFrHFj2neC+eyUMcZ4q3r0tTtMQ9bQNK1TRcYkdKBNopFUVZUar9SAlhgRyG1yeCGhzRqKolDjlhrQRuY2ErIst8jhmoQWtP8bCTTihmFQ44Ya0FJDkiTdZ+jQxtGIeoZpWXDowvTuzT+GKIq6NYI9G4DxMIE06umwo8TgeX4i8i6P3QGmGQwx9niGjzrz2EYjVw8jh8bJaRjHHJI5CybDEcqrF0GspzhKJXPpZxMFJHVYWHZYgc/5C/twXxg/3ixyWJd9VzMAAAAASUVORK5CYII= 1x, data:image/png;base64,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 2x"
+                      />
+                      <img
+                        src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACEAAAAgCAMAAACrZuH4AAABEVBMVEUAAAD9ngT7bxr8iQ37fBP8kgn7gRL8hA/8jgv5dBj/mwL6dBj+mgX7bxj6eBb9lwn5bxn+nwL8mAT9hxH7hQ36cxj+mwX6chj/nAX6cRj+nQX5ehX+lQj+lgf7ehX6bxr8nAP6cRv8nQP5dhX8dxj////7ehT+nQT+lwf7eBX6dhb6dRf+mgb6cxj6cRn9kwn9lQj7fRT+mQf7gBL8hg/8iQ39jQz9kAr9tHj9t3f9u3b8gxH/+PD+5c7+vnX9v2z8qGf+6dj+5MP9uof8rmb8q2b9sGX+uV/8mEf9oS38hyb9nyP8gyL+7db+4Mn9vY39voz9yID9wnj9s2X9sWD9s1j9tlb8nFT9sEn9sEf9mBYxiLRJAAAAJXRSTlMAfn6+vb2+vr0oJ93cfpWUeHdOLiD7+vHv0dC2ta+uY2JfXlRJqNwV9gAAATNJREFUOMutiudWg0AQhdH0Yrq9lxBii4SaACFFTbV33/9BHGB2zypwzI98MHPu3vm4BZI+KC6xFI/Sv+9bNT/ZCiNs1IJYK1Mjex5MlgilpiAIzSYObC9DKqGRF8LIo7Fz5fA9tO1PN33Z9vvUTbtoxBrAk1kFrHFj2neC+eyUMcZ4q3r0tTtMQ9bQNK1TRcYkdKBNopFUVZUar9SAlhgRyG1yeCGhzRqKolDjlhrQRuY2ErIst8jhmoQWtP8bCTTihmFQ44Ya0FJDkiTdZ+jQxtGIeoZpWXDowvTuzT+GKIq6NYI9G4DxMIE06umwo8TgeX4i8i6P3QGmGQwx9niGjzrz2EYjVw8jh8bJaRjHHJI5CybDEcqrF0GspzhKJXPpZxMFJHVYWHZYgc/5C/twXxg/3ixyWJd9VzMAAAAASUVORK5CYII="
+                        alt="Apple Books"
+                        width="16"
+                        height="16"
+                      />
+                    </picture>
+                  </a>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </section>
+      </div>
+    </main>
+
     <!------    Modal    ------->
-    
+    <button class="modal-open" type="button">modal</button>
+
+<div class="backdrop js-backdrop is-hidden" js-backdrop>
+  <div class="modal">
+    <button class="close-btn-modal" type="button">
+      <svg height="24" width="24" class="icon-close-modal">
+        <use href="/project-js-team04/assets/icon-0abd2e01.svg#icon-x-close"></use>
+      </svg>
+    </button>
+    <div class="add-books-backend">
+      <!-- for backend -->
+    </div>
+    <button class="modal-btn" type="button">
+      add to shopping list<span></span>
+    </button>
+    <div class="text-box">
+      <p class="text-modal">
+        Сongratulations! You have added the book to the shopping list. To
+        delete, press the button “Remove from the shopping list”.
+      </p>
+    </div>
+  </div>
+</div>
+
   </body>
 </html>

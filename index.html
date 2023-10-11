@@ -16,11 +16,11 @@
     />
 
     
-    <script type="module" crossorigin src="/project-js-team04/assets/index-c5d12c04.js"></script>
-    <link rel="stylesheet" href="/project-js-team04/assets/index-03092dfd.css">
+    <script type="module" crossorigin src="/project-js-team04/assets/index-acf2bc94.js"></script>
+    <link rel="stylesheet" href="/project-js-team04/assets/styles-70216e68.css">
   </head>
   <body>
-    <link rel="stylesheet" href="/project-js-team04/assets/shopping-list-fe96f5e7.html" />
+    <link rel="stylesheet" href="/project-js-team04/assets/shopping-list-5fe4646a.html" />
     <div><a href="./shopping-list.html">Shopping-list</a></div>
 
     <h1>Hello team</h1>
@@ -29,7 +29,35 @@
     <!------    Home    ------->
     
     <!------    Modal    ------->
-    
+    <button class="modal-open" type="button">modal</button>
+
+<div class="backdrop js-backdrop is-hidden" js-backdrop>
+  <div class="modal">
+    <button class="close-btn-modal" type="button">
+      <svg height="24" width="24" class="icon-close-modal">
+        <use href="/project-js-team04/assets/icon-0abd2e01.svg#icon-x-close"></use>
+      </svg>
+    </button>
+    <div class="add-books-backend">
+      <!-- for backend -->
+    </div>
+    <button class="modal-btn" type="button">
+      add to shopping list<span></span>
+    </button>
+    <div class="text-box">
+      <p class="text-modal">
+        Сongratulations! You have added the book to the shopping list. To
+        delete, press the button “Remove from the shopping list”.
+      </p>
+    </div>
+  </div>
+</div>
+
+    <!------    Categories-list    ------->
+    <div class="list-container">
+  <ul class="categories-list"></ul>
+</div>
+
 
     
   </body>
