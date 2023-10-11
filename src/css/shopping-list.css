@@ -1,4 +1,4 @@
-/* For mobile size */
+/*! For mobile size */
 .shop-list-page {
   padding: 40px 20px;
   margin-left: auto;
@@ -176,4 +176,12 @@
   .book-cover {
     background-image: url('../img/placeholder-1-2x.png');
   }
+}
+
+/*! For Tablet size */
+@media screen and (min-width: 768px) {
+}
+
+/*! For Desctop size */
+@media screen and (min-width: 1440px) {
 }
