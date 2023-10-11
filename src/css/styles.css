@@ -4,12 +4,13 @@
   | default @import url()
   |============================
 */
-
+@import url('./categories-list.css');
 @import url('./fonts.css');
 @import url('./header.css');
 @import url('./home.css');
 @import url('./modal.css');
 @import url('./reset.css');
+@import url('./shopping-list.css');
 
 /* @import url('./node_modules/.vite/deps/my-dep.js?v=f3sf2ebd'); */
 /*-----    замінити :root   ------------*/
