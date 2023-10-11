@@ -1,5 +1,3 @@
-const axios = require('axios');
-
 const perPage = 10;
 const currentPage = 1;
 const searchValue = 'cat';
