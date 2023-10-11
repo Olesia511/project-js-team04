@@ -11,17 +11,49 @@ const CATEGORY = 'books/category';
 // const BOOKS_ID = `books/${id}`;
 // function
 
-async function getResponseArr() {
+// ==== Отримання списку категорій книг та додавання до localStorage
+
+async function getCategoryListArr() {
   const resp = await axios.get(`${BASE_URL}${CATEGORY_LIST}`);
 
-  const arr = await resp.data;
-  return arr;
+  const categoryList = await resp.data;
+  localStorage.setItem('category-list', JSON.stringify(categoryList));
+  return categoryList;
 }
 
-getResponseArr()
+getCategoryListArr()
   .then(res => {
-    console.log(res);
-    const categoryType = res.map(el => el['list_name'].split(' ').join('%20'));
-    console.log(categoryType);
+    console.log(`res`, res);
   })
-  .catch(rej => console.log(rej));
+  .catch(rej => console.log(`rej`, rej));
+
+// ==== Отримання з localStorage однієї категорії книжок по кліку та запрос на бекенд по категорії
+
+const categoryBook = 'Mass Market Monthly';
+
+function getCategoryBookLocalStorage() {
+  const savedCategoryList = localStorage.getItem('category-list');
+  const parsedCategoryList = JSON.parse(savedCategoryList);
+  const findCategory = parsedCategoryList
+    .find(book => book['list_name'] === categoryBook)
+    ['list_name'].split(' ')
+    .join('%20');
+  console.log(`findCategory`, findCategory);
+
+  getBook(findCategory)
+    .then(r => console.log(`find`, r))
+    .catch(r => console.log(r));
+  return findCategory;
+}
+
+getCategoryBookLocalStorage();
+
+async function getBook(book) {
+  const resp = await axios.get(`${BASE_URL}${CATEGORY}?category=${book}`);
+
+  const categoryList = await resp;
+  // localStorage.setItem('category-list', JSON.stringify(categoryList));
+  return categoryList;
+}
+
+// ===
