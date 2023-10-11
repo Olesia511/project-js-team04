@@ -10,6 +10,7 @@
 @import url('./home.css');
 @import url('./reset.css');
 
+/* @import url('./node_modules/.vite/deps/my-dep.js?v=f3sf2ebd'); */
 /*-----    замінити :root   ------------*/
 :root {
   /* font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
