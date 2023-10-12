@@ -4,7 +4,7 @@
   | default @import url()
   |============================
 */
-
+@import url('./general-styles.css');
 @import url('./book-id.css');
 @import url('./categories-list.css');
 @import url('./category-book.css');
@@ -22,7 +22,6 @@
 
 /*-----    замінити :root   ------------*/
 :root {
-  font-family: 'DM Sans', sans-serif;
   --primary-text-color-light-theme: #111;
   --primary-text-color-dark-theme: #fff;
   --second-black-color-light-theme: rgba(17, 17, 17, 0.6);
@@ -32,4 +31,3 @@
   --yellow-color: #eac645;
   --black-color: #202024;
 }
-

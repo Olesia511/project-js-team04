@@ -23,4 +23,3 @@ function markUpByCategory(array) {
   list.innerHTML = markup;
   return markup;
 }
-// markUpByCategory(books);
