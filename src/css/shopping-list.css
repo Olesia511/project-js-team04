@@ -1,4 +1,5 @@
 /*! For mobile size */
+
 .shop-list-page {
   padding: 40px 20px;
   margin-left: auto;
@@ -9,6 +10,7 @@
 .shopping-list {
   margin-left: auto;
   margin-right: auto;
+  width: 335px;
 }
 
 .sidebar {
@@ -16,16 +18,15 @@
 }
 
 .shop-list-titel {
-  color: #111;
+  color: var(--primary-text-color-light-theme);
   font-family: DM Sans;
   font-size: 32px;
-  font-weight: 700;
-  line-height: 1.19; /* 118.75% */
+  line-height: 1.19;
   letter-spacing: -1.28px;
 }
 
 .shop-list-titel > span {
-  color: #4f2ee8;
+  color: var(--violet-color);
 }
 
 .shop-list-placeholder {
@@ -42,8 +43,7 @@
   text-align: center;
   font-family: DM Sans;
   font-size: 14px;
-  font-weight: 400;
-  line-height: 1.29; /* 128.571% */
+  line-height: 1.29;
   letter-spacing: -0.28px;
 }
 
@@ -52,9 +52,13 @@
   height: 198px;
   margin-left: auto;
   margin-right: auto;
+  margin-top: 14px;
 }
 
 .shop-list-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
   margin-top: 40px;
 }
 
@@ -63,22 +67,20 @@
   display: flex;
   gap: 14px;
   padding: 14px;
-
-  max-width: 335px;
+  width: auto;
 
   border-radius: 16px;
   border: 2px solid rgba(79, 46, 232, 0.4);
-  background: #fff;
+  background: var(--primary-text-color-dark-theme);
 }
 
 .book-name {
   margin-bottom: 4px;
 
-  color: #111;
+  color: var(--primary-text-color-light-theme);
   font-family: DM Sans;
   font-size: 16px;
-  font-weight: 700;
-  line-height: 1.13; /* 112.5% */
+  line-height: 1.13;
   letter-spacing: -0.64px;
   text-transform: uppercase;
 }
@@ -86,11 +88,10 @@
 .book-category {
   margin-bottom: 8px;
 
-  color: #b4afaf;
+  color: var(--primary-title-color);
   font-family: DM Sans;
   font-size: 12px;
-  font-weight: 400;
-  line-height: 1.17; /* 116.667% */
+  line-height: 1.17;
   letter-spacing: 0.36px;
 }
 
@@ -100,22 +101,20 @@
   margin-bottom: 16px;
 
   overflow: hidden;
-  color: #111;
+  color: var(--primary-text-color-light-theme);
   font-family: DM Sans;
   font-size: 14px;
-  font-weight: 400;
-  line-height: 1.29; /* 128.571% */
+  line-height: 1.29;
   letter-spacing: -0.56px;
 }
 
 .book-author {
-  color: #b4afaf;
+  color: var(--primary-title-color);
   font-family: DM Sans;
   font-size: 12px;
   font-style: italic;
-  font-weight: 400;
-  line-height: 1.17; /* 116.667% */
-  etter-spacing: -0.48px;
+  line-height: 1.17;
+  letter-spacing: -0.48px;
 }
 
 .link-container {
@@ -140,22 +139,18 @@
   padding: 6px;
   border-radius: 50%;
   border: none;
-  background-color: #4f2ee8;
+  background-color: var(--violet-color);
 }
 
 .delete-btn-icon {
-  fill: #4f2ee8;
-  stroke: white;
+  fill: var(--violet-color);
+  stroke: var(--primary-text-color-dark-theme);
 }
 
 .apple-icon,
 .amazon-icon {
   filter: grayscale(100%);
 }
-
-/* .amazon-icon {
-  filter: brightness(0) invert(1);
-} */
 
 /*? Backgroung and placeholders */
 .book-cover {
@@ -180,8 +175,89 @@
 
 /*! For Tablet size */
 @media screen and (min-width: 768px) {
+  .shop-list-page {
+    padding: 40px 32px;
+    max-width: 768px;
+  }
+
+  .shopping-list {
+    width: 704px;
+  }
+
+  .shop-list-titel {
+    font-size: 48px;
+    line-height: 1.08;
+    letter-spacing: -1.92px;
+  }
+
+  .shop-list-placeholder-text {
+    width: 349px;
+    margin-top: 140px;
+    font-size: 18px;
+    line-height: 1.33;
+    letter-spacing: -0.36px;
+  }
+
+  .shop-list-placeholder-img {
+    width: 322px;
+    height: 241px;
+    margin-top: 20px;
+  }
+
+  .shop-list-item {
+    gap: 24px;
+    padding: 30px 24px;
+  }
+
+  .link-container {
+    right: 24px;
+    bottom: 24px;
+
+    gap: 16px;
+    width: 92px;
+  }
+
+  .delete-btn {
+    right: 24px;
+    top: 24px;
+
+    width: 34px;
+    height: 34px;
+    padding: 8px;
+  }
+
+  .delete-btn-icon {
+    width: 18px;
+    height: 18px;
+  }
+
+  .amazon-logo {
+    width: 48px;
+    height: 15px;
+  }
+
+  .apple-books-logo {
+    width: 28px;
+    height: 27px;
+  }
 }
 
 /*! For Desctop size */
 @media screen and (min-width: 1440px) {
+  .shop-list-page {
+    display: flex;
+    gap: 40px;
+
+    padding: 40px 24px;
+    max-width: 1440px;
+  }
+
+  .shopping-list {
+    width: 996px;
+  }
+
+  .sidebar {
+    display: block;
+    width: 356px;
+  }
 }
