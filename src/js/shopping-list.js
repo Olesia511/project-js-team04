@@ -1,34 +1,29 @@
+const deleteBtn = document.querySelector('.delete-btn');
+const description = document.querySelector('.js-description');
 
-const deleteBtn = document.querySelector(".delete-btn");
-const description = document.querySelector(".js-description");
+// deleteBtn.addEventListener('click', onDelete);
 
+// function onDelete(evt) {
+//   console.log('123', evt);
+//   console.log('Deleted');
+// }
 
-deleteBtn.addEventListener ("click", onDelete);
+// //Make Description shorter for mob and tabl
 
-function onDelete(evt) {
-    console.log("Deleted");
-}
+// const descriptionLarge = description.textContent;
 
+// window.addEventListener('resize', handleResize);
 
-//Make Description shorter for mob and tabl
+// function handleResize() {
+//   if (window.innerWidth < 768) {
+//     const descriptionShirt = descriptionLarge.slice(0, 86) + '…';
+//     description.textContent = descriptionShirt;
+//   } else if (window.innerWidth >= 768 && window.innerWidth < 1440) {
+//     const descriptionShirt = descriptionLarge.slice(0, 253) + '…';
+//     description.textContent = descriptionShirt;
+//   } else {
+//     description.textContent = descriptionLarge;
+//   }
+// }
 
-const descriptionLarge = description.textContent;
-
-window.addEventListener('resize', handleResize);
-    
-    function handleResize() {
-    if (window.innerWidth < 768) {
-        const descriptionShirt = descriptionLarge.slice(0, 86) + '…';
-        description.textContent = descriptionShirt;
-        }
-        
-    else if (window.innerWidth >= 768 && window.innerWidth < 1440){
-        const descriptionShirt = descriptionLarge.slice(0, 253) + '…';
-        description.textContent = descriptionShirt;
-    } else {
-        description.textContent = descriptionLarge;
-    }
-};
-
-handleResize();
-
+// handleResize();
