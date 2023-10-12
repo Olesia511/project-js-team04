@@ -10,7 +10,7 @@
 .shopping-list {
   margin-left: auto;
   margin-right: auto;
-  width: 335px;
+  max-width: 335px;
 }
 
 .sidebar {
@@ -181,7 +181,7 @@
   }
 
   .shopping-list {
-    width: 704px;
+    max-width: 704px;
   }
 
   .shop-list-titel {
@@ -240,6 +240,11 @@
     width: 28px;
     height: 27px;
   }
+
+  .book-description {
+    width: 508px;
+    height: 53px;
+  }
 }
 
 /*! For Desctop size */
@@ -253,11 +258,15 @@
   }
 
   .shopping-list {
-    width: 996px;
+    max-width: 996px;
   }
 
   .sidebar {
     display: block;
     width: 356px;
+  }
+
+  .book-description {
+    width: 808px;
   }
 }
