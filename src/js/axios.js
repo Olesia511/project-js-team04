@@ -42,9 +42,10 @@ async function getTopBooksArr() {
 
 function getCategoryBook(text) {
   const categoryText = text.split(' ').join('%20');
-  return getBooks(categoryText)
-    .then(res => console.log(`getCategoryBook`, res))
-    .catch(rej => console.log(rej));
+  return categoryText;
+  // return getBooks(categoryText)
+  //   .then(res => console.log(`getCategoryBook`, res))
+  //   .catch(rej => console.log(rej));
 }
 
 async function getBooks(category) {
@@ -57,7 +58,7 @@ async function getBooks(category) {
 
 // -- const categoryBook буде = тій категорії яку вибере користувач
 // const categoryBook = 'Mass Market Monthly';
-// getCategoryBook(categoryBook);
+// console.log(getCategoryBook(categoryBook));
 
 // +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 // ==== Отримання книжки за ID
@@ -75,4 +76,10 @@ async function getBooksById(id) {
 //   .then(res => console.log(`bookId`, res))
 //   .catch(rej => console.log(rej));
 
-export { getCategoryListArr, getTopBooksArr, getCategoryBook, getBooksById };
+export {
+  getCategoryListArr,
+  getTopBooksArr,
+  getCategoryBook,
+  getBooksById,
+  getBooks,
+};
