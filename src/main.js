@@ -5,6 +5,7 @@ import './js/category-book.js';
 import './js/create-markup.js';
 import './js/header.js';
 import './js/home.js';
+import './js/markup-by-category.js';
 import './js/mobile-menu.js';
 import './js/modal.js';
 import './js/top-books';
