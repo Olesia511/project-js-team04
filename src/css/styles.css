@@ -4,15 +4,18 @@
   | default @import url()
   |============================
 */
+
+@import url('./book-id.css');
 @import url('./categories-list.css');
+@import url('./category-book.css');
 @import url('./fonts.css');
 @import url('./header.css');
 @import url('./home.css');
 @import url('./modal.css');
 @import url('./reset.css');
 @import url('./shopping-list.css');
+@import url('./top-books.css');
 
-/* @import url('./node_modules/.vite/deps/my-dep.js?v=f3sf2ebd'); */
 /*-----    замінити :root   ------------*/
 :root {
   --primary-text-color-light-theme: #111;
@@ -24,7 +27,3 @@
   --yellow-color: #eac645;
   --black-color: #202024;
 }
-/* font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
-  font-size: 16px;
-  line-height: 24px;
-  font-weight: 400;*/

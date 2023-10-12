@@ -1,60 +1,78 @@
-const perPage = 10;
-const currentPage = 1;
-const searchValue = 'cat';
-
 const BASE_URL = 'https://books-backend.p.goit.global/';
-// const AUTH_KEY = '39799120-0adfdb8bf4f296c3a7d41d46c';
 const CATEGORY_LIST = 'books/category-list';
 const TOP_BOOKS = 'books/top-books';
 const CATEGORY = 'books/category';
-// `${BASE_URL}${CATEGORY}?category=Young%20Adult%20Paperback%20Monthly`;
-// const BOOKS_ID = `books/${id}`;
-// function
+const BOOKS_ID = `books/`;
 
+// +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 // ==== Отримання списку категорій книг та додавання до localStorage
 
 async function getCategoryListArr() {
   const respList = await axios.get(`${BASE_URL}${CATEGORY_LIST}`);
-  const respTop = await axios.get(`${BASE_URL}${TOP_BOOKS}`);
 
-  const categoryList = await resp.data;
-  localStorage.setItem('category-list', JSON.stringify(categoryList));
+  const categoryList = await respList.data;
   return categoryList;
 }
 
-getCategoryListArr()
-  .then(res => {
-    console.log(`res`, res);
-  })
-  .catch(rej => console.log(`rej`, rej));
+// getCategoryListArr()
+//   .then(res => {
+//     console.log(`getCategoryListArr`, res);
+//   })
+//   .catch(rej => console.log(`rej`, rej));
 
-// ==== Отримання з localStorage однієї категорії книжок по кліку та запрос на бекенд по категорії
+// +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+// ==== Отримання списку ТОП книг по категоріям
 
-const categoryBook = 'Mass Market Monthly';
+async function getTopBooksArr() {
+  const respTopBooks = await axios.get(`${BASE_URL}${TOP_BOOKS}`);
 
-function getCategoryBookLocalStorage() {
-  const savedCategoryList = localStorage.getItem('category-list');
-  const parsedCategoryList = JSON.parse(savedCategoryList);
-  const findCategory = parsedCategoryList
-    .find(book => book['list_name'] === categoryBook)
-    ['list_name'].split(' ')
-    .join('%20');
-  console.log(`findCategory`, findCategory);
-
-  getBook(findCategory)
-    .then(r => console.log(`find`, r))
-    .catch(r => console.log(r));
-  return findCategory;
-}
-
-getCategoryBookLocalStorage();
-
-async function getBook(book) {
-  const resp = await axios.get(`${BASE_URL}${CATEGORY}?category=${book}`);
-
-  const categoryList = await resp;
+  const topBooks = await respTopBooks.data;
   // localStorage.setItem('category-list', JSON.stringify(categoryList));
-  return categoryList;
+  return topBooks;
 }
 
-// === Отримання списку ТОП категорій книг
+// getTopBooksArr()
+//   .then(res => {
+//     console.log(`getTopBooksArr`, res);
+//   })
+//   .catch(rej => console.log(`rej`, rej));
+
+// +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+// ==== Отримання списку книжок за категорією
+
+function getCategoryBook(text) {
+  const categoryText = text.split(' ').join('%20');
+  return getBooks(categoryText)
+    .then(res => console.log(`getCategoryBook`, res))
+    .catch(rej => console.log(rej));
+}
+
+async function getBooks(category) {
+  const respCategory = await axios.get(
+    `${BASE_URL}${CATEGORY}?category=${category}`
+  );
+  const categoryBook = await respCategory.data;
+  return categoryBook;
+}
+
+// -- const categoryBook буде = тій категорії яку вибере користувач
+// const categoryBook = 'Mass Market Monthly';
+// getCategoryBook(categoryBook);
+
+// +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+// ==== Отримання книжки за ID
+
+async function getBooksById(id) {
+  const respBooksId = await axios.get(`${BASE_URL}${BOOKS_ID}${id}`);
+  const bookById = await respBooksId.data;
+  return bookById;
+}
+
+// ---- const bookId буде = тій книжці що вибере користувач
+// const bookId = '643282b1e85766588626a0dc';
+
+// getBooksById(bookId)
+//   .then(res => console.log(`bookId`, res))
+//   .catch(rej => console.log(rej));
+
+export { getCategoryListArr, getTopBooksArr, getCategoryBook, getBooksById };
