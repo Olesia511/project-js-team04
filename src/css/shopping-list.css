@@ -22,7 +22,7 @@
   font-family: DM Sans;
   font-size: 32px;
   font-weight: 700;
-  line-height: 1.19; /* 118.75% */
+  line-height: 1.19;
   letter-spacing: -1.28px;
 }
 
@@ -45,7 +45,7 @@
   font-family: DM Sans;
   font-size: 14px;
   font-weight: 400;
-  line-height: 1.29; /* 128.571% */
+  line-height: 1.29;
   letter-spacing: -0.28px;
 }
 
@@ -83,7 +83,7 @@
   font-family: DM Sans;
   font-size: 16px;
   font-weight: 700;
-  line-height: 1.13; /* 112.5% */
+  line-height: 1.13;
   letter-spacing: -0.64px;
   text-transform: uppercase;
 }
@@ -95,7 +95,7 @@
   font-family: DM Sans;
   font-size: 12px;
   font-weight: 400;
-  line-height: 1.17; /* 116.667% */
+  line-height: 1.17;
   letter-spacing: 0.36px;
 }
 
@@ -109,7 +109,7 @@
   font-family: DM Sans;
   font-size: 14px;
   font-weight: 400;
-  line-height: 1.29; /* 128.571% */
+  line-height: 1.29;
   letter-spacing: -0.56px;
 }
 
@@ -119,8 +119,8 @@
   font-size: 12px;
   font-style: italic;
   font-weight: 400;
-  line-height: 1.17; /* 116.667% */
-  etter-spacing: -0.48px;
+  line-height: 1.17;
+  letter-spacing: -0.48px;
 }
 
 .link-container {
@@ -192,7 +192,7 @@
 
   .shop-list-titel {
     font-size: 48px;
-    line-height: 1.08; /* 108.333% */
+    line-height: 1.08;
     letter-spacing: -1.92px;
   }
 
@@ -201,7 +201,7 @@
     margin-top: 140px;
     font-size: 18px;
     font-weight: 400;
-    line-height: 1.33; /* 133.333% */
+    line-height: 1.33;
     letter-spacing: -0.36px;
   }
 
