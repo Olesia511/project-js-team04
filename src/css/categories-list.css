@@ -1,0 +1,16 @@
+.list-categories-item {
+  font-size: 18px;
+}
+
+.list-categories-item:not(:last-child) {
+  margin-bottom: 20px;
+}
+
+.list-categories-item:hover,
+.list-categories-item:focus {
+}
+
+.categories-list {
+  height: 228px;
+  overflow-x: auto;
+}

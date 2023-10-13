@@ -10,7 +10,7 @@
 .shopping-list {
   margin-left: auto;
   margin-right: auto;
-  width: 335px;
+  max-width: 335px;
 }
 
 .sidebar {
@@ -140,6 +140,7 @@
   border-radius: 50%;
   border: none;
   background-color: var(--violet-color);
+  transition: filter 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .delete-btn-icon {
@@ -150,6 +151,30 @@
 .apple-icon,
 .amazon-icon {
   filter: grayscale(100%);
+}
+
+.amazon-logo {
+  width: 32px;
+  height: 11px;
+  transition: filter 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.apple-books-logo {
+  width: 16px;
+  height: 16px;
+  transition: filter 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.amazon-logo:hover,
+.amazon-logo:focus,
+.apple-books-logo:hover,
+.apple-books-logo:focus {
+  filter: grayscale(100%) drop-shadow(0px 3px 3px rgba(0, 0, 0, 0.35));
+}
+
+.delete-btn:hover,
+.delete-btn:focus {
+  filter: drop-shadow(0px 3px 3px rgba(0, 0, 0, 0.35));
 }
 
 /*? Backgroung and placeholders */
@@ -181,7 +206,7 @@
   }
 
   .shopping-list {
-    width: 704px;
+    max-width: 704px;
   }
 
   .shop-list-titel {
@@ -240,6 +265,11 @@
     width: 28px;
     height: 27px;
   }
+
+  .book-description {
+    width: 508px;
+    height: 53px;
+  }
 }
 
 /*! For Desctop size */
@@ -253,11 +283,15 @@
   }
 
   .shopping-list {
-    width: 996px;
+    max-width: 996px;
   }
 
   .sidebar {
     display: block;
     width: 356px;
+  }
+
+  .book-description {
+    width: 808px;
   }
 }

@@ -4,7 +4,7 @@
   | default @import url()
   |============================
 */
-
+@import url('./general-styles.css');
 @import url('./book-id.css');
 @import url('./categories-list.css');
 @import url('./category-book.css');
@@ -19,6 +19,8 @@
 @import url('./shopping-list.css');
 @import url('./top-books.css');
 @import url('./sup-ukraine.css');
+@import url('./toggle-menu.css');
+
 
 /*-----    замінити :root   ------------*/
 :root {

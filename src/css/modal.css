@@ -23,9 +23,13 @@
   height: 100%;
   background: rgba(17, 17, 17, 0.4);
   top: 0;
-  overflow: auto;
+  overflow: hidden;
   transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
     visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.backdrop.is-hidden .modal {
+  transform: scaleY(0);
 }
 
 @media screen and (min-width: 375px) {
@@ -43,9 +47,10 @@
   border-radius: 18px;
   border: 2px solid #111;
   background-color: #fff;
-  overflow: auto;
+  overflow: hidden;
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+
 .close-btn-modal {
   position: absolute;
   width: 24px;
@@ -59,10 +64,41 @@
   align-items: center;
   justify-content: center;
   padding: 0;
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1) 250;
 }
 
 .icon-close-modal {
   stroke: #111;
+}
+
+.icon-close-modal:hover,
+.icon-close-modal:focus {
+  stroke: #4f2ee8;
+}
+
+.modal-img-list {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  margin-top: 14px;
+}
+
+.img-modal-amazon {
+  width: 62px;
+  height: 19px;
+  filter: grayscale(100%);
+  transition: filter 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.hover-img:hover,
+.hover-img:focus {
+  filter: grayscale(100%) drop-shadow(0px 3px 3px rgba(0, 0, 0, 0.35));
+}
+
+.img-modal-bookshop {
+  width: 33px;
+  height: 32px;
+  filter: grayscale(100%);
 }
 
 .modal-btn {
@@ -74,7 +110,7 @@
   background-color: transparent;
   border-radius: 40px;
   border: 2px solid #4f2ee8;
-  font-family: inherit;
+  font-family: 'DM Sans';
   color: #111;
   font-size: 14px;
   font-style: normal;
@@ -82,6 +118,14 @@
   line-height: 1.29;
   letter-spacing: -0.14px;
   text-transform: uppercase;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal-btn:hover,
+.modal-btn:focus {
+  background-color: #4f2ee8;
+  color: #fff;
 }
 
 .text-modal {
@@ -136,5 +180,11 @@
   }
 }
 
-@media screen and (min-width: 1280px) {
+@media screen and (min-width: 1440px) {
 }
+
+/* filter: grayscale(100%) - світла тема, звичайний стан
+filter: drop-shadow(0px 3px 3px rgba(0,0,0,.35)) - світла тема, стан hover
+filter: grayscale(100%) - темна тема, звичаний стан (для Apple Books)
+filter: brightness(0) invert(1) - темна тема, звичайний стан (для Amazon)
+filter: drop-shadow(0px 3px 3px rgba(255, 255, 255, 0.35)) - темна тема, стан hover */
