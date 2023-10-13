@@ -1,0 +1,21 @@
+.container-categories-support {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 335px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media screen and (min-width: 768px) {
+  .container-categories-support {
+    max-width: 704px;
+    flex-wrap: nowrap;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .container-categories-support {
+    max-width: 356px;
+    flex-wrap: wrap;
+  }
+}
