@@ -16,8 +16,14 @@ getBooks(categoryBookFetch)
 function markUpByCategory(array) {
   const list = document.querySelector('.list-books-by-category');
   const markup = array
-    .map(({ book_image, title, author }) => {
-      return `<li class="element-books-by-category"><img src="${book_image}" alt="${title} width="335px" height="485px"class="img-books-by-category" /><div class="title-container"><h3 class="name-books-by-category">${title}</h3><pclass="title-books-by-category">${author}</pclass=></div></li>`;
+    .map(({ book_image, title, author, _id }) => {
+      return `<li data-book-id='${_id}' class="element-books-by-category js-target">
+      <img src="${book_image}" alt="${title} width="335px" height="485px" class="img-books-by-category js-target" />
+      <div class="title-container js-target">
+      <h3 class="name-books-by-category js-target">${title}</h3>
+      <p class="title-books-by-category js-target">${author}</p>
+      </div>
+      </li>`;
     })
     .join('');
   list.innerHTML = markup;
