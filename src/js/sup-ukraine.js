@@ -73,12 +73,11 @@ const charities = [
       charities.slice(startIndex, endIndex).forEach((charity, index) => {
         const item = document.createElement('li');
         const link = document.createElement('a');
-        const number = document.createElement('span'); // Элемент для номера
+        const number = document.createElement('span'); 
       
-        // Вычислите номер организации
         const charityNumber = (startIndex + index + 1).toString().padStart(2, '0');
         
-        // Установите текст для элемента .number
+
         number.textContent = charityNumber;
       
         const img = document.createElement('img');
@@ -89,7 +88,7 @@ const charities = [
       
         link.href = charity.url;
       
-        number.classList.add('number'); // Добавьте класс для стилизации
+        number.classList.add('number'); 
       
         link.appendChild(img);
         item.appendChild(number); 
@@ -106,3 +105,4 @@ const charities = [
     toggleButton.addEventListener('click', toggleItemsVisibility);
     
     toggleItemsVisibility();
+    
