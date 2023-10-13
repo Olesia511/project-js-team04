@@ -6,9 +6,12 @@ const modalOpen = document.querySelector('.modal-open');
 const backdrop = document.querySelector('.js-backdrop');
 const modalClose = document.querySelector('.close-btn-modal');
 const marcupModal = document.querySelector('.marcup');
-
-
-
+const modalBtn = document.querySelector('.btn-add-local');
+const addLocal = document.querySelector('.add-local');
+const removeLocal = document.querySelector('.remove-local');
+console.log(modalBtn);
+const KEY_BOOK = 'user-books'; // localStorage
+const bookList = {};
 
 
 
@@ -16,7 +19,7 @@ const containerFromMarcup = document.querySelector('.add-books-backend');
 
 // -------  Modal -----////
 
-modalOpen.addEventListener('click', onOpenModal);
+// modalOpen.addEventListener('click', onOpenModal);
 
 backdrop.addEventListener('click', onBackdropClick);
 
@@ -26,20 +29,8 @@ modalClose.addEventListener('click', onCloseModal);
 
 window.addEventListener('keydown', onEscKeyPress);
     
+modalBtn.addEventListener('click', onAddLocal);
 
-
-    
-
-    function onOpenModal() {
-    //console.log(listAddBook);
-    backdrop.classList.remove('is-hidden')
-        window.addEventListener('keydown', onEscKeyPress);
-        
-        
-
- 
-    
-}
 
 
 
@@ -70,11 +61,43 @@ function onEscKeyPress(e) {
 
 
 
-const listAddBook = document.querySelector('.container-books-by-category');
 
+
+const listAddBook = document.querySelector('.list-books-by-category');
+const listTopBook = document.querySelector('.container-best-books');
+
+// console.log('qweqwe', listAddBook);
 listAddBook.addEventListener('click', onClick);
+listTopBook.addEventListener('click', onClick);
 
-function onClick(evt) {
+
+
+
+
+
+    function onClick(evt) {
+    
+        
+            
+    const parseLocal = JSON.parse(localStorage.getItem(KEY_BOOK));
+
+    if (!parseLocal) {
+        addLocal.hidden = false;
+        removeLocal.hidden = true;
+} else {
+    addLocal.hidden = true;
+    removeLocal.hidden = false;
+        }
+
+
+        //// ++++++ //////
+         
+     
+        ///+++////
+        
+
+    backdrop.classList.remove('is-hidden')
+    window.addEventListener('keydown', onEscKeyPress);
   if (!evt.target.classList.contains('js-target')) {
     return;
   }
@@ -83,78 +106,80 @@ function onClick(evt) {
     console.log('Get BOOK ID ======', bookId);
     
     getBooksById(bookId)
-  .then(data => console.log(`bookId`, data))
-        .catch(rej => console.log(rej));
-    onOpenModal();
+        .then(data => {
+            let imgBook = data.book_image;
+            let nameBook = data.title;
+            let description = data.description;
+            let author = data.author
 
- 
+            containerFromMarcup.innerHTML = marcup(imgBook, nameBook, description, author);
+            
+            console.log(data);
+
+
+            
+        })
+        .catch(rej => console.log(rej));
+    
+   }
+
+
+
+function marcup(imgBook, nameBook, description, author)
+        {
+      
+  return  `
+  <img class="img-book" src="${imgBook}" alt="${nameBook}" />
+ <h2 class="title-book">${nameBook}</h2>
+ <h4 class="author-book">${author}</h4>
+ <p class="descr-book">${description}</p>`;
 }
 
-   // getBooksById(bookId)
-    // .then(res => {
-      
-    //   let imgBook = res[0].book_image;
-    //   let nameBook = res[0].list_name;
-    //   let description = res[0].description;
-    //   let author = res[0].author
-      
-    //   containerFromMarcup.innerHTML = marcup(imgBook, nameBook, description, author);
-      
-      
-    // //   refs.container.classList.remove("is-hidden");
-    // //    refs.loader.hidden = true;
-      
-    // })
-    // .catch(err => {
-      
-    //   console.log(err);
-    // })
-
-
-
-
-
-//const bookId = '643282b1e8576658861,26a0dc';
-
-// getBooksById(bookId)
-//   .then(res => console.log(`bookId`, res))
-//   .catch(rej => console.log(rej));
-
-// getBooksById().then(res => {
-// const creatMarcup = res.map(({ author, book_image, list_name, description }) => `<img src="${book_image}" alt="${list_name}" />
-// <h2>${list_name}</h2>
-// <h4>${author}</h4>
-// <p>${description}</p>`).join('');
-//   containerFromMarcup.insertAdjacentHTML('beforeend', creatMarcup);
   
 
-  
-  
-// })
-//   .catch(err => {
+
+
+
+function onAddLocal(evt) {
+    console.log('qwe', evt.target);
+    // const textBtn = evt.target.classList.contains('js-btn-local');
+    
+
+    // if (!textBtn) {
+    // return;
+    // }
+    if (addLocal.textContent) {
+        localStorage.setItem(KEY_BOOK, bookList);
+        
+    } else {
+       console.log('---');
+    }
     
     
-//     console.log(err);
-//   });
-// marcupModal.addEventListener('')
+    
+    
+    // else {
+    //     removeLocal.textContent
+    // }
+   
+    
+}
 
 
-
-
-// function marcup(imgBook, nameBook, description, author) {
-
-//   return  `
-//   <img src="${imgBook}" alt="${list_name}" />
-// // <h2>${nameBook}</h2>
-// // <h4>${author}</h4>
-// // <p>${description}</p>`;
-// }
-
-
-
-
-
+   
 
 //------ Local Storage -----//
 
-// const addLocalBtn = document.querySelector('.')
+
+
+// console.log("123", addLocalBtn);
+
+
+
+// const addLocal = [];
+// const removeLocal = [];
+
+// function onAddLocal({imgBook, nameBook, description, author}) {
+//     addLocal.push( imgBook, nameBook, description, author);
+//     console.log(addLocal);
+// }
