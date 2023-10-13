@@ -58,39 +58,51 @@ const charities = [
       },
     ];
 
+
     const list = document.querySelector('.list');
     const toggleButton = document.getElementById('toggleButton');
+    const svgIcon = toggleButton.querySelector('svg use');
     let areItemsVisible = true;
     
     function toggleItemsVisibility() {
-        list.innerHTML = '';
+      list.innerHTML = '';
+    
+      const startIndex = areItemsVisible ? 0 : 3;
+      const endIndex = areItemsVisible ? 6 : 9;
+    
+      charities.slice(startIndex, endIndex).forEach((charity, index) => {
+        const item = document.createElement('li');
+        const link = document.createElement('a');
+        const number = document.createElement('span'); // Элемент для номера
       
-        const startIndex = areItemsVisible ? 0 : 3;
-        const endIndex = areItemsVisible ? 6 : 9;
+        // Вычислите номер организации
+        const charityNumber = (startIndex + index + 1).toString().padStart(2, '0');
+        
+        // Установите текст для элемента .number
+        number.textContent = charityNumber;
       
-        charities.slice(startIndex, endIndex).forEach((charity, index) => {
-          const item = document.createElement('li');
-          const link = document.createElement('a');
+        const img = document.createElement('img');
+        img.srcset = `${charity.img} 1x, ${charity.img2x} 2x`;
+        img.src = charity.img;
+        img.alt = charity.title;
+        img.classList.add('white-image');
       
-          const img = document.createElement('img');
-          img.srcset = `${charity.img} 1x, ${charity.img2x} 2x`;
-          img.src = charity.img;
-          img.alt = charity.title;
-          img.classList.add('white-image'); 
+        link.href = charity.url;
       
-          link.href = charity.url;
+        number.classList.add('number'); // Добавьте класс для стилизации
       
-          const paddedIndex = (startIndex + index + 1).toString().padStart(2, '0');
-          item.textContent = `${paddedIndex} `;
+        link.appendChild(img);
+        item.appendChild(number); 
+        item.appendChild(link);
       
-          link.appendChild(img);
-          item.appendChild(link);
-      
-          list.appendChild(item);
-        });
-      
-        areItemsVisible = !areItemsVisible;
-      }
+        list.appendChild(item);
+      });
+    
+      areItemsVisible = !areItemsVisible;
+
+      svgIcon.setAttribute('href', areItemsVisible ? './img/icon.svg#icon-support-ukr-scroll-up' : './img/icon.svg#icon-support-ukr-scroll-down');
+    }
+    
     toggleButton.addEventListener('click', toggleItemsVisibility);
     
     toggleItemsVisibility();
