@@ -159,7 +159,7 @@ function shopListMarkup(arr) {
     .join('');
 
   if (parsedLocalData.length !== 0) {
-    placeholder.hidden = true;
+      placeholder.hidden = true;
     savedBooksList.innerHTML = markup;
     handleResize();
     // window.addEventListener('resize', handleResize);
@@ -167,6 +167,10 @@ function shopListMarkup(arr) {
     deleteBtns.forEach(btn => {
       btn.addEventListener('click', onDelete);
     });
+  }
+  else {
+      placeholder.hidden = false;
+      savedBooksList.innerHTML = "";
   }
 }
 
@@ -178,9 +182,9 @@ function onDelete(evt) {
   const bookId = evt.target.closest('.shop-list-item').dataset.id;
 
   const bookToRemoveId = parsedLocalData.findIndex(book => book._id === bookId);
-
   if (bookToRemoveId !== -1) {
     parsedLocalData.splice(bookToRemoveId, 1);
-    localStorage.setItem(DATA_KEY, JSON.stringify(parsedLocalData));
+      localStorage.setItem(DATA_KEY, JSON.stringify(parsedLocalData));
+      shopListMarkup(parsedLocalData);
   }
 }
