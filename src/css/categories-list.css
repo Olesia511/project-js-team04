@@ -1,12 +1,14 @@
 .categories-list {
   height: 228px;
   width: 335px;
-  overflow-x: auto;
 }
 
 .list-categories-item {
   font-size: 16px;
+  line-height: 18px;
   cursor: pointer;
+  letter-spacing: -0.02em;
+  user-select: none;
 }
 
 .list-categories-item:not(:last-child) {
@@ -29,6 +31,15 @@
   height: 228px;
   width: 335px;
   margin-bottom: 40px;
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+.list-container::-webkit-scrollbar {
+  width: 8px;
+}
+.list-container::-webkit-scrollbar-thumb {
+  background-color: #e0e0e0;
+  border-radius: 4px;
 }
 
 @media screen and (min-width: 768px) {
@@ -45,6 +56,7 @@
   }
   .list-categories-item {
     font-size: 18px;
+    line-height: 24px;
   }
 }
 

@@ -3,14 +3,16 @@ import { getCategoryBook, getBooks } from './axios-fetch';
 // -- const categoryBook буде = тій категорії яку вибере користувач // let categoryBook = "";
 const categoryBook = 'Hardcover Fiction';
 const title = document.querySelector('.title-category');
-const categoryBookFetch = getCategoryBook(categoryBook);
+// const categoryBookFetch = getCategoryBook(categoryBook);
 
-getBooks(categoryBookFetch)
-  .then(res => {
-    console.log(`Get book by category`, res);
-    markUpByCategory(res);
-  })
-  .catch(rej => console.log(rej));
+function bookRequest(categoryBookFetch) {
+  getBooks(categoryBookFetch)
+    .then(res => {
+      console.log(`Get book by category`, res);
+      markUpByCategory(res);
+    })
+    .catch(rej => console.log(rej));
+}
 
 function markUpByCategory(array) {
   const list = document.querySelector('.list-books-by-category');
@@ -99,4 +101,5 @@ export {
   getBooks,
   markUpByCategory,
   updateTitleLastWordColor,
+  bookRequest,
 };
