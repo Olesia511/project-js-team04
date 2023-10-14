@@ -1,9 +1,33 @@
 .header-container {
-  display: block;
+  display: flex;
   max-width: 335px;
   height: 64px;
   margin-left: auto;
   margin-right: auto;
+  background-color: var(--background-color-light);
+  border: 1.5px solid #111111;
+  border-radius: 0px 0px 8px 8px;
+  justify-content: space-between;
+  align-items: center;
+  height: 64px;
+  padding-left: 24px;
+  padding-right: 24px;
+}
+.header-logo-link {
+  font-family: inherit;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.12;
+  letter-spacing: -0.04em;
+  display: flex;
+  align-items: center;
+  color: #111111;
+}
+
+.header-logo {
+  width: 24px;
+  height: 24px;
+  margin-right: 8px;
 }
 
 @media screen and (min-width: 768px) {
@@ -17,4 +41,298 @@
   .header-container {
     max-width: 1392px;
   }
+}
+
+.site-nav {
+  display: flex;
+  gap: 24px;
+}
+
+.site-nav__item {
+  padding: 8px 16px;
+}
+
+.site-nav__item_active {
+  background-color: #eac645;
+  border-radius: 36px;
+  padding: 8px 16px;
+}
+
+.site-nav__link_active {
+  font-family: inherit;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.28;
+  letter-spacing: -0.04em;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+
+  color: #111111;
+}
+
+.site-nav__link {
+  font-family: inherit;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.28;
+  letter-spacing: -0.04em;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+
+  color: #111111;
+}
+
+.site-nav__logo {
+  width: 20px;
+  height: 20px;
+  fill: #111111;
+
+  margin-left: 4px;
+}
+
+.site-nav__logo_active {
+  width: 20px;
+  height: 20px;
+  fill: #111111;
+
+  margin-left: 4px;
+}
+
+.toggle-theme {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* margin-left: 144px; */
+}
+
+input[type='checkbox'] {
+  display: none;
+}
+
+.check {
+  position: relative;
+  display: block;
+  width: 40px;
+  height: 24px;
+  background: linear-gradient(180deg, #4f2ee8 0%, #dcdcdc 100%);
+  box-shadow: inset 1px 1px 2px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  border-radius: 20px;
+  transition: background-color var(--animation);
+}
+
+.check::after {
+  content: '';
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  top: 3px;
+  left: 1px;
+  background: linear-gradient(180deg, #ffffff 0%, #f7f7f7 100%);
+  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1), 0px 2px 2px rgba(0, 0, 0, 0.1),
+    1px 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  transition: var(--animation);
+}
+
+input[type='checkbox']:checked ~ .check {
+  background: linear-gradient(180deg, #4f2ee8 0%, #686868 100%);
+  box-shadow: inset 1px 1px 2px rgba(0, 0, 0, 0.1);
+  transition: background-color var(--animation);
+}
+
+input[type='checkbox']:checked ~ .check::after {
+  transform: translateX(20px);
+}
+
+.sign-up-button {
+  display: none;
+  padding-right: 24px;
+}
+
+.sign-up-button_text {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: calc(18 / 14);
+  letter-spacing: -0.04em;
+  color: #ffffff;
+}
+
+.burger-menu {
+  width: 28px;
+  height: 28px;
+  background-color: transparent;
+  /* margin-left: 14px; */
+}
+
+.burger-menu__icon {
+  width: 28px;
+  height: 28px;
+  fill: var(--primary-text-color-light-theme);
+  transition: fill var(--animation);
+}
+
+.burger-menu__icon:hover {
+  fill: #4f2ee8;
+}
+
+/* burger modal */
+
+.mobile-menu-container {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  transform: translateY(-100%);
+  z-index: 20;
+  background: linear-gradient(#4f2ee8 0%, #fff 130%);
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity var(--animation), transform var(--animation);
+}
+
+.is-hidden {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+  transform: translateY(0);
+}
+
+.burger-container {
+  background-image: url(../img/shop-list-mob.png);
+  background-position: bottom;
+  background-repeat: no-repeat;
+  padding: 0;
+  background-size: contain;
+  width: 100%;
+  height: 100%;
+}
+
+@media (min-device-pixel-ratio: 2),
+  (min-resolution: 192dpi),
+  (min-resolution: 2dppx) {
+  .burger-container {
+    background-image: url(../img/shop-list-mob-2x.png);
+    background-size: contain;
+  }
+}
+
+.mobile-menu__header {
+  background-color: var(--background-color-light);
+  border: 1.5px solid #111111;
+  border-radius: 0px 0px 8px 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 64px;
+  padding: 0 20px;
+}
+
+.mobile-menu__button {
+  width: 28px;
+  height: 28px;
+  background-color: transparent;
+  margin-left: 14px;
+}
+
+.mobile-menu__icon {
+  width: 28px;
+  height: 28px;
+  fill: var(--black-color);
+  transition: fill var(--animation);
+}
+
+.mobile-menu__icon:hover {
+  fill: #4f2ee8;
+}
+
+.sign-up-button-burger {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-width: 184px;
+  padding: 13px 14px;
+  margin-top: 20px;
+  margin-left: 20px;
+
+  background: #4f2ee8;
+  border: 1.5px solid #111111;
+  border-radius: 18px;
+  cursor: pointer;
+}
+
+.navigation-burger {
+  display: flex;
+  justify-content: center;
+  margin-top: 126px;
+}
+
+.navigation-burger-shopping-list {
+  display: flex;
+  justify-content: center;
+  margin-top: 183px;
+}
+
+.log-out-button_icon {
+  margin-left: 7px;
+}
+
+/* Media */
+@media screen and (min-width: 375px) {
+  .navigation {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .header-logo-link {
+    margin-right: 40px;
+  }
+
+  .navigation {
+    display: block;
+  }
+
+  .toggle-theme {
+    margin-left: 0;
+  }
+
+  .sign-up-button {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-width: 184px;
+    padding: 13px 14px;
+
+    background: #4f2ee8;
+    border: 1.5px solid #111111;
+    border-radius: 18px;
+    cursor: pointer;
+  }
+
+  .burger-menu {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .navigation {
+    margin-right: 745px;
+  }
+}
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
