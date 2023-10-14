@@ -16,15 +16,23 @@
   margin-bottom: 40px;
 }
 
+.categories-list {
+  height: 228px;
+  width: 335px;
+  overflow-x: auto;
+}
+
 @media screen and (min-width: 768px) {
   .list-container {
     width: 337px;
     height: 472px;
     margin-right: 32px;
+    margin-bottom: 0;
   }
 
-  .list-container {
-    margin-bottom: 0;
+  .categories-list {
+    width: 337px;
+    height: 472px;
   }
 }
 
@@ -34,9 +42,8 @@
     margin-right: 0;
     margin-bottom: 86px;
   }
-}
 
-.categories-list {
-  height: 100%;
-  overflow-x: auto;
+  .categories-list {
+    width: 356px;
+  }
 }
