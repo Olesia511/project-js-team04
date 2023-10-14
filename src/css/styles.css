@@ -21,9 +21,9 @@
 @import url('./sup-ukraine.css');
 @import url('./toggle-menu.css');
 
-
 /*-----    замінити :root   ------------*/
 :root {
+  --background-color-light: #f6f6f6;
   --primary-text-color-light-theme: #111;
   --primary-text-color-dark-theme: #fff;
   --second-black-color-light-theme: rgba(17, 17, 17, 0.6);
