@@ -1,4 +1,4 @@
-import { getCategoryListArr } from './axios';
+import { getCategoryListArr } from './axios-fetch';
 
 const categoriesList = document.querySelector(`.categories-list`);
 

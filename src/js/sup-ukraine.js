@@ -55,51 +55,41 @@ const charities = [
   },
 ];
 
-    const list = document.querySelector('.list');
-    const toggleButton = document.getElementById('toggleButton');
-    const svgIcon = toggleButton.querySelector('svg use');
-    let areItemsVisible = true;
-    let animationState = 0;
-    
-    function toggleItemsVisibility() {
-      list.innerHTML = '';
-    
-      const startIndex = areItemsVisible ? 0 : 3;
-      const endIndex = areItemsVisible ? 6 : 9;
-    
-      charities.slice(startIndex, endIndex).forEach((charity, index) => {
-        const item = document.createElement('li');
-        const link = document.createElement('a');
-        const number = document.createElement('span');
-        const charityNumber = (startIndex + index + 1).toString().padStart(2, '0');
-    
-        number.textContent = charityNumber;
-    
-        const img = document.createElement('img');
-        img.srcset = `${charity.img} 1x, ${charity.img2x} 2x`;
-        img.src = charity.img;
-        img.alt = charity.title;
-        img.classList.add('white-image');
-    
-        link.href = charity.url;
-    
-        number.classList.add('number');
-    
-        link.appendChild(img);
-        item.appendChild(number);
-        item.appendChild(link);
-    
-        list.appendChild(item);
-      });
-    
-      areItemsVisible = !areItemsVisible;
-    
-      animationState = 1 - animationState;
-    
-    
-      svgIcon.setAttribute('href', areItemsVisible ? './img/icon.svg#icon-support-ukr-scroll-up' : './img/icon.svg#icon-support-ukr-scroll-down');
+const list = document.querySelector('.list');
+const toggleButton = document.getElementById('toggleButton');
+const svgIcon = toggleButton.querySelector('svg use');
+let areItemsVisible = true;
+let animationState = 0;
 
-    }
+function toggleItemsVisibility() {
+  list.innerHTML = '';
+
+  const startIndex = areItemsVisible ? 0 : 3;
+  const endIndex = areItemsVisible ? 6 : 9;
+
+  charities.slice(startIndex, endIndex).forEach((charity, index) => {
+    const item = document.createElement('li');
+    const link = document.createElement('a');
+    const number = document.createElement('span');
+    const charityNumber = (startIndex + index + 1).toString().padStart(2, '0');
+
+    number.textContent = charityNumber;
+
+    const img = document.createElement('img');
+    img.srcset = `${charity.img} 1x, ${charity.img2x} 2x`;
+    img.src = charity.img;
+    img.alt = charity.title;
+    img.classList.add('white-image');
+
+    link.href = charity.url;
+
+    number.classList.add('number');
+
+    link.appendChild(img);
+    item.appendChild(number);
+    item.appendChild(link);
+
+    list.appendChild(item);
   });
 
   areItemsVisible = !areItemsVisible;

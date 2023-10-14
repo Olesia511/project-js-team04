@@ -1,4 +1,4 @@
-import './js/axios.js';
+import './js/axios-fetch';
 import './js/book-id';
 import './js/categories-list.js';
 import './js/category-book.js';
