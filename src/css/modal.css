@@ -11,6 +11,11 @@
   overflow: hidden;
 }
 
+.disasble-scroll {
+  position: relative;
+  overflow: hidden;
+  height: 100%;
+}
 .is-hidden {
   visibility: hidden;
   opacity: 0;
@@ -28,18 +33,13 @@
     visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.backdrop.is-hidden .modal {
-  transform: scaleY(0);
-}
-
-@media screen and (min-width: 375px) {
-  .modal {
-    max-width: 335px;
-  }
-}
-
 .modal {
-  margin: 20px auto;
+  max-width: 335px;
+  margin: 20px auto 0 auto;
+  /* position: absolute; */
+  /* top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scaleY(1); */
   padding: 40px 24px;
   transform: scaleY(1);
   width: calc(100% - 10px);
@@ -49,6 +49,10 @@
   background-color: #fff;
   overflow: hidden;
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.backdrop.is-hidden .modal {
+  /* transform: translate(-50%, -50%) scaleY(0); */
+  transform: scaleY(0);
 }
 
 .close-btn-modal {
@@ -84,10 +88,9 @@
 .title-book {
   color: #111;
   margin-top: 14px;
-  font-family: DM Sans;
+  font-family: 'DM Sans';
   font-size: 16px;
-  font-style: normal;
-  font-weight: 700;
+
   line-height: 1.13;
   letter-spacing: -0.64px;
 }
@@ -95,7 +98,7 @@
 .author-book {
   color: #b4afaf;
   margin-top: 4px;
-  font-family: DM Sans;
+  font-family: 'DM Sans';
   font-size: 12px;
   font-style: italic;
   font-weight: 400;
@@ -106,7 +109,7 @@
 .descr-book {
   color: #111;
   margin-top: 18px;
-  font-family: DM Sans;
+  font-family: 'DM Sans';
   font-size: 14px;
   font-style: normal;
   font-weight: 400;
@@ -139,8 +142,7 @@
   filter: grayscale(100%);
 }
 
-.btn-add-local,
-.btn-remove-local {
+.btn-add-local {
   display: block;
   margin: 44px auto 40px auto;
 
@@ -161,12 +163,6 @@
     color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.btn-remove-local:hover,
-.btn-remove-local:focus {
-  background-color: #4f2ee8;
-  color: #fff;
-}
-
 .btn-add-local:hover,
 .btn-add-local:focus {
   background-color: #4f2ee8;
@@ -182,7 +178,6 @@
   font-weight: 400;
   line-height: 1.2;
   letter-spacing: -0.4px;
-  text-align: center;
 }
 
 .text-box {
@@ -209,24 +204,30 @@
   }
 
   .title-book {
-    color: #111;
-    margin-top: 0;
-    font-family: DM Sans;
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: 1.13;
-    letter-spacing: -0.64px;
+    font-size: 24px;
+    margin: 0;
+    line-height: 1.17;
+    letter-spacing: -0.96px;
+  }
+
+  .author-book {
+    font-size: 14px;
+
+    line-height: 1.29;
+    letter-spacing: -0.56px;
   }
 
   .img-book {
-    margin-top: 4px;
+    margin-top: 0;
     width: 192px;
     height: 281px;
   }
 
-  .btn-add-local,
-  .btn-remove-local {
+  .modal-img-list {
+    margin-top: 20px;
+  }
+
+  .btn-add-local {
     min-width: 499px;
     height: 64px;
     font-size: 18px;
@@ -235,14 +236,7 @@
   }
 
   .text-modal {
-    color: rgba(17, 17, 17, 0.5);
-    font-family: 'DM Sans';
-    font-size: 12px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 1.7;
-    letter-spacing: -0.4px;
-    text-align: center;
+    letter-spacing: -0.48px;
   }
 
   .text-box {
@@ -254,9 +248,3 @@
 
 @media screen and (min-width: 1440px) {
 }
-
-/* filter: grayscale(100%) - світла тема, звичайний стан
-filter: drop-shadow(0px 3px 3px rgba(0,0,0,.35)) - світла тема, стан hover
-filter: grayscale(100%) - темна тема, звичаний стан (для Apple Books)
-filter: brightness(0) invert(1) - темна тема, звичайний стан (для Amazon)
-filter: drop-shadow(0px 3px 3px rgba(255, 255, 255, 0.35)) - темна тема, стан hover */
