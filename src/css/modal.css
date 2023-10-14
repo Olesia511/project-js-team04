@@ -199,8 +199,30 @@
     padding: 40px;
   }
 
+  .add-books-backend {
+    display: flex;
+    flex-wrap: wrap;
+  }
   .backend-box {
     display: flex;
+    gap: 24px;
+  }
+
+  .title-book {
+    color: #111;
+    margin-top: 0;
+    font-family: DM Sans;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 1.13;
+    letter-spacing: -0.64px;
+  }
+
+  .img-book {
+    margin-top: 4px;
+    width: 192px;
+    height: 281px;
   }
 
   .btn-add-local,
