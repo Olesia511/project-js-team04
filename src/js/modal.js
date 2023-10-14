@@ -11,6 +11,7 @@ const addLocal = document.querySelector('.add-local');
 const removeLocal = document.querySelector('.remove-local');
 const p = document.querySelector('.text-modal');
 
+
 const DATA_KEY = 'user-books'; // localStorage
 const bookList = JSON.parse(localStorage.getItem(DATA_KEY)) ?? [];
 
@@ -81,6 +82,9 @@ function onClick(evt) {
       let urlAmazon = data.buy_links[0].url;
       let urlShop = data.buy_links[1].url;
 
+     
+
+
 
       containerFromMarcup.innerHTML = marcup(
         imgBook,
@@ -121,22 +125,8 @@ function marcup(imgBook, nameBook, description, author, id, urlAmazon, urlShop) 
                   ./img/shop-logo-amazon.png 1x,
                   ./img/shop-logo-amazon.png 2x
                 "
-                media="(min-width: 1440px)"
               />
-              <source
-                srcset="
-                  ./img/shop-logo-amazon.png 1x,
-                  ./img/shop-logo-amazon.png 2x
-                "
-                media="(min-width: 768px)"
-              />
-              <source
-                srcset="
-                  ./img/shop-logo-amazon.png 1x,
-                  ./img/shop-logo-amazon.png 2x
-                "
-                media="(max-width: 767px)"
-              />
+              
               <img
                 class="img-modal-amazon hover-img"
                 src="./img/shop-logo-amazon.png"
@@ -179,7 +169,7 @@ function onAddLocal(evt) {
   localStorage.setItem(DATA_KEY, JSON.stringify(bookList));
 
  
-  // const bookId = containerFromMarcup.childNodes[1].dataset.book;
+  const bookId = containerFromMarcup.childNodes[1].dataset.book;
   
   //  console.log(bookId);
   // const inStorage = bookList.some(({_id}) => _id === bookId)
@@ -191,35 +181,5 @@ function onAddLocal(evt) {
  
 
 
-  // const bookToRemoveId = parseLocal.find(book => book._id === `${id}`);
-  // console.log('id', bookToRemoveId);
-  // if (bookToRemoveId !== -1) {
-  //   //parseLocal.splice(bookToRemoveId, 1);
-  //   addLocal.hidden = true;
-  //   removeLocal.hidden = false;
-  //   p.hidden = false;
-  //   localStorage.setItem(DATA_KEY, JSON.stringify(parseLocal));
-  // }
 
-  //const bookId = evt.target.closest('.shop-list-item').dataset.id;
-
-  // const bookToRemoveId = parseLocal.findIndex(book => book._id === bookId);
-
-  //     if (bookToRemoveId !== -1) {
-  //       //parseLocal.splice(bookToRemoveId, 1);
-  //       addLocal.hidden = true;
-  //       removeLocal.hidden = false;
-  //       p.hidden = false;
-  //       localStorage.setItem(DATA_KEY, JSON.stringify(parseLocal));
-  //     }
-
-  // modalBtn.addEventListener('click', onRemoveLocal);
-  // function onRemoveLocal() {
-  //     if (removeLocal.textContent) {
-  //         localStorage.removeItem(KEY_BOOK);
-  //         addLocal.hidden = false;
-  //         removeLocal.hidden = true;
-  //         p.hidden = true;
-  //     }
-  // }
 }

@@ -154,8 +154,6 @@
   font-family: 'DM Sans';
   color: #111;
   font-size: 14px;
-  font-style: normal;
-  font-weight: 700;
   line-height: 1.29;
   letter-spacing: -0.14px;
   text-transform: uppercase;
@@ -221,6 +219,13 @@
     margin-top: 0;
     width: 192px;
     height: 281px;
+  }
+
+  .text-modal {
+    font-size: 12px;
+
+    line-height: 1.7;
+    letter-spacing: -0.48px;
   }
 
   .modal-img-list {
