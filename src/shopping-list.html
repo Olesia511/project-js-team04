@@ -23,7 +23,7 @@
     <load ="partials/header.html" />
 
     <main>
-      <div class="shop-list-page">
+      <div class="shop-list-page container">
         <div class="sidebar"></div>
         <section class="shopping-list">
           <h1 class="shop-list-titel">Shopping <span>List</span></h1>
@@ -62,66 +62,7 @@
             </picture>
           </div>
 
-          <ul class="shop-list-list">
-            <li class="shop-list-item">
-              <button type="button" class="delete-btn">
-                <svg class="delete-btn-icon" width="16" height="16">
-                  <use href="./img/icon.svg#icon-shop-list-delete"></use>
-                </svg>
-              </button>
-              <div class="book-cover"></div>
-              <div class="book-info">
-                <h2 class="book-name">Book name</h2>
-                <p class="book-category">Category</p>
-                <p class="book-description js-description">
-                  David Burroughs was once a devoted father to his
-                  three-year-old son Matthew, living a dream life just a short
-                  drive away from the working-class suburb where he and his
-                  wife, Cheryl, first fell in love--until one fateful night when
-                  David woke suddenly to discover Matthew had been murdered
-                  while David was asleep just down the hall.
-                </p>
-                <p class="book-author">Author</p>
-
-                <div class="link-container">
-                  <a class="amazon-icon" href="#">
-                    <picture>
-                      <source
-                        srcset="
-                          ./img/shop-logo-amazon.png    1x,
-                          ./img/shop-logo-amazon-2x.png 2x
-                        "
-                      />
-                      <img
-                        class="amazon-logo"
-                        src="./img/shop-logo-amazon.png"
-                        alt="Amazon"
-                        width="32"
-                        height="11"
-                      />
-                    </picture>
-                  </a>
-                  <a class="apple-icon" href="#">
-                    <picture>
-                      <source
-                        srcset="
-                          ./img/shop-logo.png    1x,
-                          ./img/shop-logo-2x.png 2x
-                        "
-                      />
-                      <img
-                        class="apple-books-logo"
-                        src="./img/shop-logo.png"
-                        alt="Apple Books"
-                        width="16"
-                        height="16"
-                      />
-                    </picture>
-                  </a>
-                </div>
-              </div>
-            </li>
-          </ul>
+          <ul class="shop-list-list"></ul>
         </section>
       </div>
     </main>
