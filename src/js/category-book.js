@@ -1,6 +1,12 @@
-import { getCategoryBook } from './axios';
+const listAddBook = document.querySelector('.container-books-by-category');
 
-// -- const categoryBook буде = тій категорії яку вибере користувач
-const categoryBook = 'Mass Market Monthly';
+listAddBook.addEventListener('click', onClick);
 
-getCategoryBook(categoryBook);
+function onClick(evt) {
+  if (!evt.target.classList.contains('js-target')) {
+    return;
+  }
+  const bookId =
+    evt.target.dataset.bookId ?? evt.target.closest('li').dataset.bookId;
+  console.log('Get BOOK ID ======', bookId);
+}

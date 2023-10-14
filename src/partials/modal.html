@@ -9,12 +9,73 @@
     </button>
     <div class="add-books-backend">
       <!-- for backend -->
+      <div class="img-modal-box">
+        <ul class="modal-img-list">
+          <li>
+            <a href="https://www.amazon.com/dp/1984826395?tag=NYTBSREV-20">
+              <picture>
+                <source
+                  srcset="
+                    ./img/shop-logo-amazon.png 1x,
+                    ./img/shop-logo-amazon.png 2x
+                  "
+                  media="(min-width: 1280px)"
+                />
+                <source
+                  srcset="
+                    ./img/shop-logo-amazon.png 1x,
+                    ./img/shop-logo-amazon.png 2x
+                  "
+                  media="(min-width: 768px)"
+                />
+                <source
+                  srcset="
+                    ./img/shop-logo-amazon.png 1x,
+                    ./img/shop-logo-amazon.png 2x
+                  "
+                  media="(max-width: 767px)"
+                />
+                <img
+                  class="img-modal-amazon hover-img"
+                  src="./img/shop-logo-amazon.png"
+                  alt="link-amazon"
+                />
+              </picture>
+            </a>
+          </li>
+          <li>
+            <a href="">
+              <picture>
+                <source
+                  srcset="./img/shop-logo.png 1x, ./img/shop-logo.png 2x"
+                  media="(min-width: 1280px)"
+                />
+                <source
+                  srcset="./img/shop-logo.png 1x, ./img/shop-logo.png 2x"
+                  media="(min-width: 768px)"
+                />
+                <source
+                  srcset="./img/shop-logo.png 1x, ./img/shop-logo.png 2x"
+                  media="(max-width: 767px)"
+                />
+                <img
+                  class="img-modal-bookshop hover-img"
+                  src="./img/shop-logo.png"
+                  alt="link-amazon"
+                />
+              </picture>
+            </a>
+          </li>
+        </ul>
+      </div>
     </div>
-    <button class="modal-btn" type="button">
-      add to shopping list<span></span>
+
+    <button class="modal-btn-add-local" type="button">
+      <span class="first-text-btn">add to shopping list</span
+      ><span class="second-text-btn" hidden>remove from the shopping list</span>
     </button>
     <div class="text-box">
-      <p class="text-modal">
+      <p class="text-modal" hidden>
         Сongratulations! You have added the book to the shopping list. To
         delete, press the button “Remove from the shopping list”.
       </p>
