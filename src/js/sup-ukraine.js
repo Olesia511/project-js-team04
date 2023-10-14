@@ -1,4 +1,3 @@
-import 'animate.css';
 const charities = [
 
     {
@@ -94,12 +93,6 @@ const charities = [
         item.appendChild(link);
     
         list.appendChild(item);
-    
-        if (animationState === 0) {
-          item.classList.add('animate__animated', 'animate__bounceInDown');
-        } else {
-          item.classList.add('animate__animated', 'animate__bounceInUp');
-        }
       });
     
       areItemsVisible = !areItemsVisible;
