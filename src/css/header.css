@@ -1,4 +1,4 @@
-.head-container {
+.header-container {
   display: block;
   max-width: 335px;
   height: 64px;
@@ -7,14 +7,14 @@
 }
 
 @media screen and (min-width: 768px) {
-  .head-container {
+  .header-container {
     max-width: 704px;
     height: 72px;
   }
 }
 
 @media screen and (min-width: 1440px) {
-  .head-container {
+  .header-container {
     max-width: 1392px;
   }
 }
