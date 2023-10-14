@@ -153,7 +153,7 @@ const parsedLocalData = JSON.parse(localStorage.getItem(DATA_KEY));
 
 //     };
 
-shopListMarkup(parsedLocalData);
+// shopListMarkup(parsedLocalData);
 
 // ----------- Delete book from LS (Button) -----------
 
