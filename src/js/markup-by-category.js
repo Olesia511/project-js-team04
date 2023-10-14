@@ -2,15 +2,18 @@ import { getCategoryBook, getBooks } from './axios-fetch';
 
 // -- const categoryBook буде = тій категорії яку вибере користувач // let categoryBook = "";
 const categoryBook = 'Hardcover Fiction';
+// const categoryBook = 'Mass Market Monthly';
 const title = document.querySelector('.title-category');
-const categoryBookFetch = getCategoryBook(categoryBook);
+// const categoryBookFetch = getCategoryBook(categoryBook);
 
-getBooks(categoryBookFetch)
-  .then(res => {
-    console.log(`Get book by category`, res);
-    markUpByCategory(res);
-  })
-  .catch(rej => console.log(rej));
+function bookRequest(categoryBookFetch) {
+  getBooks(categoryBookFetch)
+    .then(res => {
+      console.log(`Get book by category`, res);
+      markUpByCategory(res);
+    })
+    .catch(rej => console.log(rej));
+}
 
 function markUpByCategory(array) {
   const list = document.querySelector('.list-books-by-category');
@@ -31,8 +34,12 @@ function markUpByCategory(array) {
 
   updateTitleLastWordColor(title, categoryBook);
 
-  // const element = document.querySelector('.name-books-by-category');
-  // trimText(element);
+  const titleElements = document.querySelectorAll('.name-books-by-category');
+  titleElements.forEach(titleElement => {
+    trimText(titleElement);
+  });
+
+  trimTitleText();
 
   return markup;
 }
@@ -59,44 +66,71 @@ function updateTitleLastWordColor(title, categoryBook) {
   title.innerHTML = updatedTitle;
 }
 
-// function textReduction(element) {
-//   const text = element.textContent;
-//   const words = text.split(' ');
-//   let maxWords;
+function trimText() {
+  const windowWidth = window.innerWidth;
+  let maxCharacters;
 
-//   if (window.innerWidth < 768) {
-//     maxWords = 4;
-//   } else {
-//     maxWords = 2;
-//   }
+  if (windowWidth >= 768) {
+    maxCharacters = 19;
+  } else {
+    maxCharacters = 31;
+  }
 
-//   if (words.length > maxWords) {
-//     const reducedText = words.slice(0, maxWords).join(' ');
-//     element.textContent = reducedText + '...';
-//   }
-// }
+  const titleElements = document.querySelectorAll('.name-books-by-category');
 
-// function trimText(element) {
-//   const windowWidth = window.innerWidth;
+  titleElements.forEach(titleElement => {
+    let text = titleElement.textContent;
+    if (text.length > maxCharacters) {
+      const words = text.split(' ');
+      let resultText = '';
 
-//   let maxCharacters;
-//   if (windowWidth >= 768) {
-//     maxCharacters = 11;
-//   } else {
-//     maxCharacters = 22;
-//   }
+      for (const word of words) {
+        if (resultText.length + word.length <= maxCharacters) {
+          resultText += (resultText === '' ? '' : ' ') + word;
+        } else {
+          break;
+        }
+      }
 
-//   const text = element.textContent;
-//   if (text.length > maxCharacters) {
-//     element.textContent = text.slice(0, maxCharacters) + '...';
-//   }
-// }
-// const element = document.querySelector('.name-books-by-category');
-// trimText(element);
+      titleElement.textContent =
+        resultText + (resultText.length < text.length ? '...' : '');
+    }
+  });
+}
+
+function trimTitleText() {
+  const windowWidth = window.innerWidth;
+  let maxCharacters;
+  let maxWords;
+
+  if (windowWidth >= 768) {
+    maxCharacters = 32;
+    maxWords = 5;
+  } else {
+    maxCharacters = 45;
+    maxWords = 8;
+  }
+
+  const titleElements = document.querySelectorAll('.title-books-by-category');
+
+  titleElements.forEach(titleElement => {
+    const text = titleElement.textContent;
+    const words = text.split(' ');
+
+    if (words.length > maxWords || text.length > maxCharacters) {
+      const trimmedWords = words.slice(0, maxWords).join(' ');
+      titleElement.textContent = `${trimmedWords}${
+        words.length > maxWords ? '...' : ''
+      }`;
+    }
+  });
+}
 
 export {
   getCategoryBook,
   getBooks,
   markUpByCategory,
   updateTitleLastWordColor,
+  bookRequest,
+  trimText,
 };

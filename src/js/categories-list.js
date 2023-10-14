@@ -1,4 +1,12 @@
 import { getCategoryListArr } from './axios-fetch';
+import {
+  getCategoryBook,
+  getBooks,
+  markUpByCategory,
+  updateTitleLastWordColor,
+  bookRequest,
+} from './markup-by-category.js';
+import { createMarkupBestBooks, getTopBooksArr } from './top-books';
 
 const categoriesList = document.querySelector(`.categories-list`);
 
@@ -19,23 +27,17 @@ getCategoryListArr()
     categoriesList.insertAdjacentHTML(`beforeend`, html);
     console.log(`getCategoryListArr`, res);
     const firstElementList = categoriesList.firstChild;
-    const firstText = firstElementList.textContent;
-    // console.log('firstElementList', firstElementList.classList);
+
     curentCategory = firstElementList;
     console.log(curentCategory);
 
     addCurrent();
-    // const upperCaseText = firstText.toUpperCase();
-
-    // firstElementList.textContent = upperCaseText;
-    // firstElementList.style.color = 'var(--violet-color)';
   })
   .catch(rej => console.log(`rej`, rej));
 
 categoriesList.addEventListener(`click`, categotySelect);
 
 function categotySelect(evt) {
-  console.log(evt.currentTarget);
   if (evt.target === curentCategory) {
     return;
   } else if (evt.target === evt.currentTarget) {
@@ -43,9 +45,10 @@ function categotySelect(evt) {
   } else if (evt.target === categoriesList.firstChild) {
   }
   removeCurrent();
-
+  const categoryName = evt.target.textContent;
+  console.log(categoryName);
+  bookRequest(categoryName);
   curentCategory = evt.target;
-  console.log(curentCategory);
   curentCategory.classList.add(`active-list-item`);
 }
 
