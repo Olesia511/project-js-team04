@@ -5,20 +5,20 @@ const DATA_KEY = 'user-books';
 
 // ----------- Make Description shorter for mob and tabl -----------
 
-function handleResize() {
-  const description = document.querySelector('.js-description');
-  const descriptionLarge = description.textContent;
+// function handleResize() {
+//   const description = document.querySelector('.js-description');
+//   const descriptionLarge = description.textContent;
 
-  if (window.innerWidth < 768) {
-    const descriptionShirt = descriptionLarge.slice(0, 86) + '…';
-    description.textContent = descriptionShirt;
-  } else if (window.innerWidth >= 768 && window.innerWidth < 1440) {
-    const descriptionShirt = descriptionLarge.slice(0, 253) + '…';
-    description.textContent = descriptionShirt;
-  } else {
-    description.textContent = descriptionLarge;
-  }
-}
+//   if (window.innerWidth < 768) {
+//     const descriptionShirt = descriptionLarge.slice(0, 86) + '…';
+//     description.textContent = descriptionShirt;
+//   } else if (window.innerWidth >= 768 && window.innerWidth < 1440) {
+//     const descriptionShirt = descriptionLarge.slice(0, 253) + '…';
+//     description.textContent = descriptionShirt;
+//   } else {
+//     description.textContent = descriptionLarge;
+//   }
+// }
 
 //! ----------- Make fake Data to LS -----------
 // const books = [{"_id": "642fd89ac8cf5ee957f12360"},
@@ -83,7 +83,7 @@ function handleResize() {
 
 // ----------- Get data from LS and make markup -----------
 
-const parsedLocalData = JSON.parse(localStorage.getItem(DATA_KEY));
+// const parsedLocalData = JSON.parse(localStorage.getItem(DATA_KEY));
 
 // function shopListMarkup(arr) {
 //   const markup = arr.map(({ buy_links="null", amazon_product_url="null", book_image="null", title="null", list_name="null", description="null", author, _id="null" }) => {
@@ -157,13 +157,13 @@ const parsedLocalData = JSON.parse(localStorage.getItem(DATA_KEY));
 
 // ----------- Delete book from LS (Button) -----------
 
-function onDelete(evt) {
-  const bookId = evt.target.closest('.shop-list-item').dataset.id;
+// function onDelete(evt) {
+//   const bookId = evt.target.closest('.shop-list-item').dataset.id;
 
-  const bookToRemoveId = parsedLocalData.findIndex(book => book._id === bookId);
+//   const bookToRemoveId = parsedLocalData.findIndex(book => book._id === bookId);
 
-  if (bookToRemoveId !== -1) {
-    parsedLocalData.splice(bookToRemoveId, 1);
-    localStorage.setItem(DATA_KEY, JSON.stringify(parsedLocalData));
-  }
-}
+//   if (bookToRemoveId !== -1) {
+//     parsedLocalData.splice(bookToRemoveId, 1);
+//     localStorage.setItem(DATA_KEY, JSON.stringify(parsedLocalData));
+//   }
+// }
