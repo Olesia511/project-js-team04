@@ -76,6 +76,44 @@
   stroke: #4f2ee8;
 }
 
+.img-book {
+  margin-top: 4px;
+  width: 287px;
+  height: 408px;
+}
+.title-book {
+  color: #111;
+  margin-top: 14px;
+  font-family: DM Sans;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 1.13;
+  letter-spacing: -0.64px;
+}
+
+.author-book {
+  color: #b4afaf;
+  margin-top: 4px;
+  font-family: DM Sans;
+  font-size: 12px;
+  font-style: italic;
+  font-weight: 400;
+  line-height: 1.17;
+  letter-spacing: -0.48px;
+}
+
+.descr-book {
+  color: #111;
+  margin-top: 18px;
+  font-family: DM Sans;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.29;
+  letter-spacing: -0.56px;
+}
+
 .modal-img-list {
   display: flex;
   gap: 20px;
@@ -101,7 +139,8 @@
   filter: grayscale(100%);
 }
 
-.modal-btn-add-local {
+.btn-add-local,
+.btn-remove-local {
   display: block;
   margin: 44px auto 40px auto;
 
@@ -122,8 +161,14 @@
     color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.modal-btn:hover,
-.modal-btn:focus {
+.btn-remove-local:hover,
+.btn-remove-local:focus {
+  background-color: #4f2ee8;
+  color: #fff;
+}
+
+.btn-add-local:hover,
+.btn-add-local:focus {
   background-color: #4f2ee8;
   color: #fff;
 }
@@ -154,7 +199,12 @@
     padding: 40px;
   }
 
-  .modal-btn {
+  .backend-box {
+    display: flex;
+  }
+
+  .btn-add-local,
+  .btn-remove-local {
     min-width: 499px;
     height: 64px;
     font-size: 18px;
