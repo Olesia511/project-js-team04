@@ -2,11 +2,25 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bookshelf</title>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/2.0.0/modern-normalize.min.css"
+      integrity="sha512-4xo8blKMVCiXpTaLzQSLSw3KFOVPWhm/TRtuPVc4WG6kUgjH6J03IBuG7JZPkcWMxJ5huwaBpOpnwYElP/m6wg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
     <link rel="stylesheet" href="./css/styles.css" />
-    <title>Page 2</title>
+
+    <script type="module" src="/main.js"></script>
+    <script type="module" src="./js/shopping-list.js"></script>
   </head>
+
   <body>
     <section>
       <a href="./index.html">Home</a>
@@ -16,7 +30,7 @@
     <load ="partials/header.html" />
 
     <main>
-      <div class="shop-list-page">
+      <div class="shop-list-page container">
         <div class="sidebar"></div>
         <section class="shopping-list">
           <h1 class="shop-list-titel">Shopping <span>List</span></h1>
@@ -55,64 +69,14 @@
             </picture>
           </div>
 
-          <ul class="shop-list-list">
-            <li class="shop-list-item">
-              <button type="button" class="delete-btn">
-                <svg class="delete-btn-icon" width="16" height="16">
-                  <use href="./img/icon.svg#icon-shop-list-delete"></use>
-                </svg>
-              </button>
-              <div class="book-cover"></div>
-              <div class="book-info">
-                <h2 class="book-name">Book name</h2>
-                <p class="book-category">Category</p>
-                <p class="book-description">Description.</p>
-                <p class="book-author">Author</p>
-
-                <div class="link-container">
-                  <a class="amazon-icon" href="#">
-                    <picture>
-                      <source
-                        srcset="
-                          ./img/shop-logo-amazon.png    1x,
-                          ./img/shop-logo-amazon-2x.png 2x
-                        "
-                      />
-                      <img
-                        class="amazon-logo"
-                        src="./img/shop-logo-amazon.png"
-                        alt="Amazon"
-                        width="32"
-                        height="11"
-                      />
-                    </picture>
-                  </a>
-                  <a class="apple-icon" href="#">
-                    <picture>
-                      <source
-                        srcset="
-                          ./img/shop-logo.png    1x,
-                          ./img/shop-logo-2x.png 2x
-                        "
-                      />
-                      <img
-                        class="apple-books-logo"
-                        src="./img/shop-logo.png"
-                        alt="Apple Books"
-                        width="16"
-                        height="16"
-                      />
-                    </picture>
-                  </a>
-                </div>
-              </div>
-            </li>
-          </ul>
+          <ul class="shop-list-list"></ul>
         </section>
       </div>
     </main>
 
     <!------    Modal    ------->
     <load ="partials/modal.html" />
+
+    <!------    Script    ------->
   </body>
 </html>

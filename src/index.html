@@ -16,25 +16,41 @@
     />
 
     <link rel="stylesheet" href="./css/styles.css" />
-  </head>
-  <body>
-    <link rel="stylesheet" href="./shopping-list.html" />
-    <div><a href="./shopping-list.html">Shopping-list</a></div>
-
-    <h1>Hello team</h1>
-
-    <!------       ------->
-    <load ="partials/book-id.html" />
-    <load ="partials/categories-list.html" />
-    <load ="partials/category-book.html" />
-    <load ="partials/create-markup.html" />
-    <load ="partials/header.html" />
-    <load ="partials/home.html" />
-    <load ="partials/markup-by-category.html" />
-    <load ="partials/mobile-menu.html" />
-    <load ="partials/modal.html" />
-    <load ="partials/top-books.html" />
 
     <script type="module" src="/main.js"></script>
+  </head>
+
+  <body>
+    <section>
+      <a href="./shopping-list.html">SHOPPING LIST</a>
+    </section>
+    <!------    Header    ------->
+
+    <main>
+      <div>
+        <load ="partials/header.html" />
+      </div>
+
+      <div class="container-basic container">
+        <div class="container-categories-support">
+          <load ="partials/categories-list.html" />
+          <load ="partials/sup-ukraine.html" />
+        </div>
+
+        <!------       ------->
+        <load ="partials/home.html" />
+        <load ="partials/markup-by-category.html" />
+        <load ="partials/mobile-menu.html" />
+
+        <load ="partials/top-books.html" />
+
+        <load ="partials/book-id.html" />
+
+        <load ="partials/category-book.html" />
+        <load ="partials/create-markup.html" />
+      </div>
+      <load ="partials/modal.html" />
+    </main>
+    <body></body>
   </body>
 </html>

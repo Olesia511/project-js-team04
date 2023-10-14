@@ -1,5 +1,3 @@
-<button class="modal-open" type="button">modal</button>
-
 <div class="backdrop js-backdrop is-hidden" js-backdrop>
   <div class="modal">
     <button class="close-btn-modal" type="button">
@@ -7,14 +5,20 @@
         <use href="./img/icon.svg#icon-x-close"></use>
       </svg>
     </button>
+
     <div class="add-books-backend">
       <!-- for backend -->
     </div>
-    <button class="modal-btn" type="button">
-      add to shopping list<span></span>
+
+    <button class="btn-add-local js-btn-local" type="button">
+      <span class="add-local js-btn-local" hidden>add to shopping list</span>
+      <span class="remove-local js-btn-local" hidden
+        >remove from the shopping list</span
+      >
     </button>
+
     <div class="text-box">
-      <p class="text-modal">
+      <p class="text-modal" hidden>
         Сongratulations! You have added the book to the shopping list. To
         delete, press the button “Remove from the shopping list”.
       </p>
