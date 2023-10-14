@@ -1,18 +1,11 @@
 import { getCategoryBook, getBooks } from './axios';
 
-// -- const categoryBook буде = тій категорії яку вибере користувач
-const categoryBook = 'Mass Market Monthly';
+// -- const categoryBook буде = тій категорії яку вибере користувач // let categoryBook = "";
+const categoryBook = 'Hardcover Fiction';
+
 const title = document.querySelector('.title-category');
-// console.log('111', title.textContent);
-// const text = categoryBook.split(' ').lenght;
-// const lenght = categoryBook.lenght;
-// console.log('1111', text);
-// // const lastWorld = text[text.lenght - 1];
-// console.log('11', lastWorld);
 const categoryBookFetch = getCategoryBook(categoryBook);
-// console.log(`categoryBookFetch`, categoryBookFetch);
-// console.log((title.textContent = categoryBook));
-// textContent на назву категорії
+
 getBooks(categoryBookFetch)
   .then(res => {
     console.log(`Get book by category`, res);
@@ -35,5 +28,28 @@ function markUpByCategory(array) {
     .join('');
   list.innerHTML = markup;
   title.textContent = categoryBook;
+  updateTitleLastWordColor(title, categoryBook);
   return markup;
+}
+
+function updateTitleLastWordColor(title, categoryBook) {
+  const words = categoryBook.split(' ');
+  // console.log('h2', words);
+  const lastWord = words[words.length - 1];
+  // console.log('lastWord', lastWord);
+  let updatedTitle = '';
+
+  words.forEach(word => {
+    if (updatedTitle !== '') {
+      updatedTitle += ' ';
+    }
+
+    if (word === words[words.length - 1]) {
+      updatedTitle += `<span class="title-category-part">${word}</span>`;
+    } else {
+      updatedTitle += word;
+    }
+  });
+
+  title.innerHTML = updatedTitle;
 }
