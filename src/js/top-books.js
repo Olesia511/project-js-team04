@@ -29,3 +29,4 @@ function createMarkupBestBooks(book) {
 </ul>`;
   return booksMarkup;
 }
+export { createMarkupBestBooks, getTopBooksArr };
