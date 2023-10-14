@@ -9,6 +9,6 @@ import './js/markup-by-category.js';
 import './js/mobile-menu.js';
 import './js/modal.js';
 import './js/top-books';
-import './js/shopping-list.js';
+// import './js/shopping-list.js';
 import './js/sup-ukraine.js';
 import './js/firebase.js';
