@@ -77,12 +77,13 @@
 }
 
 .img-book {
+  margin-top: 4px;
   width: 287px;
   height: 408px;
 }
 .title-book {
   color: #111;
-
+  margin-top: 14px;
   font-family: DM Sans;
   font-size: 16px;
   font-style: normal;
@@ -93,7 +94,7 @@
 
 .author-book {
   color: #b4afaf;
-
+  margin-top: 4px;
   font-family: DM Sans;
   font-size: 12px;
   font-style: italic;
@@ -104,7 +105,7 @@
 
 .descr-book {
   color: #111;
-
+  margin-top: 18px;
   font-family: DM Sans;
   font-size: 14px;
   font-style: normal;
@@ -196,6 +197,10 @@
     min-height: 465px;
     transform: scaleY(1);
     padding: 40px;
+  }
+
+  .backend-box {
+    display: flex;
   }
 
   .btn-add-local,
