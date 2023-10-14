@@ -10,7 +10,7 @@ const addLocal = document.querySelector('.add-local');
 const removeLocal = document.querySelector('.remove-local');
 const p = document.querySelector('.text-modal');
 
-const KEY_BOOK = 'user-books'; // localStorage
+const DATA_KEY = 'user-books'; // localStorage
 const bookList = [
     {
     "_id": "643282b1e85766588626a089",
@@ -70,9 +70,7 @@ const bookList = [
 }
 ];
 
-function findId() {
-   
-}
+
 
 
 
@@ -109,11 +107,21 @@ const listTopBook = document.querySelector('.container-best-books');
 listAddBook.addEventListener('click', onClick);
 //listTopBook.addEventListener('click', onClick);
 
-
+const savedLokal = localStorage.getItem(DATA_KEY);
+const parseLocal = JSON.parse(savedLokal);
+   if (!parseLocal) {
+        addLocal.hidden = false;
+        removeLocal.hidden = true;
+    } else {
+    addLocal.hidden = true;
+    removeLocal.hidden = false;
+};
+modalBtn.addEventListener('click', onAddLocal);
 function onClick(evt) {
 
     backdrop.classList.remove('is-hidden')
-    window.addEventListener('keydown', onEscKeyPress);
+  window.addEventListener('keydown', onEscKeyPress);
+  
 
   if (!evt.target.classList.contains('js-target')) {
     return;
@@ -127,19 +135,21 @@ function onClick(evt) {
             let imgBook = data.book_image;
             let nameBook = data.title;
             let description = data.description;
-            let author = data.author
+          let author = data.author;
+          let id = data._id;
 
-            containerFromMarcup.innerHTML = marcup(imgBook, nameBook, description, author);
+            containerFromMarcup.innerHTML = marcup(imgBook, nameBook, description, author, id);
             
-            console.log(data);
-
-
-            
-        })
-        .catch(rej => console.log(rej));
+          console.log('###', data);
+          
+          console.log('***', id);
+})
+    .catch(rej => console.log(rej));
+  
+  
 }
 
-function marcup(imgBook, nameBook, description, author)
+function marcup(imgBook, nameBook, description, author, id)
         {
       
     return  `
@@ -149,55 +159,99 @@ function marcup(imgBook, nameBook, description, author)
  <h2 class="title-book">${nameBook}</h2>
  <h4 class="author-book">${author}</h4>
  <p class="descr-book">${description}</p>
+ <ul class="modal-img-list">
+        <li>
+          <a href="">
+            <picture>
+              <source
+                srcset="
+                  ./img/shop-logo-amazon.png 1x,
+                  ./img/shop-logo-amazon.png 2x
+                "
+                media="(min-width: 1440px)"
+              />
+              <source
+                srcset="
+                  ./img/shop-logo-amazon.png 1x,
+                  ./img/shop-logo-amazon.png 2x
+                "
+                media="(min-width: 768px)"
+              />
+              <source
+                srcset="
+                  ./img/shop-logo-amazon.png 1x,
+                  ./img/shop-logo-amazon.png 2x
+                "
+                media="(max-width: 767px)"
+              />
+              <img
+                class="img-modal-amazon hover-img"
+                src="./img/shop-logo-amazon.png"
+                alt="link-amazon"
+              />
+            </picture>
+          </a>
+        </li>
+        <li>
+          <a href="">
+            <picture>
+              
+              <source
+                srcset="./img/shop-logo.png 1x, ./img/shop-logo.png 2x"
+              />
+              <img
+                class="img-modal-bookshop hover-img"
+                src="./img/shop-logo.png"
+                alt="link-amazon"
+              />
+            </picture>
+          </a>
+        </li>
+      </ul>
  </div>
- </div>`;
+ </div>
+  `;
 }
 
   //------ Local Storage -----//
 
-modalBtn.addEventListener('click', onAddLocal);
 
-//   let imgBook = res[0].book_image;
-//   let nameBook = res[0].list_name;
-//   let description = res[0].description;
-//   let author = res[0].author
 
-const savedLokal = localStorage.getItem(KEY_BOOK);
-const parseLocal = JSON.parse(savedLokal);
-   if (!parseLocal) {
-        addLocal.hidden = false;
-        removeLocal.hidden = true;
-    } else {
-    addLocal.hidden = true;
-    removeLocal.hidden = false;
-};
+function onAddLocal(evt) {
+    console.log('btn',  evt.target);
+            //const bookToRemoveId = parseLocal.find(book => book._id === `${id}`);
+            //console.log('id', bookToRemoveId);
+      // if (bookToRemoveId !== -1) {
+      //   //parseLocal.splice(bookToRemoveId, 1);
+      //   addLocal.hidden = true;
+      //   removeLocal.hidden = false;
+      //   p.hidden = false;
+      //   localStorage.setItem(DATA_KEY, JSON.stringify(parseLocal));
+      // }
 
-    function onAddLocal(evt) {
-    console.log('qwe', evt.target);
-    const textBtn = evt.target.classList.contains('js-btn-local');
+  //const bookId = evt.target.closest('.shop-list-item').dataset.id;
 
-    if (!textBtn) {
-        return;
-    }
-    if (addLocal.textContent) {
-       
-        localStorage.setItem(KEY_BOOK, JSON.stringify(bookList));
-        addLocal.hidden = true;
-        removeLocal.hidden = false;
-        p.hidden = false;
-            
-    }
+  // const bookToRemoveId = parseLocal.findIndex(book => book._id === bookId);
+
+  //     if (bookToRemoveId !== -1) {
+  //       //parseLocal.splice(bookToRemoveId, 1);
+  //       addLocal.hidden = true;
+  //       removeLocal.hidden = false;
+  //       p.hidden = false;
+  //       localStorage.setItem(DATA_KEY, JSON.stringify(parseLocal));
+  //     }
+
         
     
-    modalBtn.addEventListener('click', onRemoveLocal);
-    function onRemoveLocal() {
-        if (removeLocal.textContent) {
-            localStorage.removeItem(KEY_BOOK);
-            addLocal.hidden = false;
-            removeLocal.hidden = true;
-            p.hidden = true;
-        }
-    }
+    // modalBtn.addEventListener('click', onRemoveLocal);
+    // function onRemoveLocal() {
+    //     if (removeLocal.textContent) {
+    //         localStorage.removeItem(KEY_BOOK);
+    //         addLocal.hidden = false;
+    //         removeLocal.hidden = true;
+    //         p.hidden = true;
+    //     }
+    // }
     
 }
 
