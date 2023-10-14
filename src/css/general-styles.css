@@ -5,8 +5,14 @@ html {
 body {
   font-family: 'DM Sans', sans-serif;
   font-weight: 400;
+  background-color: var(--background-color-light);
+  color: var(--primary-text-color-light-theme);
 }
 
+body .dark {
+  background-color: var(--black-color);
+  color: var(--primary-text-color-dark-theme);
+}
 .container {
   max-width: 375px;
   padding-left: 20px;
@@ -15,11 +21,39 @@ body {
   margin-right: auto;
 }
 
+.container-basic {
+  max-width: 335px;
+  margin-top: 40px;
+  margin-bottom: 80px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.container-categories-support {
+  max-width: 335px;
+  margin-bottom: 40px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+
 @media screen and (min-width: 768px) {
   .container {
     max-width: 768px;
     padding-left: 32px;
     padding-right: 32px;
+  }
+
+  .container-basic {
+    max-width: 704px;
+    margin-bottom: 100px;
+  }
+
+  .container-categories-support {
+    flex-wrap: nowrap;
+    max-width: 704px;
+    height: 474px;
+    margin-bottom: 100px;
   }
 }
 
@@ -28,5 +62,18 @@ body {
     max-width: 1440px;
     padding-left: 24px;
     padding-right: 24px;
+  }
+
+  .container-basic {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1392px;
+  }
+
+  .container-categories-support {
+    max-width: 356px;
+    height: 100%;
+    flex-wrap: wrap;
+    margin-right: 40px;
   }
 }

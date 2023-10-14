@@ -1,96 +1,109 @@
 img {
-    display: inline-block;
+  display: inline-block;
 }
-.charities-section{
-    width: 335px;
-    border-radius: 16px;
-    background: radial-gradient(189.32% 190.93% at 59.76% -23.42%, #4F2EE8 18.03%, #FFF 100%);
-    box-shadow: 0px 10px 10px 0px rgba(245, 245, 247, 0.10);
-    margin: 0px;
+.charities-section {
+  max-width: 335px;
+  height: 460px;
+  border-radius: 16px;
+  background: radial-gradient(
+    189.32% 190.93% at 59.76% -23.42%,
+    #4f2ee8 18.03%,
+    #fff 100%
+  );
+  box-shadow: 0px 10px 10px 0px rgba(245, 245, 247, 0.1);
+}
+@media screen and (min-width: 768px) {
+  .charities-section {
+    height: 474px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .charities-section {
+    max-width: 356px;
+  }
 }
 
 .hidden-charities {
-    display: none;
-    flex-direction: column;
-    align-items: center;
+  display: none;
+  flex-direction: column;
+  align-items: center;
 }
 
 .show-hidden .hidden-charities {
-    display: flex;
-    animation: slide-in 0.5s ease-in-out;
+  display: flex;
+  animation: slide-in 0.5s ease-in-out;
 }
 
 @keyframes slide-in {
-    from {
-        transform: translateY(100%);
-        opacity: 0;
-    }
-    to {
-        transform: translateY(0);
-        opacity: 1;
-    }
+  from {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }
 
 .sup-ukraine-head {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    
-    padding-left: 40px;
-    padding-right: 100px;
-    padding-top: 24px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  padding-left: 40px;
+  padding-right: 100px;
+  padding-top: 24px;
 }
 .sup-ukraine-title {
-    color: #FFF;
-    font-family: "DM Sans";
-    font-size: 22px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: 24px; 
-    letter-spacing: -0.88px;
-    
+  color: #fff;
+  font-family: 'DM Sans';
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 24px;
+  letter-spacing: -0.88px;
 }
 .sup-ukraine-gerb {
-    fill: #FFF;
+  fill: #fff;
 }
 .sup-list {
-    color: #FFF;
-font-family: "DM Sans";
-font-size: 14px;
-font-style: normal;
-font-weight: 400;
-line-height: 18px;
-letter-spacing: -0.56px;
+  color: #fff;
+  font-family: 'DM Sans';
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 18px;
+  letter-spacing: -0.56px;
 
-padding-left: 40px;
-padding-top: 40px;
-
+  padding-left: 40px;
+  padding-top: 40px;
 }
 .sup-list li {
-    display: flex;
-    align-items: center;
-    gap: 16px;
-    column-gap: 20px;
-    margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  column-gap: 20px;
+  margin-bottom: 20px;
 }
 .white-image {
-    filter: brightness(0) invert(1);
-  }
+  filter: brightness(0) invert(1);
+}
 .button-sup {
-width: 32px;
-height: 32px;
-border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
 
-display: flex;
-align-items: center;
+  display: flex;
+  align-items: center;
 
-border: none;
-fill: #4F2EE8;
+  border: none;
+  fill: #4f2ee8;
 
-margin-right: 151px;
-margin-left: 152px;
+  margin-right: 151px;
+  margin-left: 152px;
 }
 
 .place-holder {
-    padding-bottom: 20px
+  padding-bottom: 20px;
 }

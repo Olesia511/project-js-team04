@@ -10,7 +10,33 @@
 .list-categories-item:focus {
 }
 
-.categories-list {
+.list-container {
   height: 228px;
+  width: 335px;
+  margin-bottom: 40px;
+}
+
+@media screen and (min-width: 768px) {
+  .list-container {
+    width: 337px;
+    height: 472px;
+    margin-right: 32px;
+  }
+
+  .list-container {
+    margin-bottom: 0;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .list-container {
+    width: 356px;
+    margin-right: 0;
+    margin-bottom: 86px;
+  }
+}
+
+.categories-list {
+  height: 100%;
   overflow-x: auto;
 }
