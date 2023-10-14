@@ -1,4 +1,3 @@
-
 import { getBooksById } from './axios';
 
 //const modal = document.querySelector('.modal');
@@ -29,7 +28,7 @@ const bookList = [
     "contributor": "by James Patterson and J.D. Barker",
     "contributor_note": "",
     "created_date": "2023-04-05 23:10:15",
-    "description": "Detective Walter O’Brien is obsessed with an escape artist who bludgeoned her kidnapper and avoided police custody.",
+    "description": "Detective Walter O'Brien is obsessed with an escape artist who bludgeoned her kidnapper and avoided police custody.",
     "first_chapter_link": "",
     "price": "0.00",
     "primary_isbn10": "1538753081",
@@ -86,23 +85,20 @@ modalClose.addEventListener('click', onCloseModal);
 window.addEventListener('keydown', onEscKeyPress);
 
 function onCloseModal() {
-    
-    backdrop.classList.add('is-hidden');
-    window.removeEventListener('keydown', onEscKeyPress);
+  backdrop.classList.add('is-hidden');
+  window.removeEventListener('keydown', onEscKeyPress);
 }
 
 function onBackdropClick(e) {
-    if (e.currentTarget === e.target) {
-        onCloseModal();
-    }
+  if (e.currentTarget === e.target) {
+    onCloseModal();
+  }
 }
 
 function onEscKeyPress(e) {
-    
-    if (e.code === 'Escape') {
-        onCloseModal();
-    }
-    
+  if (e.code === 'Escape') {
+    onCloseModal();
+  }
 }
 
 // ------- add Id Books ---- //
@@ -161,6 +157,10 @@ function marcup(imgBook, nameBook, description, author)
 
 modalBtn.addEventListener('click', onAddLocal);
 
+//   let imgBook = res[0].book_image;
+//   let nameBook = res[0].list_name;
+//   let description = res[0].description;
+//   let author = res[0].author
 
 const savedLokal = localStorage.getItem(KEY_BOOK);
 const parseLocal = JSON.parse(savedLokal);

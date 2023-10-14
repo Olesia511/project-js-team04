@@ -1,15 +1,32 @@
-/* .container-books-by-category {
+.container-books-by-category {
   width: 335px;
+}
+
+.title-category {
+  color: var(--primary-text-color-light-theme);
+  font-family: DM Sans;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 1.19;
+  letter-spacing: -1.28px;
+  margin-bottom: 40px;
+}
+
+.title-category .dark {
+  color: var(--primary-text-color-dark-theme);
 }
 
 .list-books-by-category {
   width: 335px;
   display: flex;
   flex-wrap: wrap;
-  margin-top: 40px;
-  margin-left: 20px;
-  margin-right: 20px;
 }
+
+.list-books-by-category > :last-child {
+  margin-bottom: 0;
+}
+
 .element-books-by-category {
   display: flex;
   width: 335px;
@@ -19,10 +36,11 @@
   margin-bottom: 40px;
 }
 
-.img-container {
+.img-books-by-category {
   width: 335px;
   height: 485px;
   border-radius: 8px;
+  border: none;
 }
 .title-container {
   font-family: DM Sans;
@@ -31,7 +49,7 @@
   gap: 4px;
 }
 .name-books-by-category {
-  color: var(--primary-text-color-light-theme);
+  /* color: var(--primary-text-color-light-theme); */
   font-size: 16px;
   font-style: normal;
   font-weight: 700;
@@ -39,6 +57,11 @@
   letter-spacing: -0.64px;
   text-transform: uppercase;
 }
+
+.name-books-by-category .dark {
+  color: var(--primary-text-color-dark-theme);
+}
+
 .title-books-by-category {
   color: var(--primary-title-color);
   font-size: 12px;
@@ -46,17 +69,57 @@
   font-weight: 400;
   line-height: 1.17;
   letter-spacing: -0.48px;
-} */
-
-/* @media screen and (min-width:768px) {
-    .container {
-        width: 768px;
-       
-    }
+  text-transform: uppercase;
 }
 
-@media screen and (min-width:1440px) {
-    .container {
-        width: 1440px;
-    }
-} */
+/* tablet */
+
+@media screen and (min-width: 768px) {
+  .container-books-by-category {
+    width: 704px;
+  }
+
+  .title-category {
+    font-size: 48px;
+    line-height: 1.08;
+    letter-spacing: -1.92px;
+  }
+  .list-books-by-category {
+    width: 704px;
+    gap: 40px 25px;
+  }
+
+  .element-books-by-category {
+    max-width: 704px;
+    width: calc((100% - 50px) / 3);
+    margin-bottom: 0;
+  }
+
+  .img-books-by-category {
+    width: 218px;
+    height: 316px;
+  }
+}
+
+/* desctop */
+@media screen and (min-width: 1440px) {
+  .container-books-by-category {
+    width: 996px;
+  }
+
+  .list-books-by-category {
+    width: 996px;
+    gap: 40px 24px;
+  }
+
+  .element-books-by-category {
+    max-width: 704px;
+    width: calc((100% - 96px) / 5);
+    margin-bottom: 0;
+  }
+
+  .img-books-by-category {
+    width: 180px;
+    height: 256px;
+  }
+}
