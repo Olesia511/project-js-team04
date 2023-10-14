@@ -1,4 +1,4 @@
-import { getCategoryBook, getBooks } from './axios';
+import { getCategoryBook, getBooks } from './axios-fetch';
 
 // -- const categoryBook буде = тій категорії яку вибере користувач // let categoryBook = "";
 const categoryBook = 'Hardcover Fiction';

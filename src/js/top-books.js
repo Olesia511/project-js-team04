@@ -1,4 +1,4 @@
-import { getTopBooksArr } from './axios';
+import { getTopBooksArr } from './axios-fetch';
 
 const container = document.querySelector('.container-best-books');
 
