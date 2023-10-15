@@ -11,23 +11,30 @@ function topBooksRequest() {
           const { list_name, books } = category;
           const mappedBooks = books
             .map(
-              ({ _id, author, book_image, title }) => `<ul class="book-list">
+              ({ _id, author, book_image, title }) => `
   <li data-book-id="${_id}" class="book-item js-target">
     <img class="book-img js-target" src="${book_image}" alt="${title}" />
     <h2 class="book-title js-target">${title}</h2>
     <h3 class="author js-target">${author}</h3>
   </li>
-</ul>`
+`
             )
             .join('');
           // console.log(mappedBooks);
-          const title = `<h2 class="category-title">${list_name}</h2>`;
-          const categoryBtn = `<button data-category="${list_name}" class="see-more-btn">
+          const categoryList = `<div class="category-container"><h2 class="category-title">${list_name}</h2>
+          <ul class="book-list">${mappedBooks}</ul>
+          <button data-category="${list_name}" class="see-more-btn">
             SEE MORE
-          </button>`;
-          const categorySum = title + mappedBooks + categoryBtn;
+          </button>
+          </div>`;
+
+          // const mappedBooksList = `<ul class="book-list">${mappedBooks}</ul>`;
+          // const categoryBtn = `<button data-category="${list_name}" class="see-more-btn">
+          //   SEE MORE
+          // </button>`;
+          // const categorySum = title + mappedBooksList + categoryBtn;
           // console.log(categorySum);
-          return categorySum;
+          return categoryList;
         })
         .join('');
       container.innerHTML = nameCategory;
