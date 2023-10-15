@@ -1,18 +1,18 @@
-import"./sup-ukraine-49cf17dd.js";const l=document.querySelector(".shop-list-list"),c=document.querySelector(".shop-list-placeholder"),r="user-books";function m(){const o=document.querySelector(".js-description"),t=o.textContent;if(window.innerWidth<768){const e=t.slice(0,86)+"…";o.textContent=e}else if(window.innerWidth>=768&&window.innerWidth<1440){const e=t.slice(0,253)+"…";o.textContent=e}else o.textContent=t}const n=JSON.parse(localStorage.getItem(r));function a(o){const t=o.map(({buy_links:e="null",amazon_product_url:s="null",book_image:p="null",title:i="null",list_name:d="null",description:g="null",author:h,_id:u="null"})=>`<li class="shop-list-item" data-id="${u}">
+import"./sup-ukraine-49cf17dd.js";const c=document.querySelector(".shop-list-list"),r=document.querySelector(".shop-list-placeholder"),i="user-books";function m(){const o=document.querySelector(".js-description"),s=o.textContent;if(window.innerWidth<768){const e=s.slice(0,86)+"…";o.textContent=e}else if(window.innerWidth>=768&&window.innerWidth<1440){const e=s.slice(0,253)+"…";o.textContent=e}else o.textContent=s}let t;localStorage.getItem(i)?t=JSON.parse(localStorage.getItem(i)):t=[];function a(o){const s=o.map(({buy_links:e="null",amazon_product_url:n="null",book_image:p="null",title:l="null",list_name:d="null",description:g="null",author:h,_id:u="null"})=>`<li class="shop-list-item" data-id="${u}">
               <button type="button" class="delete-btn">
                 <svg class="delete-btn-icon" width="16" height="16">
                   <use href="./img/icon.svg#icon-shop-list-delete"></use>
                 </svg>
               </button>
-              <div class="book-cover"><img class="book-cover-img" src="${p}" alt="${i}" /></div>
+              <div class="book-cover"><img class="book-cover-img" src="${p}" alt="${l}" /></div>
               <div class="book-info">
-                <h2 class="book-name">${i}</h2>
+                <h2 class="book-name">${l}</h2>
                 <p class="book-category">${d}</p>
                 <p class="book-description js-description">${g}</p>
                 <p class="book-author">${h}</p>
 
                 <div class="link-container">
-                  <a class="amazon-icon" href="${s}" target="_blank" rel="noopener noreferrer nofollow">
+                  <a class="amazon-icon" href="${n}" target="_blank" rel="noopener noreferrer nofollow">
                     <picture>
                       <source
                         srcset="
@@ -48,4 +48,4 @@ import"./sup-ukraine-49cf17dd.js";const l=document.querySelector(".shop-list-lis
                   </a>
                 </div>
               </div>
-        </li>`).join("");n.length!==0?(c.hidden=!0,l.innerHTML=t,m(),document.querySelectorAll(".delete-btn").forEach(s=>{s.addEventListener("click",b)})):(c.hidden=!1,l.innerHTML="")}a(n);function b(o){const t=o.target.closest(".shop-list-item").dataset.id,e=n.findIndex(s=>s._id===t);e!==-1&&(n.splice(e,1),localStorage.setItem(r,JSON.stringify(n)),a(n))}
+        </li>`).join("");t.length!==0?(r.hidden=!0,c.innerHTML=s,m(),document.querySelectorAll(".delete-btn").forEach(n=>{n.addEventListener("click",f)})):(r.hidden=!1,c.innerHTML="")}a(t);function f(o){const s=o.target.closest(".shop-list-item").dataset.id,e=t.findIndex(n=>n._id===s);e!==-1&&(t.splice(e,1),localStorage.setItem(i,JSON.stringify(t)),a(t))}
