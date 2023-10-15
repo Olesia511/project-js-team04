@@ -12,6 +12,7 @@ const removeLocal = document.querySelector('.remove-local');
 const p = document.querySelector('.text-modal');
 
 const DATA_KEY = 'user-books'; // localStorage
+localStorage.setItem('user-books', '');
 
 let bookList;
 if (localStorage.getItem(DATA_KEY)) {
@@ -100,7 +101,6 @@ async function onClick(evt) {
         urlAmazon,
         urlShop
       );
-
     })
     .catch(rej => console.log(rej));
 }
@@ -175,8 +175,7 @@ async function onAddLocal(evt) {
     p.hidden = true;
 
     await getBooksById(bookId)
-      .then(data =>
-        bookList.push({ ...data }))
+      .then(data => bookList.push({ ...data }))
       .catch(rej => console.log(rej));
     console.log(bookList);
 
@@ -185,16 +184,15 @@ async function onAddLocal(evt) {
     addLocal.hidden = true;
     removeLocal.hidden = false;
     p.hidden = false;
-    
   } else {
-   const bookToRemoveId = bookList.findIndex(book => book._id === bookId);
+    const bookToRemoveId = bookList.findIndex(book => book._id === bookId);
     if (bookToRemoveId !== -1) {
       bookList.splice(bookToRemoveId, 1);
       await localStorage.setItem(DATA_KEY, JSON.stringify(bookList));
 
-    addLocal.hidden = false;
-    removeLocal.hidden = true;
-    p.hidden = true;
+      addLocal.hidden = false;
+      removeLocal.hidden = true;
+      p.hidden = true;
     }
   }
 }
