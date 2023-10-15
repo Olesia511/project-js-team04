@@ -142,11 +142,11 @@
   filter: grayscale(100%);
 }
 
-.add-local,
+/* .add-local,
 .reremove-local {
   padding-top: 14px;
   padding-bottom: 14px;
-}
+} */
 
 .btn-add-local {
   display: block;
@@ -246,11 +246,11 @@
     margin: 40px auto 40px auto;
   }
 
-  .add-local,
+  /* .add-local,
   .reremove-local {
     padding-top: 20px;
     padding-bottom: 20px;
-  }
+  } */
 
   .text-modal {
     letter-spacing: -0.48px;
