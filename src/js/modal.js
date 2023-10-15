@@ -60,7 +60,6 @@ function onClick(evt) {
   }
   const bookId =
     evt.target.dataset.bookId ?? evt.target.closest('li').dataset.bookId;
-  console.log('Get BOOK ID ======', bookId);
   const findIndexBookLocalStorage = bookList.findIndex(
     book => book._id === `${bookId}`
   );
@@ -93,10 +92,10 @@ function onClick(evt) {
         urlShop
       );
 
-      console.log('###', data);
+      // console.log('###', data);
       bookList.push({ ...data });
 
-      console.log('***', id);
+      // console.log('***', id);
     })
     .catch(rej => console.log(rej));
 }
@@ -159,18 +158,22 @@ function marcup(
 
 //------ Local Storage -----//
 
-const savedLokal = localStorage.getItem(DATA_KEY);
-const parseLocal = JSON.parse(savedLokal);
-
-// addLocal.hidden = false;
-// removeLocal.hidden = true;
-
 function onAddLocal(evt) {
-  console.dir(`++++++++`, evt.target);
-  addLocal.hidden = false;
-  removeLocal.hidden = true;
-
-  localStorage.setItem(DATA_KEY, JSON.stringify(bookList));
+  const text = evt.target.textContent;
+  const add = 'add to shopping list';
 
   const bookId = containerFromMarcup.childNodes[1].dataset.book;
+  console.log(`ID book ====== ***`, bookId);
+
+  if (text === add) {
+    addLocal.hidden = false;
+    removeLocal.hidden = true;
+
+    localStorage.setItem(DATA_KEY, JSON.stringify(bookList));
+
+    onCloseModal();
+  }
+
+  //  ======  ТУТ ПРОПИСАТИ ФУНКЦІЮ ПОШУКУ ТА ВИДАЛЕННЯ З
+  // *********
 }
