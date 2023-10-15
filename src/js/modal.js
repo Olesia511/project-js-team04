@@ -12,7 +12,7 @@ const removeLocal = document.querySelector('.remove-local');
 const p = document.querySelector('.text-modal');
 
 const DATA_KEY = 'user-books'; // localStorage
-const bookList = JSON.parse(localStorage.getItem(DATA_KEY)) ?? [];
+const bookList = JSON.parse(localStorage.getItem(DATA_KEY));
 
 const containerFromMarcup = document.querySelector('.add-books-backend');
 
@@ -50,7 +50,7 @@ listTopBook.addEventListener('click', onClick);
 
 modalBtn.addEventListener('click', onAddLocal);
 
-function onClick(evt) {
+async function onClick(evt) {
   backdrop.classList.remove('is-hidden');
   window.addEventListener('keydown', onEscKeyPress);
   body.classList.add('disasble-scroll');
@@ -74,7 +74,7 @@ function onClick(evt) {
     p.hidden = true;
   }
 
-  getBooksById(bookId)
+  await getBooksById(bookId)
     .then(data => {
       let imgBook = data.book_image;
       let nameBook = data.title;
@@ -95,7 +95,6 @@ function onClick(evt) {
       );
 
       // console.log('###', data);
-      bookList.push({ ...data });
 
       // console.log('***', id);
     })
@@ -160,7 +159,7 @@ function marcup(
 
 //------ Local Storage -----//
 
-function onAddLocal(evt) {
+async function onAddLocal(evt) {
   const text = evt.target.textContent;
   const add = 'add to shopping list';
 
@@ -172,11 +171,27 @@ function onAddLocal(evt) {
     removeLocal.hidden = true;
     p.hidden = true;
 
+    await getBooksById(bookId)
+      .then(data =>
+        bookList.push({ ...data }))
+      .catch(rej => console.log(rej));
+    console.log(bookList);
+
     localStorage.setItem(DATA_KEY, JSON.stringify(bookList));
 
-    onCloseModal();
-  }
+    addLocal.hidden = true;
+    removeLocal.hidden = false;
+    p.hidden = false;
+    
+  } else {
+    const bookToRemoveId = bookList.findIndex(book => book._id === bookId);
+    if (bookToRemoveId !== -1) {
+      bookList.splice(bookToRemoveId, 1);
+      localStorage.setItem(DATA_KEY, JSON.stringify(bookList));
 
-  //  ======  ТУТ ПРОПИСАТИ ФУНКЦІЮ ПОШУКУ ТА ВИДАЛЕННЯ З
-  // *********
+    addLocal.hidden = false;
+    removeLocal.hidden = true;
+    p.hidden = true;
+    }
+  }
 }
