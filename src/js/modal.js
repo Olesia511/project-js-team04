@@ -1,8 +1,6 @@
 import { getBooksById } from './axios-fetch';
 
-//const modal = document.querySelector('.modal');
-//const modalOpen = document.querySelector('.modal-open');
-//const marcupModal = document.querySelector('.marcup');
+
 const body = document.body;
 const backdrop = document.querySelector('.js-backdrop');
 const modalClose = document.querySelector('.close-btn-modal');
@@ -57,6 +55,7 @@ listAddBook.addEventListener('click', onClick);
 listTopBook.addEventListener('click', onClick);
 
 modalBtn.addEventListener('click', onAddLocal);
+modalBtn.addEventListener('click', onRemoveLocal)
 
 async function onClick(evt) {
   backdrop.classList.remove('is-hidden');
@@ -76,6 +75,8 @@ async function onClick(evt) {
     addLocal.hidden = true;
     removeLocal.hidden = false;
     p.hidden = false;
+    p.hidden = false;
+    
   } else {
     addLocal.hidden = false;
     removeLocal.hidden = true;
@@ -116,7 +117,10 @@ function marcup(
 ) {
   return `
   <div class="backend-box" data-book="${id}">
+  <div class="cover-modal">
   <img class="img-book" src="${imgBook}" alt="${nameBook}" />
+  
+  </div>
   <div>
  <h2 class="title-book">${nameBook}</h2>
  <h4 class="author-book">${author}</h4>
@@ -167,12 +171,17 @@ async function onAddLocal(evt) {
   const text = evt.target.textContent;
   const add = 'add to shopping list';
 
+
+
+
   const bookId = containerFromMarcup.childNodes[1].dataset.book;
 
   if (text === add) {
     addLocal.hidden = false;
     removeLocal.hidden = true;
     p.hidden = true;
+    modalBtn.blur();
+    
 
     await getBooksById(bookId)
       .then(data => bookList.push({ ...data }))
@@ -193,6 +202,7 @@ async function onAddLocal(evt) {
       addLocal.hidden = false;
       removeLocal.hidden = true;
       p.hidden = true;
+      modalBtn.blur();
     }
   }
 }
