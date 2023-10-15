@@ -55,6 +55,7 @@ listAddBook.addEventListener('click', onClick);
 listTopBook.addEventListener('click', onClick);
 
 modalBtn.addEventListener('click', onAddLocal);
+modalBtn.addEventListener('click', onRemoveLocal)
 
 async function onClick(evt) {
   backdrop.classList.remove('is-hidden');
@@ -74,6 +75,8 @@ async function onClick(evt) {
     addLocal.hidden = true;
     removeLocal.hidden = false;
     p.hidden = false;
+    p.hidden = false;
+    
   } else {
     addLocal.hidden = false;
     removeLocal.hidden = true;
@@ -167,6 +170,9 @@ function marcup(
 async function onAddLocal(evt) {
   const text = evt.target.textContent;
   const add = 'add to shopping list';
+
+
+
 
   const bookId = containerFromMarcup.childNodes[1].dataset.book;
 
