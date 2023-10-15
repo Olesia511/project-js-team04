@@ -240,10 +240,9 @@ input[type='checkbox']:checked ~ .check::after {
 }
 
 .mobile-menu__button {
-  width: 28px;
-  height: 28px;
   background-color: transparent;
-  margin-left: 14px;
+  display: flex;
+  border: none;
 }
 
 .mobile-menu__icon {
@@ -342,4 +341,10 @@ input[type='checkbox']:checked ~ .check::after {
   clip-path: inset(100%);
   clip: rect(0 0 0 0);
   overflow: hidden;
+}
+
+.menu-burger-icon {
+  stroke: #111111;
+  align-self: center;
+  justify-content: center;
 }
