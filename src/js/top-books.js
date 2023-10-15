@@ -21,11 +21,11 @@ function createMarkupBestBooks(book) {
   const { _id, author, book_image, title } = book;
   const booksMarkup = `<ul class="book-list">
   <li data-book-id="${_id}"  class="book-item js-target">
-    <img class="book-img js-target" src="${book_image}" alt="${title}" />
-    <h2 class="book-title js-target">${title}</h2>
-    <h3 class="author js-target">${author}</h3>
-  </li>
-  <button class="see-more-btn">SEE MORE</button>
+  <img class="book-img js-target" src="${book_image}" alt="${title}" />
+  <h2 class="book-title js-target">${title}</h2>
+  <h3 class="author js-target">${author}</h3>
+</li>
+<button class="see-more-btn">SEE MORE</button>
 </ul>`;
   return booksMarkup;
 }
