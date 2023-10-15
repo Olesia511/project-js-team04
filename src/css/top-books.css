@@ -2,6 +2,10 @@
   color: var(--violet-color);
 }
 
+.category-container {
+  width: 335px;
+}
+
 .title {
   color: var(--primary-text-color-light-theme);
   font-family: DM Sans;
@@ -14,19 +18,29 @@
 }
 
 .container-best-books {
-  width: 375px;
-  padding: 0 20px;
+  width: 335px;
+  /* padding: 0 20px; */
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .book-list {
   display: flex;
   align-items: flex-end;
   flex-direction: column;
+  margin-bottom: 8px;
 }
 
-/* .book-item {
-  
-} */
+.book-list > li:not(:first-child) {
+  visibility: hidden;
+  display: none;
+}
+
+.book-item {
+  width: 335px;
+  width: 335px;
+  height: 535px;
+}
 
 .book-img {
   width: 335px;
@@ -51,7 +65,6 @@
 
 .category-title {
   color: #b4afaf;
-
   font-family: DM Sans;
   font-size: 14px;
   font-style: normal;
@@ -70,20 +83,63 @@
   font-weight: 400;
   line-height: 14px; /* 116.667% */
   letter-spacing: -0.48px;
-  margin-bottom: 8px;
 }
 
 .see-more-btn {
+  font-size: 14px;
   background-color: #fff;
   padding: 14px 28px;
   border-radius: 40px;
   border: 2px solid #4f2ee8;
   margin-bottom: 40px;
+  margin-left: 62%;
+  white-space: nowrap;
 }
 
-@media screen and (min-width: 428px) {
+@media screen and (min-width: 768px) {
   .container-best-books {
     width: 704px;
-    padding: 0 32px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  .book-list {
+    margin-bottom: 20px;
+  }
+
+  .title {
+    color: var(--primary-text-color-light-theme);
+    font-family: DM Sans;
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 52px; /* 108.333% */
+    letter-spacing: -1.92px;
+  }
+
+  .book-list {
+    display: flex;
+    align-items: flex-end;
+    flex-direction: row;
+    margin-bottom: 8px;
+  }
+
+  .book-list > li:nth-last-child(-n + 3) {
+    visibility: hidden;
+    display: none;
+  }
+
+  .book-item {
+    width: 218px;
+    height: 316px;
+  }
+
+  .book-img {
+    width: 218px;
+    height: 316px;
+    border-radius: 8px;
+    background: url(<path-to-image>),
+      lightgray -4.635px -16px / 102.522% 106.839% no-repeat;
+    margin-bottom: 14px;
   }
 }
