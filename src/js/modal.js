@@ -12,7 +12,14 @@ const removeLocal = document.querySelector('.remove-local');
 const p = document.querySelector('.text-modal');
 
 const DATA_KEY = 'user-books'; // localStorage
-const bookList = JSON.parse(localStorage.getItem(DATA_KEY));
+
+let bookList;
+if (localStorage.getItem(DATA_KEY)) {
+  bookList = JSON.parse(localStorage.getItem(DATA_KEY));
+} else {
+  bookList = [];
+}
+// const bookList = JSON.parse(localStorage.getItem(DATA_KEY));
 
 const containerFromMarcup = document.querySelector('.add-books-backend');
 
@@ -94,9 +101,6 @@ async function onClick(evt) {
         urlShop
       );
 
-      // console.log('###', data);
-
-      // console.log('***', id);
     })
     .catch(rej => console.log(rej));
 }
@@ -164,7 +168,6 @@ async function onAddLocal(evt) {
   const add = 'add to shopping list';
 
   const bookId = containerFromMarcup.childNodes[1].dataset.book;
-  console.log(`ID book ====== ***`, bookId);
 
   if (text === add) {
     addLocal.hidden = false;
@@ -177,17 +180,17 @@ async function onAddLocal(evt) {
       .catch(rej => console.log(rej));
     console.log(bookList);
 
-    localStorage.setItem(DATA_KEY, JSON.stringify(bookList));
+    await localStorage.setItem(DATA_KEY, JSON.stringify(bookList));
 
     addLocal.hidden = true;
     removeLocal.hidden = false;
     p.hidden = false;
     
   } else {
-    const bookToRemoveId = bookList.findIndex(book => book._id === bookId);
+   const bookToRemoveId = bookList.findIndex(book => book._id === bookId);
     if (bookToRemoveId !== -1) {
       bookList.splice(bookToRemoveId, 1);
-      localStorage.setItem(DATA_KEY, JSON.stringify(bookList));
+      await localStorage.setItem(DATA_KEY, JSON.stringify(bookList));
 
     addLocal.hidden = false;
     removeLocal.hidden = true;
