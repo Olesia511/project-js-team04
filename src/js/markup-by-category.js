@@ -1,12 +1,10 @@
 import { getCategoryBook, getBooks } from './axios-fetch';
 
-// -- const categoryBook буде = тій категорії яку вибере користувач // let categoryBook = "";
-const categoryBook = 'Hardcover Fiction';
-// const categoryBook = 'Mass Market Monthly';
+let categoryBook = '';
 const title = document.querySelector('.title-category');
-// const categoryBookFetch = getCategoryBook(categoryBook);
 
 function bookRequest(categoryBookFetch) {
+  categoryBook = categoryBookFetch;
   getBooks(categoryBookFetch)
     .then(res => {
       console.log(`Get book by category`, res);
@@ -70,10 +68,10 @@ function trimText() {
   const windowWidth = window.innerWidth;
   let maxCharacters;
 
-  if (windowWidth >= 768) {
-    maxCharacters = 19;
-  } else {
+  if (windowWidth < 768) {
     maxCharacters = 31;
+  } else {
+    maxCharacters = 19;
   }
 
   const titleElements = document.querySelectorAll('.name-books-by-category');
@@ -103,11 +101,14 @@ function trimTitleText() {
   let maxCharacters;
   let maxWords;
 
-  if (windowWidth >= 768) {
-    maxCharacters = 32;
+  if (windowWidth >= 1440) {
+    maxCharacters = 30;
     maxWords = 5;
+  } else if (windowWidth >= 768) {
+    maxCharacters = 40;
+    maxWords = 6;
   } else {
-    maxCharacters = 45;
+    maxCharacters = 50;
     maxWords = 8;
   }
 
@@ -117,12 +118,17 @@ function trimTitleText() {
     const text = titleElement.textContent;
     const words = text.split(' ');
 
-    if (words.length > maxWords || text.length > maxCharacters) {
-      const trimmedWords = words.slice(0, maxWords).join(' ');
-      titleElement.textContent = `${trimmedWords}${
-        words.length > maxWords ? '...' : ''
-      }`;
+    let trimmedWords = words.slice(0, maxWords).join(' ');
+    let trimmedText = text.slice(0, maxCharacters);
+
+    if (trimmedWords.length > maxCharacters) {
+      // Видаляємо слова, якщо вони перевищують ліміт maxCharacters
+      trimmedWords = trimmedWords.slice(0, maxCharacters);
     }
+
+    titleElement.textContent = `${
+      trimmedWords.length > maxCharacters ? trimmedWords + '...' : trimmedWords
+    }`;
   });
 }
 
@@ -133,4 +139,5 @@ export {
   updateTitleLastWordColor,
   bookRequest,
   trimText,
+  trimTitleText,
 };
