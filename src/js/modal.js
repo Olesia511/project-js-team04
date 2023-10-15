@@ -1,6 +1,5 @@
 import { getBooksById } from './axios-fetch';
 
-
 const body = document.body;
 const backdrop = document.querySelector('.js-backdrop');
 const modalClose = document.querySelector('.close-btn-modal');
@@ -55,7 +54,7 @@ listAddBook.addEventListener('click', onClick);
 listTopBook.addEventListener('click', onClick);
 
 modalBtn.addEventListener('click', onAddLocal);
-modalBtn.addEventListener('click', onRemoveLocal)
+// modalBtn.addEventListener('click', onRemoveLocal)
 
 async function onClick(evt) {
   backdrop.classList.remove('is-hidden');
@@ -76,7 +75,6 @@ async function onClick(evt) {
     removeLocal.hidden = false;
     p.hidden = false;
     p.hidden = false;
-    
   } else {
     addLocal.hidden = false;
     removeLocal.hidden = true;
@@ -171,9 +169,6 @@ async function onAddLocal(evt) {
   const text = evt.target.textContent;
   const add = 'add to shopping list';
 
-
-
-
   const bookId = containerFromMarcup.childNodes[1].dataset.book;
 
   if (text === add) {
@@ -181,7 +176,6 @@ async function onAddLocal(evt) {
     removeLocal.hidden = true;
     p.hidden = true;
     modalBtn.blur();
-    
 
     await getBooksById(bookId)
       .then(data => bookList.push({ ...data }))
