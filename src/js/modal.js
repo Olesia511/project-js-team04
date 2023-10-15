@@ -67,9 +67,11 @@ function onClick(evt) {
   if (findIndexBookLocalStorage !== -1) {
     addLocal.hidden = true;
     removeLocal.hidden = false;
+    p.hidden = false;
   } else {
     addLocal.hidden = false;
     removeLocal.hidden = true;
+    p.hidden = true;
   }
 
   getBooksById(bookId)
@@ -168,6 +170,7 @@ function onAddLocal(evt) {
   if (text === add) {
     addLocal.hidden = false;
     removeLocal.hidden = true;
+    p.hidden = true;
 
     localStorage.setItem(DATA_KEY, JSON.stringify(bookList));
 
