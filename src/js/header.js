@@ -8,9 +8,9 @@ console.dir(refs.themeSwitcher);
 const boDy = document.querySelector(`body`);
 
 const LOCAL_KEY = 'theme';
-let theme;
+let theme = '';
 
-// localStorage.setItem(LOCAL_KEY, JSON.stringify(theme));
+localStorage.setItem(LOCAL_KEY, JSON.stringify(theme));
 const getKey = localStorage.getItem(LOCAL_KEY);
 console.log(getKey);
 if (getKey === null || undefined) {
