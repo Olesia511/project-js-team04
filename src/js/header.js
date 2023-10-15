@@ -8,7 +8,7 @@ refs.openBurgerBtn.addEventListener('click', toggleModal);
 refs.closeBurgerBtn.addEventListener('click', toggleModal);
 
 function toggleModal() {
-  refs.burger.classList.toggle('is-hidden');
+  refs.burger.classList.toggle('is-hidden-header');
 }
 
 function setTheme(theme) {

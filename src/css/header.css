@@ -1,6 +1,6 @@
 .header-container {
   display: flex;
-  max-width: 335px;
+  max-width: 375px;
   height: 64px;
   margin-left: auto;
   margin-right: auto;
@@ -32,14 +32,14 @@
 
 @media screen and (min-width: 768px) {
   .header-container {
-    max-width: 704px;
+    max-width: 768px;
     height: 72px;
   }
 }
 
 @media screen and (min-width: 1440px) {
   .header-container {
-    max-width: 1392px;
+    max-width: 1440px;
   }
 }
 
@@ -87,7 +87,7 @@
 .site-nav__logo {
   width: 20px;
   height: 20px;
-  fill: #111111;
+  fill: black;
 
   margin-left: 4px;
 }
@@ -195,7 +195,7 @@ input[type='checkbox']:checked ~ .check::after {
   transition: opacity var(--animation), transform var(--animation);
 }
 
-.is-hidden {
+.is-hidden-header {
   opacity: 1;
   visibility: visible;
   pointer-events: auto;
@@ -203,7 +203,7 @@ input[type='checkbox']:checked ~ .check::after {
 }
 
 .burger-container {
-  background-image: url(../img/shop-list-mob.png);
+  background-image: url(../img/menu-picture.png);
   background-position: bottom;
   background-repeat: no-repeat;
   padding: 0;
@@ -216,7 +216,7 @@ input[type='checkbox']:checked ~ .check::after {
   (min-resolution: 192dpi),
   (min-resolution: 2dppx) {
   .burger-container {
-    background-image: url(../img/shop-list-mob-2x.png);
+    background-image: url(../img/menu-picture-2x.png);
     background-size: contain;
   }
 }
@@ -242,7 +242,7 @@ input[type='checkbox']:checked ~ .check::after {
 .mobile-menu__icon {
   width: 28px;
   height: 28px;
-  fill: var(--black-color);
+  fill: var(--primary-text-color-light-theme);
   transition: fill var(--animation);
 }
 
