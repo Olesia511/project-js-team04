@@ -152,6 +152,12 @@ input[type='checkbox']:checked ~ .check::after {
   padding-right: 24px;
 }
 
+.sign-up-button_icon {
+  fill: #111111;
+  width: 24px;
+  height: 20px;
+}
+
 .sign-up-button_text {
   font-weight: 500;
   font-size: 14px;
@@ -165,6 +171,7 @@ input[type='checkbox']:checked ~ .check::after {
   height: 28px;
   background-color: transparent;
   /* margin-left: 14px; */
+  border: none;
 }
 
 .burger-menu__icon {
