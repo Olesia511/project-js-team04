@@ -74,11 +74,16 @@
 }
 
 .see-more-btn {
-  display: flex;
-  align-items: flex-end;
   background-color: #fff;
   padding: 14px 28px;
   border-radius: 40px;
   border: 2px solid #4f2ee8;
   margin-bottom: 40px;
+}
+
+@media screen and (min-width: 428px) {
+  .container-best-books {
+    width: 704px;
+    padding: 0 32px;
+  }
 }
