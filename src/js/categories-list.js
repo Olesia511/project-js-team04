@@ -6,7 +6,7 @@ import {
   updateTitleLastWordColor,
   bookRequest,
 } from './markup-by-category.js';
-import { createMarkupBestBooks, getTopBooksArr } from './top-books';
+import { topBooksRequest } from './top-books';
 
 const categoriesList = document.querySelector(`.categories-list`);
 
@@ -22,14 +22,14 @@ getCategoryListArr()
             `<li class="list-categories-item">${list_name}</li>`
         )
         .join(``);
-    console.log(`html`, html);
+    // console.log(`html`, html);
 
     categoriesList.insertAdjacentHTML(`beforeend`, html);
-    console.log(`getCategoryListArr`, res);
+    // console.log(`getCategoryListArr`, res);
     const firstElementList = categoriesList.firstChild;
 
     curentCategory = firstElementList;
-    console.log(curentCategory);
+    // console.log(curentCategory);
 
     addCurrent();
   })
