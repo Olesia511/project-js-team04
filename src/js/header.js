@@ -18,15 +18,20 @@ if (getKey === null || undefined) {
   localStorage.setItem(LOCAL_KEY, JSON.stringify(theme));
   refs.themeSwitcher.checked = false;
 }
-const checkKey = JSON.parse(localStorage.getItem(LOCAL_KEY));
+// const checkKey = JSON.parse(localStorage.getItem(LOCAL_KEY));
 
-if (checkKey === 'dark') {
-  refs.themeSwitcher.checked = true;
-  console.log('1111111');
-} else {
-  refs.themeSwitcher.checked = false;
-  console.log('222222');
+if (getKey) {
+  const checkKey = JSON.parse(localStorage.getItem(LOCAL_KEY));
+
+  if (checkKey === 'dark') {
+    refs.themeSwitcher.checked = true;
+    console.log('1111111');
+  } else {
+    refs.themeSwitcher.checked = false;
+    console.log('222222');
+  }
 }
+
 refs.themeSwitcher.addEventListener('change', setTheme);
 // refs.themeSwitcher.checked = true;
 // console.log(themeSwitcher.checked);
