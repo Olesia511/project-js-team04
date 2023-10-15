@@ -20,9 +20,9 @@
     <!-- <script type="module" src="/main.js"></script> -->
     
     
-    <script type="module" crossorigin src="/project-js-team04/assets/shopping-list-26496f25.js"></script>
-    <link rel="modulepreload" crossorigin href="/project-js-team04/assets/sup-ukraine-ed4aad73.js">
-    <link rel="stylesheet" href="/project-js-team04/assets/sup-ukraine-b5803e94.css">
+    <script type="module" crossorigin src="/project-js-team04/assets/shopping-list-e50f6a2e.js"></script>
+    <link rel="modulepreload" crossorigin href="/project-js-team04/assets/sup-ukraine-9b729697.js">
+    <link rel="stylesheet" href="/project-js-team04/assets/sup-ukraine-4a3714bd.css">
   </head>
 
   <body>
@@ -33,24 +33,97 @@
     <!------    Header    ------->
     <header>
   <div class="header-container">
-    <a href="/src/index.html" class="header-logo-link">
-      <svg class="" width="24px" height="24px">
-        <use href="/project-js-team04/assets/icon-18140bb8.svg#icon-logo"></use>
-      </svg>
-      Bookshelf
-    </a>
+// конфлікт----
+    <a href="../index.html" class="header-logo-link"
+      ><svg class="header-logo">
+        <use href="../img/icon.svg#icon-logo"></use></svg
+      >Bookshelf</a>
+
     <nav class="navigation">
       <ul class="site-nav">
-        <li class="site-nav_item-activ">
-          <a href="/src/index.html" class="site-nav_link-active">Home</a>
+        <li class="site-nav__item_active">
+          <a href="../index.html" class="site-nav__link_active">Home</a>
         </li>
-        <li class="site-nav_item">
-          <a href="/src/shopping-list.html" class="site-nav_link"
-            >Shopping list
+
+        <li class="site-nav__item">
+          <a href="./shopping-list.html" class="site-nav__link"
+            >Shopping list<svg class="site-nav__logo">
+              <use href="../img/icon.svg#icon-lock"></use>
+            </svg>       
           </a>
         </li>
       </ul>
     </nav>
+
+    <label class="toggle-theme common-toggle">
+      <input type="checkbox" />
+      <span class="check"></span>
+    </label>
+
+    <button
+      class="sign-up-button"
+      type="button"
+      data-modal-open
+      aria-label="sign in"
+    >
+      <span class="sign-up-button_text">Sign up</span>
+      <svg class="sign-up-button_icon" width="20" height="20">
+        <use href="../img/icon.svg#icon-sing-up-align-left"></use>
+      </svg>
+    </button>
+    <button type="button" class="burger-menu">
+      <svg class="burger-menu__icon">
+        <use href="../img/icon.svg#icon-Vector-lock"></use>
+      </svg>
+    </button>
+  </div>
+  <div class="mobile-menu-container">
+    <div class="burger-container">
+      <div class="mobile-menu__header">
+        <a href="../index.html" class="header-logo-link"
+          ><svg class="header-logo">
+            <use href="../img/icon.svg#icon-logo"></use></svg
+          >Bookshelf</a
+        >
+
+        <label class="toggle-theme common-toggle">
+          <input type="checkbox" />
+          <span class="check"></span>
+        </label>
+
+        <button type="button" class="mobile-menu__button">
+          <svg class="mobile-menu__icon">
+            <use href="../img/icon.svg#icon-x-close"></use>
+          </svg>
+        </button>
+      </div>
+      <button
+        class="sign-up-button-burger"
+        type="button"
+        data-modal-open
+        aria-label="sign in"
+      >
+        <span class="sign-up-button_text">Sign up</span>
+        <svg class="sign-up-button_icon" width="20" height="20">
+          <use href="../img/icon.svg#icon-sing-up-align-left"></use>
+        </svg>
+      </button>
+
+      <nav class="navigation-burger">
+        <ul class="site-nav-burger">
+          <li class="site-nav__item_active">
+            <a href="../index.html" class="site-nav__link_active">HOME</a>
+          </li>
+          <li class="site-nav__item">
+            <a href="./shopping-list.html" class="site-nav__link"
+              >SHOPPING LIST<svg class="site-nav__logo">
+                <use href="../img/icon.svg#icon-lock"></use>
+              </svg>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
   </div>
 </header>
 
@@ -62,14 +135,14 @@
   <div class="sup-ukraine-head">
     <h1 class="sup-ukraine-title">Support Ukraine</h1>
     <svg class="sup-ukraine-gerb" width="20px" height="32px">
-      <use href="/project-js-team04/assets/icon-18140bb8.svg#icon-support-ukr-logo"></use>
+      <use href="/project-js-team04/assets/icon-10ace4d8.svg#icon-support-ukr-logo"></use>
     </svg>
   </div>
   <ul class="list sup-list"></ul>
   <div class="pos-but">
     <button id="toggleButton" class="button-sup">
       <svg class="button-sup-svg" width="20px" height="32px">
-        <use href="/project-js-team04/assets/icon-18140bb8.svg#icon-support-ukr-scroll-down"></use>
+        <use href="/project-js-team04/assets/icon-10ace4d8.svg#icon-support-ukr-scroll-down"></use>
       </svg>
     </button>
   </div>
