@@ -23,7 +23,7 @@ function handleResize() {
 
 // ----------- Get data from LS and make markup -----------
 
-const parsedLocalData = JSON.parse(localStorage.getItem(DATA_KEY));
+let parsedLocalData = JSON.parse(localStorage.getItem(DATA_KEY)) || [];
 
 function shopListMarkup(arr) {
   const markup = arr

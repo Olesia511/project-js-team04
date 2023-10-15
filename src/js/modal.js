@@ -12,7 +12,7 @@ const removeLocal = document.querySelector('.remove-local');
 const p = document.querySelector('.text-modal');
 
 const DATA_KEY = 'user-books'; // localStorage
-const bookList = JSON.parse(localStorage.getItem(DATA_KEY));
+let bookList = JSON.parse(localStorage.getItem(DATA_KEY)) || [];
 
 const containerFromMarcup = document.querySelector('.add-books-backend');
 
@@ -182,7 +182,7 @@ async function onAddLocal(evt) {
     addLocal.hidden = true;
     removeLocal.hidden = false;
     p.hidden = false;
-    
+
   } else {
     const bookToRemoveId = bookList.findIndex(book => book._id === bookId);
     if (bookToRemoveId !== -1) {
