@@ -3,8 +3,6 @@
 }
 
 .title-category {
-  color: var(--primary-text-color-light-theme);
-  font-family: DM Sans;
   font-size: 32px;
   font-style: normal;
   font-weight: 700;
@@ -13,8 +11,8 @@
   margin-bottom: 40px;
 }
 
-.title-category .dark {
-  color: var(--primary-text-color-dark-theme);
+.title-category-part {
+  color: var(--violet-color);
 }
 
 .list-books-by-category {
@@ -43,23 +41,18 @@
   border: none;
 }
 .title-container {
-  font-family: DM Sans;
   display: flex;
   flex-direction: column;
   gap: 4px;
 }
+
 .name-books-by-category {
-  /* color: var(--primary-text-color-light-theme); */
   font-size: 16px;
   font-style: normal;
   font-weight: 700;
   line-height: 1.13;
   letter-spacing: -0.64px;
   text-transform: uppercase;
-}
-
-.name-books-by-category .dark {
-  color: var(--primary-text-color-dark-theme);
 }
 
 .title-books-by-category {
@@ -69,7 +62,6 @@
   font-weight: 400;
   line-height: 1.17;
   letter-spacing: -0.48px;
-  text-transform: uppercase;
 }
 
 /* tablet */

@@ -16,7 +16,6 @@
 }
 
 .shop-list-titel {
-  color: var(--primary-text-color-light-theme);
   font-family: DM Sans;
   font-size: 32px;
   line-height: 1.19;
@@ -75,7 +74,6 @@
 .book-name {
   margin-bottom: 4px;
 
-  color: var(--primary-text-color-light-theme);
   font-family: DM Sans;
   font-size: 16px;
   line-height: 1.13;
@@ -99,7 +97,6 @@
   margin-bottom: 16px;
 
   overflow: hidden;
-  color: var(--primary-text-color-light-theme);
   font-family: DM Sans;
   font-size: 14px;
   line-height: 1.29;
