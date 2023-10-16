@@ -13,20 +13,15 @@ body .dark {
   background-color: var(--black-color);
   color: var(--primary-text-color-dark-theme);
 }
-.container {
-  max-width: 375px;
-  /* padding-left: 20px;
-  padding-right: 20px; */
-  margin-left: auto;
-  margin-right: auto;
-}
 
 .container-basic {
-  max-width: 335px;
+  max-width: 375px;
   margin-top: 40px;
   margin-bottom: 80px;
   margin-left: auto;
   margin-right: auto;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
 .container-categories-support {
@@ -38,15 +33,11 @@ body .dark {
 }
 
 @media screen and (min-width: 768px) {
-  .container {
-    max-width: 768px;
-    /* padding-left: 32px;
-    padding-right: 32px; */
-  }
-
   .container-basic {
-    max-width: 704px;
+    max-width: 768px;
     margin-bottom: 100px;
+    padding-left: 32px;
+    padding-right: 32px;
   }
 
   .container-categories-support {
@@ -58,16 +49,12 @@ body .dark {
 }
 
 @media screen and (min-width: 1440px) {
-  .container {
-    max-width: 1440px;
-    /* padding-left: 24px;
-    padding-right: 24px; */
-  }
-
   .container-basic {
+    max-width: 1440px;
     display: flex;
     flex-wrap: wrap;
-    max-width: 1392px;
+    padding-left: 24px;
+    padding-right: 24px;
   }
 
   .container-categories-support {

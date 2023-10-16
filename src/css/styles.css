@@ -28,8 +28,7 @@
 :root {
   /*   використовувати у властивості transition: var(--transition-duration) var(--transition-timing-function);   */
 
-  --transition-duration: 250ms;
-  --transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-time: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
   --background-color-light: #f6f6f6;
   --primary-text-color-light-theme: #111;
