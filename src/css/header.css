@@ -1,3 +1,7 @@
+.mobile-nav,
+.sign-up-button {
+  display: none;
+}
 .header-container {
   display: flex;
   width: 375px;
@@ -157,19 +161,20 @@ input[type='checkbox']:checked ~ .check::after {
     height: 34px;
     padding-top: 19px;
     padding-bottom: 19px;
-    margin-right: 87px;
+    margin-right: 103px;
   }
 
   .site-nav {
     display: flex;
-    gap: 24px;
+    /* gap: 24px; */
     align-items: center;
 
     width: 220px;
     height: 34px;
   }
 
-  .site-nav-item {
+  .site-nav-item-home,
+  .site-nav-item-shop {
     display: flex;
     align-items: center;
     text-align: center;
@@ -177,6 +182,10 @@ input[type='checkbox']:checked ~ .check::after {
     padding-top: 27px;
     padding-bottom: 27px;
   }
+  .site-nav-item-home {
+    margin-right: 40px;
+  }
+
   .shopping-link {
     display: block;
     margin-right: 8px;
@@ -198,24 +207,32 @@ input[type='checkbox']:checked ~ .check::after {
   }
 
   .sign-up-button {
-    display: block;
+    display: flex;
+    align-items: center;
+
     width: 184px;
     height: 48px;
     border-radius: 18px;
     border: 1.5px solid #111;
-    background: #4f2ee8;
+    background-color: #4f2ee8;
     /* background-color: transparent; */
-    color: #fff;
+
+    padding: 12px 14px;
+
+    cursor: pointer;
+    text-decoration: none;
+    text-align: center;
   }
 
   .sign-up-btn-text {
-    color: #fff;
     font-family: DM Sans;
     font-size: 14px;
     font-style: normal;
     font-weight: 500;
-    line-height: 128; /* 128.571% */
+    line-height: 1.28; /* 128.571% */
     letter-spacing: -0.56px;
+    margin-right: auto;
+    color: #fff;
   }
 
   /* .sign-up-button_icon {
@@ -435,18 +452,6 @@ input[type='checkbox']:checked ~ .check::after {
     margin-left: 0;
   } */
 
-/* .sign-up-button {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    min-width: 184px;
-    padding: 13px 14px;
-
-    background: #4f2ee8;
-    border: 1.5px solid #111111;
-    border-radius: 18px;
-    cursor: pointer;
-  } */
 /* 
   .burger-menu {
     display: none;
