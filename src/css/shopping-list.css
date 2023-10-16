@@ -197,6 +197,41 @@
   }
 }
 
+/*! Only Phone */
+@media screen and (max-width: 325px) {
+  .book-cover {
+    background-repeat: no-repeat;
+    background-size: 16px 15px;
+    background-position: top;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .book-info {
+    max-width: 193px;
+  }
+
+  .book-name,
+  .book-category {
+    max-width: 144px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+
+  .book-author {
+    max-width: 130px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+
+  .book-description {
+    max-height: 54px;
+    margin-bottom: 30px;
+  }
+}
+
 /*! For Tablet size */
 @media screen and (min-width: 768px) {
   .shopping-list {
@@ -264,6 +299,16 @@
   .book-description {
     width: 508px;
     height: 53px;
+    margin-bottom: 48px;
+  }
+
+  .book-category {
+    margin-bottom: 14px;
+  }
+
+  .book-cover {
+    width: 116px;
+    height: 165px;
   }
 }
 

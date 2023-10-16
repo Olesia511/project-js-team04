@@ -9,14 +9,31 @@ function handleResize() {
   const description = document.querySelector('.js-description');
   const descriptionLarge = description.textContent;
 
+  const title = document.querySelector('.js-name');
+  const titleLarge = title.textContent;
+
+  const category = document.querySelector('.js-category');
+  const categoryLarge = category.textContent;
+
   if (window.innerWidth < 768) {
-    const descriptionShirt = descriptionLarge.slice(0, 86) + '…';
+    const descriptionShirt = descriptionLarge.slice(0, 86)+'…';
     description.textContent = descriptionShirt;
+
+     const titleShirt = titleLarge.slice(0, 22)+'…';
+    description.textContent = descriptionShirt;
+
+     const categoryShirt = categoryLarge.slice(0, 34)+'…';
+    category.textContent = categoryShirt;
+
   } else if (window.innerWidth >= 768 && window.innerWidth < 1440) {
-    const descriptionShirt = descriptionLarge.slice(0, 253) + '…';
+    const descriptionShirt = descriptionLarge.slice(0, 253)+'…';
     description.textContent = descriptionShirt;
+    description.textContent = descriptionLarge;
+    category.textContent = categoryLarge;
   } else {
     description.textContent = descriptionLarge;
+    description.textContent = descriptionLarge;
+    category.textContent = categoryLarge;
   }
 }
 
@@ -52,8 +69,8 @@ function shopListMarkup(arr) {
               </button>
               <div class="book-cover"><img class="book-cover-img" src="${book_image}" alt="${title}" /></div>
               <div class="book-info">
-                <h2 class="book-name">${title}</h2>
-                <p class="book-category">${list_name}</p>
+                <h2 class="book-name js-name">${title}</h2>
+                <p class="book-category js-category">${list_name}</p>
                 <p class="book-description js-description">${description}</p>
                 <p class="book-author">${author}</p>
 
