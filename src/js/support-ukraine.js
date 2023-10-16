@@ -70,6 +70,8 @@ function toggleItemsVisibility() {
   charities.slice(startIndex, endIndex).forEach((charity, index) => {
     const item = document.createElement('li');
     const link = document.createElement('a');
+    link.target = '_blank';
+    link.rel = 'noopener noreferrer nofollow';
     const number = document.createElement('span');
     const charityNumber = (startIndex + index + 1).toString().padStart(2, '0');
 

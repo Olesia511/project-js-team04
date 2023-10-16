@@ -7,6 +7,7 @@
 
 /* @import 'modern-normalize/modern-normalize.css'; */
 /* @import url('../node_modules/modern-normalize/modern-normalize.css'); */
+
 @import url('./general-styles.css');
 @import url('./book-id.css');
 @import url('./categories-list.css');
@@ -21,11 +22,15 @@
 @import url('./reset.css');
 @import url('./shopping-list.css');
 @import url('./top-books.css');
-@import url('./sup-ukraine.css');
+@import url('./support-ukraine.css');
 @import url('./toggle-menu.css');
 
-/*-----    замінити :root   ------------*/
 :root {
+  /*   використовувати у властивості transition: var(--transition-duration) var(--transition-timing-function);   */
+
+  --transition-duration: 250ms;
+  --transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
   --background-color-light: #f6f6f6;
   --primary-text-color-light-theme: #111;
   --primary-text-color-dark-theme: #fff;
