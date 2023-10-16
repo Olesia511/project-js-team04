@@ -2,7 +2,18 @@
 .sign-up-button {
   display: none;
 }
+.main-container {
+  margin-top: 100px;
+}
+
 .header-container {
+  background-color: var(--background-color-light);
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1000;
+
   display: flex;
   width: 375px;
   height: 64px;
