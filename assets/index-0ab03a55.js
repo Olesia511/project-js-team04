@@ -1,5 +1,8 @@
 import"./support-ukraine-0b35d1e3.js";const z="https://books-backend.p.goit.global/",Lt="books/category-list",Ot="books/top-books",Rt="books/category",Mt="books/";async function xt(){return await(await axios.get(`${z}${Lt}`)).data}async function Pt(){return await(await axios.get(`${z}${Ot}`)).data}async function Nt(e){return await(await axios.get(`${z}${Rt}?category=${e}`)).data}async function Ue(e){return await(await axios.get(`${z}${Mt}${e}`)).data}let oe="";const Se=document.querySelector(".title-category");function jt(e){oe=e,Nt(e).then(t=>{console.log("Get book by category",t),Ft(t)}).catch(t=>console.log(t))}function Ft(e){const t=document.querySelector(".list-books-by-category"),n=e.map(({book_image:o,title:s,author:a,_id:i})=>`<li data-book-id='${i}' class="element-books-by-category js-target">
+      <div class="cover-wrap">
       <img src="${o}" alt="${s}" class="img-books-by-category js-target" />
+       <p class="cover-text">quick view</p>
+       </div>
       <div class="title-container js-target">
       <h3 class="name-books-by-category js-target">${s}</h3>
       <p class="title-books-by-category js-target">${a}</p>
