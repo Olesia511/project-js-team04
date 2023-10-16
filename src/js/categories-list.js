@@ -9,8 +9,27 @@ import {
 import { topBooksRequest } from './top-books';
 
 const categoriesList = document.querySelector(`.categories-list`);
-
+const byCategoryField = document.querySelector(`.container-books-by-category`);
+const topBooksField = document.querySelector(`.top-books-box`);
 let curentCategory = null;
+
+topBooksRequest();
+
+function hideTopBooksField() {
+  topBooksField.style.display = 'none';
+}
+function showTopBooksField() {
+  topBooksField.style.display = 'flex';
+}
+function hideCategoryField() {
+  byCategoryField.style.display = 'none';
+}
+function showCategoryField() {
+  byCategoryField.style.display = 'block';
+}
+
+// showTopBooksField();
+// hideCategoryField();
 
 getCategoryListArr()
   .then(res => {
@@ -38,16 +57,29 @@ getCategoryListArr()
 categoriesList.addEventListener(`click`, categotySelect);
 
 function categotySelect(evt) {
-  if (evt.target === curentCategory) {
+  if (evt.target.textContent === curentCategory) {
     return;
   } else if (evt.target === evt.currentTarget) {
     return;
   } else if (evt.target === categoriesList.firstChild) {
+    if (document.querySelector(`.container-best-books`)) {
+      removeCurrent();
+      showTopBooksField();
+      hideCategoryField();
+    } else {
+      removeCurrent();
+      hideCategoryField();
+      topBooksRequest();
+      showTopBooksField();
+    }
+  } else {
+    removeCurrent();
+    hideTopBooksField();
+    const categoryName = evt.target.textContent;
+    console.log(categoryName);
+    bookRequest(categoryName);
+    showCategoryField();
   }
-  removeCurrent();
-  const categoryName = evt.target.textContent;
-  console.log(categoryName);
-  bookRequest(categoryName);
   curentCategory = evt.target;
   curentCategory.classList.add(`active-list-item`);
 }
