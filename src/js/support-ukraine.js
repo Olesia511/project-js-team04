@@ -78,8 +78,8 @@ function toggleItemsVisibility() {
     number.textContent = charityNumber;
 
     const img = document.createElement('img');
-    img.srcset = `${charity.img} 1x, ${charity.img2x} 2x`;
     img.src = charity.img;
+    img.srcset = '${charity.img} 1x, ${charity.img2x} 2x';
     img.alt = charity.title;
     img.classList.add('white-image');
 

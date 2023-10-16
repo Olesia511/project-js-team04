@@ -77,6 +77,7 @@ input[type='checkbox']:checked ~ .check::after {
 }
 
 .toggle-theme {
+  margin-left: auto;
   margin-right: 14px;
   padding-top: 18px;
   padding-bottom: 18px;
@@ -169,7 +170,7 @@ input[type='checkbox']:checked ~ .check::after {
   .site-nav {
     display: flex;
     align-items: center;
-    width: 220px;
+    /* width: 220px; */
     height: 34px;
   }
 
@@ -177,17 +178,12 @@ input[type='checkbox']:checked ~ .check::after {
     display: flex;
     align-items: center;
     text-align: center;
-    /* padding-left: 16px; */
-    /* padding-right: 16px; */
-    /* height: 18px; */
+    margin-right: auto;
   }
   .site-nav-item-home {
     display: flex;
     align-items: center;
     text-align: center;
-    /* padding-left: 16px;
-    padding-right: 16px; */
-    /* height: 18px; */
   }
   .site-nav-item-home {
     margin-right: 24px;
@@ -267,6 +263,9 @@ input[type='checkbox']:checked ~ .check::after {
   }
   .site-nav-item-home {
     margin-right: 40px;
+  }
+  .site-nav-item-shop {
+    margin-right: auto;
   }
 }
 
