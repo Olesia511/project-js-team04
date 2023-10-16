@@ -9,7 +9,7 @@ const modalClose = document.querySelector('.close-btn-modal');
 const modalBtn = document.querySelector('.btn-add-local');
 const addLocal = document.querySelector('.add-local');
 const removeLocal = document.querySelector('.remove-local');
-const p = document.querySelector('.text-modal');
+const p = document.querySelector('.text-box');
 
 const DATA_KEY = 'user-books'; // localStorage
 localStorage.setItem('user-books', '');
@@ -75,11 +75,13 @@ async function onClick(evt) {
   if (findIndexBookLocalStorage !== -1) {
     addLocal.hidden = true;
     removeLocal.hidden = false;
-    p.hidden = false;
+    p.classList.remove('text-off')
+    // p.hidden = false;
   } else {
     addLocal.hidden = false;
     removeLocal.hidden = true;
-    p.hidden = true;
+    p.classList.add('text-off')
+    // p.hidden = true;
   }
 
   await getBooksById(bookId)
@@ -116,7 +118,9 @@ function marcup(
 ) {
   return `
   <div class="backend-box" data-book="${id}">
-  <img class="img-book" src="${imgBook}" alt="${nameBook}" />
+  <div class="cover-modal">
+  <img class="img-book" src="${imgBook}" loading="lazy" alt="${nameBook}" />
+  </div>
   <div>
  <h2 class="title-book">${nameBook}</h2>
  <h4 class="author-book">${author}</h4>
@@ -172,7 +176,8 @@ async function onAddLocal(evt) {
   if (text === add) {
     addLocal.hidden = false;
     removeLocal.hidden = true;
-    p.hidden = true;
+    // p.hidden = true;
+    p.classList.add('text-off')
 
     await getBooksById(bookId)
       .then(data => bookList.push({ ...data }))
@@ -183,7 +188,9 @@ async function onAddLocal(evt) {
 
     addLocal.hidden = true;
     removeLocal.hidden = false;
-    p.hidden = false;
+    p.classList.remove('text-off');
+    modalBtn.blur();
+    // p.hidden = false;
   } else {
     const bookToRemoveId = bookList.findIndex(book => book._id === bookId);
     if (bookToRemoveId !== -1) {
@@ -192,7 +199,9 @@ async function onAddLocal(evt) {
 
       addLocal.hidden = false;
       removeLocal.hidden = true;
-      p.hidden = true;
+      p.classList.add('text-off')
+      modalBtn.blur();
+      // p.hidden = true;
     }
   }
 }

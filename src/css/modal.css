@@ -1,3 +1,35 @@
+.cover-wrap:hover .cover-text,
+.cover-wrap:focus .cover-text {
+  transform: translateY(0);
+}
+
+.cover-wrap {
+  position: relative;
+  overflow: hidden;
+  height: 281px;
+}
+
+.cover-text {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 70px;
+  padding: 26px 52px;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.29;
+  letter-spacing: -0.56px;
+  text-align: center;
+  border-radius: 0px 0px 8px 8px;
+  font-family: 'DM Sans';
+  text-transform: uppercase;
+  color: #111;
+  background-color: #eac645;
+  transform: translateY(100%);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
 .visually-hidden {
   position: absolute;
   width: 1px;
@@ -34,12 +66,13 @@
 }
 
 .modal {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: space-between;
+  justify-content: center;
   max-width: 335px;
   margin: 20px auto 0 auto;
-  /* position: absolute; */
-  /* top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%) scaleY(1); */
+
   padding: 40px 24px;
   transform: scaleY(1);
   width: calc(100% - 10px);
@@ -50,8 +83,8 @@
   overflow: hidden;
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+
 .backdrop.is-hidden .modal {
-  /* transform: translate(-50%, -50%) scaleY(0); */
   transform: scaleY(0);
 }
 
@@ -80,11 +113,17 @@
   stroke: #4f2ee8;
 }
 
+.cover-modal {
+  width: 287px;
+  height: 408px;
+}
+
 .img-book {
   margin-top: 4px;
   width: 287px;
   height: 408px;
 }
+
 .title-book {
   color: #111;
   margin-top: 14px;
@@ -115,6 +154,8 @@
   font-weight: 400;
   line-height: 1.29;
   letter-spacing: -0.56px;
+  /* width: 287px; */
+  height: auto;
 }
 
 .modal-img-list {
@@ -142,22 +183,29 @@
   filter: grayscale(100%);
 }
 
-/* .add-local,
-.reremove-local {
-  padding-top: 14px;
-  padding-bottom: 14px;
-} */
+.add-books-backend {
+  margin-bottom: 44px;
+}
+
+.add-local {
+  padding: 14px 28px;
+}
+
+.remove-local {
+  padding: 14px 23px;
+}
 
 .btn-add-local {
-  display: block;
-  margin: 44px auto 40px auto;
-
+  white-space: nowrap;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   min-width: 211px;
   height: 46px;
   background-color: transparent;
   border-radius: 40px;
   border: 2px solid #4f2ee8;
-  font-family: 'DM Sans';
+  font-family: inherit;
   color: #111;
   font-size: 14px;
   line-height: 1.29;
@@ -165,6 +213,10 @@
   text-transform: uppercase;
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
     color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.text-off {
+  display: none;
 }
 
 .btn-add-local:hover,
@@ -186,16 +238,39 @@
 
 .text-box {
   width: 242px;
-  height: 36px;
-  margin: 0 auto;
+
+  margin: 8px auto 0 auto;
 }
 
 @media screen and (min-width: 768px) {
   .modal {
+    display: block;
+    gap: 0;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scaleY(1);
     max-width: 579px;
     min-height: 465px;
-    transform: scaleY(1);
+
     padding: 40px;
+  }
+
+  .backdrop.is-hidden .modal {
+    transform: translate(-50%, -50%) scaleY(0);
+  }
+
+  .icon-close-modal {
+    width: 28px;
+    height: 28px;
+  }
+
+  .close-btn-modal {
+    width: 28px;
+    height: 28px;
+    top: 24px;
+    right: 24px;
   }
 
   .add-books-backend {
@@ -221,9 +296,18 @@
     letter-spacing: -0.56px;
   }
 
+  .cover-modal {
+    width: 192px;
+    height: 281px;
+  }
+
+  .add-books-backend {
+    margin-bottom: 40px;
+  }
+
   .img-book {
     margin-top: 0;
-    width: 192px;
+    min-width: 192px;
     height: 281px;
   }
 
@@ -238,19 +322,21 @@
     margin-top: 20px;
   }
 
+  .add-local {
+    padding: 20px 149px;
+  }
+
+  .remove-local {
+    padding: 20px 100px;
+  }
+
   .btn-add-local {
-    min-width: 499px;
+    width: 499px;
     height: 64px;
     font-size: 18px;
     line-height: 1.33;
-    margin: 40px auto 40px auto;
+    /* margin: 40px auto 40px auto; */
   }
-
-  /* .add-local,
-  .reremove-local {
-    padding-top: 20px;
-    padding-bottom: 20px;
-  } */
 
   .text-modal {
     letter-spacing: -0.48px;
@@ -258,8 +344,7 @@
 
   .text-box {
     width: 324px;
-    height: 28px;
-    margin: 0 auto;
+    margin: 8 auto 0 auto;
   }
 }
 
