@@ -37,8 +37,8 @@ refs.themeSwitcher.addEventListener('change', setTheme);
 // console.log(themeSwitcher.checked);
 
 // console.log(checking.checked);
-refs.openBurgerBtn.addEventListener('click', toggleModal);
-refs.closeBurgerBtn.addEventListener('click', toggleModal);
+// refs.openBurgerBtn.addEventListener('click', toggleModal);
+// refs.closeBurgerBtn.addEventListener('click', toggleModal);
 
 function toggleModal() {
   refs.burger.classList.toggle('is-hidden-header');
