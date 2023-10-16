@@ -9,7 +9,6 @@ const removeLocal = document.querySelector('.remove-local');
 const p = document.querySelector('.text-box');
 
 const DATA_KEY = 'user-books'; // localStorage
-localStorage.setItem('user-books', '');
 
 let bookList;
 if (localStorage.getItem(DATA_KEY)) {
@@ -17,7 +16,6 @@ if (localStorage.getItem(DATA_KEY)) {
 } else {
   bookList = [];
 }
-// const bookList = JSON.parse(localStorage.getItem(DATA_KEY));
 
 const containerFromMarcup = document.querySelector('.add-books-backend');
 
@@ -54,7 +52,6 @@ listAddBook.addEventListener('click', onClick);
 listTopBook.addEventListener('click', onClick);
 
 modalBtn.addEventListener('click', onAddLocal);
-// modalBtn.addEventListener('click', onRemoveLocal)
 
 async function onClick(evt) {
   backdrop.classList.remove('is-hidden');
@@ -74,14 +71,11 @@ async function onClick(evt) {
     addLocal.hidden = true;
     removeLocal.hidden = false;
 
-    p.classList.remove('text-off')
-    // p.hidden = false;
-
+    p.classList.remove('text-off');
   } else {
     addLocal.hidden = false;
     removeLocal.hidden = true;
-    p.classList.add('text-off')
-    // p.hidden = true;
+    p.classList.add('text-off');
   }
 
   await getBooksById(bookId)
@@ -180,11 +174,9 @@ async function onAddLocal(evt) {
     removeLocal.hidden = true;
 
     // p.hidden = true;
-    p.classList.add('text-off')
+    p.classList.add('text-off');
 
-   
     modalBtn.blur();
-
 
     await getBooksById(bookId)
       .then(data => bookList.push({ ...data }))
@@ -207,10 +199,8 @@ async function onAddLocal(evt) {
       addLocal.hidden = false;
       removeLocal.hidden = true;
 
-      p.classList.add('text-off')
+      p.classList.add('text-off');
       modalBtn.blur();
-      // p.hidden = true;
-
     }
   }
 }

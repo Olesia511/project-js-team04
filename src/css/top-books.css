@@ -154,13 +154,13 @@
     line-height: 1.71; /* 171.429% */
   }
 
-  .book-list > li:not(:first-child) {
+  .book-list > li:not(:last-child) {
     display: flex;
     flex-wrap: wrap;
   }
 
   .book-list > li:nth-child(n + 4) {
-    display: block;
+    display: flex;
   }
 
   .book-list > li:not(:nth-child(-n + 3)) {
@@ -199,10 +199,12 @@
     gap: 24px;
   }
 
-  .book-list > li:nth-child(n + 4) {
+  .book-list > li:nth-child(n + 3) {
     display: flex;
   }
-
+  .book-list > li:last-child {
+    flex-wrap: wrap;
+  }
   .book-item {
     width: 180px;
     height: 306px;

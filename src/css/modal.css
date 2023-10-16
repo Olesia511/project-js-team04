@@ -7,6 +7,7 @@
   position: relative;
   overflow: hidden;
   /* height: 281px; */
+  margin-bottom: 14px;
 }
 
 .cover-text {
@@ -79,7 +80,7 @@
 .modal {
   display: flex;
   flex-wrap: wrap;
-  align-content: space-between;
+  align-content: start;
   justify-content: center;
   max-width: 335px;
   margin: 20px auto 0 auto;
@@ -87,7 +88,6 @@
   padding: 40px 24px;
   /* transform: scaleY(1); */
   width: calc(100% - 10px);
-  min-height: 762px;
   border-radius: 18px;
   border: 2px solid #111;
   background-color: #fff;
