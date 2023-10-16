@@ -11,13 +11,17 @@ function topBooksRequest() {
           const { list_name, books } = category;
           const mappedBooks = books
             .map(
-              ({ _id, author, book_image, title }) => `
+              ({ _id, author, book_image, title }) => ` 
   <li data-book-id="${_id}" class="book-item js-target">
-    <img class="book-img js-target" src="${book_image}" alt="${title}" />
-    <h2 class="book-title js-target">${title}</h2>
-    <h3 class="author js-target">${author}</h3>
-  </li>
-`
+              <div class="cover-wrap">
+                <img class="book-img js-target" src="${book_image}" alt="${title}" />
+                <p class="cover-text">quick view</p>
+              </div>
+              <div class="title-author-container">
+                <h2 class="book-title js-target">${title}</h2>
+                <h3 class="author js-target">${author}</h3>
+              </div>
+  </li>`
             )
             .join('');
           // console.log(mappedBooks);
