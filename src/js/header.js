@@ -62,7 +62,7 @@ function setTheme(evt) {
 //   localStorage.setItem(LOCAL_KEY, JSON.stringify(theme));
 
 //   const toggleSwitches = document.querySelectorAll(
-//     '.common-toggle input[type="checkbox"]'
+//     '.js-common-toggle input[type="checkbox"]'
 //   );
 //   toggleSwitches.forEach(function (toggleSwitch) {
 //     if (theme === 'dark') {
@@ -82,7 +82,7 @@ function setTheme(evt) {
 // }
 
 // const toggleSwitches = document.querySelectorAll(
-//   '.common-toggle input[type="checkbox"]'
+//   '.js-common-toggle input[type="checkbox"]'
 // );
 // toggleSwitches.forEach(function (toggleSwitch) {
 //   toggleSwitch.addEventListener(

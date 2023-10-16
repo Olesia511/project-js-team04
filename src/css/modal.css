@@ -102,7 +102,6 @@
   max-width: 335px;
   margin: 20px auto 0 auto;
 
-
   padding: 40px 24px;
   /* transform: scaleY(1); */
   width: calc(100% - 10px);
@@ -146,6 +145,7 @@
 .cover-modal {
   width: 287px;
   height: 408px;
+}
 
 .img-book {
   margin-top: 4px;
