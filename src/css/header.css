@@ -13,6 +13,7 @@
   align-items: center;
   padding-left: 20px;
   padding-right: 20px;
+  margin-bottom: 40px;
 }
 .header-logo-link {
   display: flex;
@@ -76,6 +77,7 @@ input[type='checkbox']:checked ~ .check::after {
 }
 
 .toggle-theme {
+  margin-left: auto;
   margin-right: 14px;
   padding-top: 18px;
   padding-bottom: 18px;
@@ -108,7 +110,6 @@ input[type='checkbox']:checked ~ .check::after {
 
 .log-out-btn {
   display: none;
-  /* display: flex; */
   width: 118px;
   height: 48px;
   background-color: transparent;
@@ -141,6 +142,8 @@ input[type='checkbox']:checked ~ .check::after {
   .header-container {
     width: 768px;
     height: 72px;
+    padding-left: 32px;
+    padding-right: 32px;
   }
   .burger-menu {
     display: none;
@@ -161,34 +164,47 @@ input[type='checkbox']:checked ~ .check::after {
     height: 34px;
     padding-top: 19px;
     padding-bottom: 19px;
-    margin-right: 103px;
+    margin-right: 101px;
   }
 
   .site-nav {
     display: flex;
-    /* gap: 24px; */
     align-items: center;
-
-    width: 220px;
+    /* width: 220px; */
     height: 34px;
   }
 
-  .site-nav-item-home,
   .site-nav-item-shop {
     display: flex;
     align-items: center;
     text-align: center;
-    height: 18px;
-    padding-top: 27px;
-    padding-bottom: 27px;
+    margin-right: auto;
   }
   .site-nav-item-home {
-    margin-right: 40px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+  }
+  .site-nav-item-home {
+    margin-right: 24px;
+  }
+
+  .home-link {
+    display: block;
+    white-space: nowrap;
+  }
+
+  .site-nav-item-home,
+  .site-nav-item-shop {
+    transition: background-color var(--transition-time);
+    padding-top: 7px;
+    padding-bottom: 7px;
   }
 
   .shopping-link {
     display: block;
     margin-right: 8px;
+    white-space: nowrap;
   }
 
   .basket-icon {
@@ -215,10 +231,7 @@ input[type='checkbox']:checked ~ .check::after {
     border-radius: 18px;
     border: 1.5px solid #111;
     background-color: #4f2ee8;
-    /* background-color: transparent; */
-
     padding: 12px 14px;
-
     cursor: pointer;
     text-decoration: none;
     text-align: center;
@@ -234,20 +247,26 @@ input[type='checkbox']:checked ~ .check::after {
     margin-right: auto;
     color: #fff;
   }
+}
 
-  /* .sign-up-button_icon {
-  fill: #111111;
-  width: 24px;
-  height: 20px;
-} */
-
-  /* .sign-up-button_text {
-  font-weight: 500;
-  font-size: 14px;
-  line-height: calc(18 / 14);
-  letter-spacing: -0.04em;
-  color: #ffffff;
-} */
+@media screen and (min-width: 1440px) {
+  .header-container {
+    width: 1440px;
+    height: 72px;
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+  .header-logo-link {
+    margin-right: 92px;
+    padding-top: 22px;
+    padding-bottom: 22px;
+  }
+  .site-nav-item-home {
+    margin-right: 40px;
+  }
+  .site-nav-item-shop {
+    margin-right: auto;
+  }
 }
 
 /* .site-nav__item {

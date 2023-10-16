@@ -1,25 +1,20 @@
-.container-categories-support {
-  display: block;
-}
-img {
+/* img {
   display: inline-block;
-}
+} */
 .charities-section {
-  
   padding-left: 40px;
   padding-top: 24px;
   padding-right: 40px;
   padding-bottom: 20px;
 
   position: relative;
-  max-width: 335px;
-  min-height: 460px;
+  width: 335px;
+  height: 460px;
   border-radius: 16px;
   background: radial-gradient(
     189.32% 190.93% at 59.76% -23.42%,
-    #4f2ee8 18.03%, 
+    #4f2ee8 18.03%,
     #fff 100%
-    
   );
   box-shadow: 0px 10px 10px 0px rgba(245, 245, 247, 0.1);
 }
@@ -51,7 +46,6 @@ img {
   gap: 12px;
 
   margin-bottom: 40px;
-
 }
 .sup-ukraine-title {
   color: #fff;
@@ -99,12 +93,11 @@ img {
   border-radius: 50%;
   border: none;
   fill: #4f2ee8;
-  margin-right: auto; 
-  margin-left: auto; 
+  margin-right: auto;
+  margin-left: auto;
 }
 @media screen and (min-width: 768px) {
   .charities-section {
-    max-width: 356px;
     height: 474px;
     padding-bottom: 24px;
   }
@@ -116,4 +109,4 @@ img {
     line-height: 28px;
     letter-spacing: -0.96px;
   }
-};
+}

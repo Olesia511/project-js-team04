@@ -17,7 +17,6 @@
   "dependencies": {
     "animate.css": "^4.1.1",
     "axios": "^1.2.2",
-    "firebase": "^10.5.0",
     "modern-normalize": "^2.0.0",
     "vite-plugin-full-reload": "^1.0.5",
     "vite-plugin-html-inject": "^1.0.1"
