@@ -18,7 +18,10 @@ function markUpByCategory(array) {
   const markup = array
     .map(({ book_image, title, author, _id }) => {
       return `<li data-book-id='${_id}' class="element-books-by-category js-target">
+      <div class="cover-wrap">
       <img src="${book_image}" alt="${title}" class="img-books-by-category js-target" />
+       <p class="cover-text">quick view</p>
+       </div>
       <div class="title-container js-target">
       <h3 class="name-books-by-category js-target">${title}</h3>
       <p class="title-books-by-category js-target">${author}</p>
@@ -122,7 +125,6 @@ function trimTitleText() {
     let trimmedText = text.slice(0, maxCharacters);
 
     if (trimmedWords.length > maxCharacters) {
-      // Видаляємо слова, якщо вони перевищують ліміт maxCharacters
       trimmedWords = trimmedWords.slice(0, maxCharacters);
     }
 
