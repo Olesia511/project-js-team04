@@ -6,28 +6,31 @@ const refs = {
 };
 console.dir(refs.themeSwitcher);
 const boDy = document.querySelector(`body`);
+console.log(`++++++`, boDy);
 
 const LOCAL_KEY = 'theme';
-let theme = '';
+let theme;
 
-localStorage.setItem(LOCAL_KEY, JSON.stringify(theme));
+// localStorage.setItem(LOCAL_KEY, JSON.stringify(theme));
 const getKey = localStorage.getItem(LOCAL_KEY);
 console.log(getKey);
-if (getKey === null || undefined) {
+if (getKey === null || getKey === undefined) {
   theme = 'light';
   localStorage.setItem(LOCAL_KEY, JSON.stringify(theme));
   refs.themeSwitcher.checked = false;
 }
-// const checkKey = JSON.parse(localStorage.getItem(LOCAL_KEY));
 
 if (getKey) {
-  const checkKey = JSON.parse(localStorage.getItem(LOCAL_KEY));
+  const checkKey = localStorage.getItem(LOCAL_KEY);
 
   if (checkKey === 'dark') {
     refs.themeSwitcher.checked = true;
+    changeTheme();
+
     console.log('1111111');
   } else {
     refs.themeSwitcher.checked = false;
+
     console.log('222222');
   }
 }
@@ -44,6 +47,13 @@ function toggleModal() {
   refs.burger.classList.toggle('is-hidden-header');
 }
 
+function changeTheme() {
+  boDy.classList.add('dark');
+}
+function changeDarkTheme() {
+  boDy.classList.remove('dark');
+}
+
 // refs.themeSwitcher.addEventListener('change', setTheme);
 
 function setTheme(evt) {
@@ -51,8 +61,10 @@ function setTheme(evt) {
   console.log(toggleSwitches);
   if (toggleSwitches) {
     localStorage.setItem(LOCAL_KEY, 'dark');
+    changeTheme();
   } else {
     localStorage.setItem(LOCAL_KEY, 'light');
+    changeDarkTheme();
   }
 }
 

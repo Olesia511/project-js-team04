@@ -9,7 +9,7 @@ body {
   color: var(--primary-text-color-light-theme);
 }
 
-body .dark {
+body.dark {
   background-color: var(--black-color);
   color: var(--primary-text-color-dark-theme);
 }
