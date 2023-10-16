@@ -161,6 +161,10 @@
   }
 
   .book-list > li:nth-child(n + 4) {
+    display: block;
+  }
+
+  .book-list > li:not(:nth-child(-n + 3)) {
     display: none;
   }
 
