@@ -3,6 +3,7 @@
   display: none;
 }
 .header-container {
+  position: fixed;
   display: flex;
   width: 375px;
   height: 64px;
