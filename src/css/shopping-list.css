@@ -197,7 +197,7 @@
 }
 
 /*! Only Phone */
-@media screen and (max-width: 325px) {
+@media screen and (max-width: 374px) {
   .book-cover {
     background-repeat: no-repeat;
     background-size: 16px 15px;
