@@ -9,6 +9,9 @@
   margin-right: auto;
   max-width: 335px;
 }
+.shop-list-placeholder.dark {
+  color: var(--primary-text-color-dark-theme);
+}
 
 .sidebar {
   display: none;
@@ -139,17 +142,17 @@
 
   background-size:contain;
   background-repeat: no-repeat;
-  background-image: url("../img/shop-logo-amazon.png");
+  background-image: url('../img/shop-logo-amazon.png');
   transition: filter 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .apple-books-logo {
   width: 16px;
   height: 16px;
-  
   background-size: contain;
+
   background-repeat: no-repeat;
-  background-image: url("../img/shop-logo.png");
+  background-image: url('../img/shop-logo.png');
   transition: filter 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -182,12 +185,10 @@
 .delete-btn-icon {
   width: 16px;
   height: 16px;
-
   background-size: cover;
   background-repeat: no-repeat;
-  background-image: url("../img/trash-03.png");
+  background-image: url('../img/trash-03.png');
 }
-
 
 /*? Backgroung and placeholders */
 .book-cover {
@@ -210,15 +211,15 @@
   }
 
   .amazon-logo {
-    background-image: url("../img/shop-logo-amazon-2x.png");
+    background-image: url('../img/shop-logo-amazon-2x.png');
   }
 
   .apple-books-logo {
-    background-image: url("../img/shop-logo-2x.png");
+    background-image: url('../img/shop-logo-2x.png');
   }
 
   .delete-btn-icon {
-    background-image: url("../img/trash-03-x2.png");
+    background-image: url('../img/trash-03-x2.png');
   }
 }
 
