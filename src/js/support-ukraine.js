@@ -79,7 +79,7 @@ function toggleItemsVisibility() {
 
     const img = document.createElement('img');
     img.src = charity.img;
-    img.srcset = '${charity.img} 1x, ${charity.img2x} 2x';
+    img.srcset = `${charity.img} 1x, ${charity.img2x} 2x`;
     img.alt = charity.title;
     img.classList.add('white-image');
 
