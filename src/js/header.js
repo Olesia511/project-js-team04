@@ -8,7 +8,11 @@ const refs = {
 const boDy = document.querySelector(`body`);
 const headerDark = document.querySelector('.header-container');
 const iconClose = document.querySelector('.icon-close');
-// console.log(`++++++`, boDy);
+const modal = document.querySelector('.modal');
+const iconModalClose = document.querySelector('.icon-close-modal');
+const categoryListItem = document.querySelector('.categories-list');
+
+setTimeout(console.log(`++++++`, li), 2000);
 
 const LOCAL_KEY = 'theme';
 let theme;
@@ -53,11 +57,17 @@ function changeTheme() {
   boDy.classList.add('dark');
   headerDark.classList.add('dark');
   iconClose.classList.add('dark');
+  modal.classList.add('dark');
+  iconModalClose.classList.add('dark');
+  categoryListItem.classList.add('dark');
 }
 function changeDarkTheme() {
   boDy.classList.remove('dark');
   headerDark.classList.remove('dark');
   iconClose.classList.remove('dark');
+  modal.classList.remove('dark');
+  iconModalClose.classList.remove('dark');
+  categoryListItem.classList.remove('dark');
 }
 
 // refs.themeSwitcher.addEventListener('change', setTheme);

@@ -82,22 +82,27 @@
 
 .modal {
   position: relative;
-  
+  opacity: 1;
   display: flex;
   flex-wrap: wrap;
   align-content: start;
   justify-content: center;
   max-width: 335px;
   margin: 20px auto 0 auto;
+  background-color: var(--primary-text-color-dark-theme);
 
   padding: 40px 24px;
   /* transform: scaleY(1); */
   width: calc(100% - 10px);
   border-radius: 18px;
   border: 2px solid #111;
-  background-color: #fff;
+  /* background-color: inherit; */
   overflow: hidden;
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.modal.dark {
+  background-color: var(--black-color);
+  color: var(--primary-text-color-dark-theme);
 }
 
 .backdrop.is-hidden .modal {
@@ -123,6 +128,9 @@
 .icon-close-modal {
   stroke: #111;
 }
+.icon-close-modal.dark {
+  stroke: var(--primary-text-color-dark-theme);
+}
 
 .icon-close-modal:hover,
 .icon-close-modal:focus {
@@ -141,7 +149,7 @@
 }
 
 .title-book {
-  color: #111;
+  color: inherit;
   margin-top: 14px;
   font-family: 'DM Sans';
   font-size: 16px;
@@ -162,7 +170,7 @@
 }
 
 .descr-book {
-  color: #111;
+  color: inherit;
   height: 70px;
   width: 279px;
   margin-top: 18px;
@@ -225,7 +233,7 @@
   border-radius: 40px;
   border: 2px solid #4f2ee8;
   font-family: inherit;
-  color: #111;
+  color: inherit;
   font-size: 14px;
   line-height: 1.29;
   letter-spacing: -0.14px;
