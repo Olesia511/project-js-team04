@@ -63,9 +63,8 @@ function shopListMarkup(arr) {
       }) => {
         return `<li class="shop-list-item" data-id="${_id}">
               <button type="button" class="delete-btn">
-                <svg class="delete-btn-icon" width="16" height="16">
-                  <use href="../img/icon.svg#icon-shop-list-delete"></use>
-                </svg>
+              <div class="delete-btn-icon">
+              </div>
               </button>
               <div class="book-cover"><img class="book-cover-img" src="${book_image}" alt="${title}" /></div>
               <div class="book-info">
@@ -76,38 +75,12 @@ function shopListMarkup(arr) {
 
                 <div class="link-container">
                   <a class="amazon-icon" href="${amazon_product_url}" target="_blank" rel="noopener noreferrer nofollow">
-                    <picture>
-                      <source
-                        srcset="
-                          ../img/shop-logo-amazon.png    1x,
-                          ../img/shop-logo-amazon-2x.png 2x
-                        "
-                      />
-                      <img
-                        class="amazon-logo"
-                        src="../img/shop-logo-amazon.png"
-                        alt="Amazon"
-                        width="32"
-                        height="11"
-                      />
-                    </picture>
+                  <div class="amazon-logo">
+                  </div>
                   </a>
                   <a class="apple-icon" href="${buy_links[1].url}" target="_blank" rel="noopener noreferrer nofollow">
-                    <picture>
-                      <source
-                        srcset="
-                          ../img/shop-logo.png    1x,
-                          ../img/shop-logo-2x.png 2x
-                        "
-                      />
-                      <img
-                        class="apple-books-logo"
-                        src="../img/shop-logo.png"
-                        alt="Apple Books"
-                        width="16"
-                        height="16"
-                      />
-                    </picture>
+                  <div class="apple-books-logo">
+                  </div>
                   </a>
                 </div>
               </div>
