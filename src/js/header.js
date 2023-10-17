@@ -10,7 +10,6 @@ const headerDark = document.querySelector('.header-container');
 const iconClose = document.querySelector('.icon-close');
 const modal = document.querySelector('.modal');
 const iconModalClose = document.querySelector('.icon-close-modal');
-const categoryListItem = document.querySelector('.categories-list');
 
 setTimeout(console.log(`++++++`, li), 2000);
 
@@ -59,7 +58,6 @@ function changeTheme() {
   iconClose.classList.add('dark');
   modal.classList.add('dark');
   iconModalClose.classList.add('dark');
-  categoryListItem.classList.add('dark');
 }
 function changeDarkTheme() {
   boDy.classList.remove('dark');
@@ -67,7 +65,6 @@ function changeDarkTheme() {
   iconClose.classList.remove('dark');
   modal.classList.remove('dark');
   iconModalClose.classList.remove('dark');
-  categoryListItem.classList.remove('dark');
 }
 
 // refs.themeSwitcher.addEventListener('change', setTheme);
