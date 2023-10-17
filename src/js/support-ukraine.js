@@ -2,8 +2,8 @@ const charities = [
   {
     title: 'Save the Children',
     url: 'https://www.savethechildren.net/what-we-do/emergencies/ukraine-crisis',
-    img: `./img/save-the-children.png`,
-    img2x: `./img/save-the-children-2x.png`,
+    img: './img/save-the-children.png',
+    img2x: './img/save-the-children-2x.png',
   },
   {
     title: 'Project HOPE',

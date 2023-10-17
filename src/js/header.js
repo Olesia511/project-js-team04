@@ -4,10 +4,11 @@ const refs = {
   burger: document.querySelector('.mobile-menu-container'),
   themeSwitcher: document.querySelector('input[type="checkbox"]'),
 };
-console.dir(refs.themeSwitcher);
+// console.dir(refs.themeSwitcher);
 const boDy = document.querySelector(`body`);
 const headerDark = document.querySelector('.header-container');
-console.log(`++++++`, boDy);
+const iconClose = document.querySelector('.icon-close');
+// console.log(`++++++`, boDy);
 
 const LOCAL_KEY = 'theme';
 let theme;
@@ -51,10 +52,12 @@ function toggleModal() {
 function changeTheme() {
   boDy.classList.add('dark');
   headerDark.classList.add('dark');
+  iconClose.classList.add('dark');
 }
 function changeDarkTheme() {
   boDy.classList.remove('dark');
   headerDark.classList.remove('dark');
+  iconClose.classList.remove('dark');
 }
 
 // refs.themeSwitcher.addEventListener('change', setTheme);
@@ -70,6 +73,41 @@ function setTheme(evt) {
     changeDarkTheme();
   }
 }
+
+(() => {
+  const backdrop = document.querySelector('.backdrop-header');
+  const mobileMenu = document.querySelector('.js-menu-container');
+  const openMenuBtn = document.querySelector('.js-open-menu');
+  const closeMenuButtons = document.querySelectorAll('.js-close-menu');
+  const burger = document.querySelector('.burger-menu');
+  const closeBtn = document.querySelector('.mob-menu-close');
+  const toggleMenu = () => {
+    const isMenuOpen =
+      openMenuBtn.getAttribute('aria-expanded') === 'true' || false;
+    openMenuBtn.setAttribute('aria-expanded', !isMenuOpen);
+    burger.classList.toggle('is-hidden-burger');
+    mobileMenu.classList.toggle('is-open');
+    backdrop.classList.toggle('is-hidden-mobile');
+    closeBtn.classList.toggle('is-hidden-burger');
+    const scrollLockMethod = !isMenuOpen
+      ? 'disableBodyScroll'
+      : 'enableBodyScroll';
+    bodyScrollLock[scrollLockMethod](document.body);
+  };
+  openMenuBtn.addEventListener('click', toggleMenu);
+  closeMenuButtons.forEach(closeMenuBtn => {
+    closeMenuBtn.addEventListener('click', toggleMenu);
+  });
+
+  // Close the mobile menu on wider screens if the device orientation changes
+  window.matchMedia('(min-width: 768px)').addEventListener('change', e => {
+    if (!e.matches) return;
+    mobileMenu.classList.remove('is-open');
+    backdrop.classList.add('is-hidden-mobile');
+    openMenuBtn.setAttribute('aria-expanded', false);
+    bodyScrollLock.enableBodyScroll(document.body);
+  });
+})();
 
 // setTheme();
 
