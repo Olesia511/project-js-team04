@@ -64,7 +64,7 @@ function shopListMarkup(arr) {
         return `<li class="shop-list-item" data-id="${_id}">
               <button type="button" class="delete-btn">
                 <svg class="delete-btn-icon" width="16" height="16">
-                  <use href="./img/icon.svg#icon-shop-list-delete"></use>
+                  <use href="../img/icon.svg#icon-shop-list-delete"></use>
                 </svg>
               </button>
               <div class="book-cover"><img class="book-cover-img" src="${book_image}" alt="${title}" /></div>
@@ -79,13 +79,13 @@ function shopListMarkup(arr) {
                     <picture>
                       <source
                         srcset="
-                          ./img/shop-logo-amazon.png    1x,
-                          ./img/shop-logo-amazon-2x.png 2x
+                          ../img/shop-logo-amazon.png    1x,
+                          ../img/shop-logo-amazon-2x.png 2x
                         "
                       />
                       <img
                         class="amazon-logo"
-                        src="./img/shop-logo-amazon.png"
+                        src="../img/shop-logo-amazon.png"
                         alt="Amazon"
                         width="32"
                         height="11"
@@ -96,13 +96,13 @@ function shopListMarkup(arr) {
                     <picture>
                       <source
                         srcset="
-                          ./img/shop-logo.png    1x,
-                          ./img/shop-logo-2x.png 2x
+                          ../img/shop-logo.png    1x,
+                          ../img/shop-logo-2x.png 2x
                         "
                       />
                       <img
                         class="apple-books-logo"
-                        src="./img/shop-logo.png"
+                        src="../img/shop-logo.png"
                         alt="Apple Books"
                         width="16"
                         height="16"
