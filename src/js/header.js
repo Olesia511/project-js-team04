@@ -13,11 +13,27 @@ const iconModalClose = document.querySelector('.icon-close-modal');
 const burgerMenu = document.querySelector('.menu-burger-icon');
 const basketIcon = document.querySelector('.basket-icon');
 const shopListText = document.querySelector('.shop-list-placeholder');
+const navigMenu = document.querySelector(`.site-nav`);
 
 // console.log(`++++++`, );
 
 const LOCAL_KEY = 'theme';
 let theme;
+
+navigMenu.addEventListener(`click`, activePage);
+
+function activePage(evt) {
+  if (
+    !evt.target.classList.contains(`site-nav-item-home`) ||
+    !evt.target.classList.contains(`site-nav-item-shop`)
+  ) {
+    return;
+  } else if (evt.target.classList.contains(`active`)) {
+    return;
+  } else {
+    console.log(evt.target);
+  }
+}
 
 // localStorage.setItem(LOCAL_KEY, JSON.stringify(theme));
 const getKey = localStorage.getItem(LOCAL_KEY);
