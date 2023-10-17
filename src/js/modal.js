@@ -128,35 +128,14 @@ function marcup(
  <ul class="modal-img-list">
         <li>
           <a href="${urlAmazon}" target="_blank" rel="noopener noreferrer nofollow">
-            <picture>
-              <source
-                srcset="
-                  ./img/shop-logo-amazon.png 1x,
-                  ./img/shop-logo-amazon.png 2x
-                "
-              />
-              
-              <img
-                class="img-modal-amazon hover-img"
-                src="./img/shop-logo-amazon.png"
-                alt="link-amazon"
-              />
-            </picture>
+          <div class="img-modal-amazon hover-img">
+          </div>
           </a>
         </li>
         <li>
           <a href="${urlShop}" target="_blank" rel="noopener noreferrer nofollow">
-            <picture>
-              
-              <source
-                srcset="./img/shop-logo.png 1x, ./img/shop-logo.png 2x"
-              />
-              <img
-                class="img-modal-bookshop hover-img"
-                src="./img/shop-logo.png"
-                alt="link-amazon"
-              />
-            </picture>
+          <div class="img-modal-bookshop hover-img">
+          </div>
           </a>
         </li>
       </ul>
