@@ -6,6 +6,7 @@ const refs = {
 };
 console.dir(refs.themeSwitcher);
 const boDy = document.querySelector(`body`);
+const headerDark = document.querySelector('.header-container');
 console.log(`++++++`, boDy);
 
 const LOCAL_KEY = 'theme';
@@ -49,9 +50,11 @@ function toggleModal() {
 
 function changeTheme() {
   boDy.classList.add('dark');
+  headerDark.classList.add('dark');
 }
 function changeDarkTheme() {
   boDy.classList.remove('dark');
+  headerDark.classList.remove('dark');
 }
 
 // refs.themeSwitcher.addEventListener('change', setTheme);

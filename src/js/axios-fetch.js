@@ -25,6 +25,7 @@ async function getCategoryListArr() {
 // ==== Отримання списку ТОП книг по категоріям
 
 async function getTopBooksArr() {
+  //  hideLoader();
   const respTopBooks = await axios.get(`${BASE_URL}${TOP_BOOKS}`);
 
   const topBooks = await respTopBooks.data;
@@ -32,6 +33,9 @@ async function getTopBooksArr() {
   return topBooks;
 }
 
+function hideLoader() {
+  elements.loader.style.display = `none`;
+}
 // getTopBooksArr()
 //   .then(res => {
 //     console.log(`getTopBooksArr`, res);

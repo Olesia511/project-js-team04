@@ -1,12 +1,11 @@
 /*! For mobile size */
 
 .shop-list-page {
-  padding-top: 40px;
-  padding-bottom: 40px;
+  margin-bottom: 40px;
 }
 
 .shopping-list {
-  margin-left: auto;
+  /* margin-left: auto; */
   margin-right: auto;
   max-width: 335px;
 }
@@ -316,7 +315,7 @@
 @media screen and (min-width: 1440px) {
   .shop-list-page {
     display: flex;
-    gap: 40px;
+    /* gap: 40px; */
   }
 
   .shopping-list {
@@ -325,8 +324,10 @@
   }
 
   .sidebar {
-    display: block;
-    width: 356px;
+    display: flex;
+    max-width: 356px;
+    flex-wrap: wrap;
+    margin-right: 40px;
   }
 
   .book-description {

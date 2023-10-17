@@ -14,9 +14,12 @@ body.dark {
   color: var(--primary-text-color-dark-theme);
 }
 
+.main-container {
+  margin-top: 104px;
+}
+
 .container-basic {
   max-width: 375px;
-
   margin-bottom: 80px;
   margin-left: auto;
   margin-right: auto;
@@ -37,6 +40,9 @@ body.dark {
 }
 
 @media screen and (min-width: 768px) {
+  .main-container {
+    margin-top: 112px;
+  }
   .container-basic {
     max-width: 768px;
     margin-bottom: 100px;

@@ -2,8 +2,10 @@
 .sign-up-button {
   display: none;
 }
-.main-container {
-  margin-top: 100px;
+
+.header-container.dark {
+  background-color: var(--black-color);
+  color: var(--primary-text-color-dark-theme);
 }
 
 .header-container {
@@ -24,8 +26,9 @@
   align-items: center;
   padding-left: 20px;
   padding-right: 20px;
-  margin-bottom: 40px;
+  /* margin-bottom: 40px; */
 }
+
 .header-logo-link {
   display: flex;
   justify-content: center;
