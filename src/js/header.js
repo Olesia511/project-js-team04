@@ -12,6 +12,7 @@ const modal = document.querySelector('.modal');
 const iconModalClose = document.querySelector('.icon-close-modal');
 const burgerMenu = document.querySelector('.menu-burger-icon');
 const basketIcon = document.querySelector('.basket-icon');
+const shopListText = document.querySelector('.shop-list-placeholder');
 
 // console.log(`++++++`, );
 
@@ -58,19 +59,24 @@ function changeTheme() {
   boDy.classList.add('dark');
   headerDark.classList.add('dark');
   iconClose.classList.add('dark');
-  modal.classList.add('dark');
-  iconModalClose.classList.add('dark');
   burgerMenu.classList.add('dark');
   basketIcon.classList.add('dark');
+  // shopListText.classList.add('dark');
+
+  modal.classList.add('dark');
+  iconModalClose.classList.add('dark');
 }
+
 function changeDarkTheme() {
   boDy.classList.remove('dark');
   headerDark.classList.remove('dark');
-  iconClose.classList.remove('dark');
-  modal.classList.remove('dark');
   iconModalClose.classList.remove('dark');
   burgerMenu.classList.remove('dark');
   basketIcon.classList.remove('dark');
+  // shopListText.classList.remove('dark');
+
+  modal.classList.remove('dark');
+  iconModalClose.classList.remove('dark');
 }
 
 // refs.themeSwitcher.addEventListener('change', setTheme);

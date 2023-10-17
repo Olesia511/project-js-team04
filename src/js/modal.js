@@ -3,10 +3,12 @@ import { getBooksById } from './axios-fetch';
 const body = document.body;
 const backdrop = document.querySelector('.js-backdrop');
 const modalClose = document.querySelector('.close-btn-modal');
+const modal = document.querySelector('.modal');
 const modalBtn = document.querySelector('.btn-add-local');
 const addLocal = document.querySelector('.add-local');
 const removeLocal = document.querySelector('.remove-local');
 const p = document.querySelector('.text-box');
+const iconModalClose = document.querySelector('.icon-close-modal');
 
 const DATA_KEY = 'user-books'; // localStorage
 
@@ -27,6 +29,7 @@ window.addEventListener('keydown', onEscKeyPress);
 
 function onCloseModal() {
   backdrop.classList.add('is-hidden');
+  modal.classList.add('is-hidden');
   window.removeEventListener('keydown', onEscKeyPress);
   body.classList.remove('disasble-scroll');
 }
@@ -54,12 +57,13 @@ listTopBook.addEventListener('click', onClick);
 modalBtn.addEventListener('click', onAddLocal);
 
 async function onClick(evt) {
-  backdrop.classList.remove('is-hidden');
-  window.addEventListener('keydown', onEscKeyPress);
-  body.classList.add('disasble-scroll');
-
   if (!evt.target.classList.contains('js-target')) {
     return;
+  } else {
+    backdrop.classList.remove('is-hidden');
+    modal.classList.remove('is-hidden');
+    window.addEventListener('keydown', onEscKeyPress);
+    body.classList.add('disasble-scroll');
   }
   const bookId =
     evt.target.dataset.bookId ?? evt.target.closest('li').dataset.bookId;
