@@ -137,7 +137,7 @@
   width: 32px;
   height: 11px;
 
-  background-size: cover;
+  background-size:contain;
   background-repeat: no-repeat;
   background-image: url("../img/shop-logo-amazon.png");
   transition: filter 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -147,7 +147,7 @@
   width: 16px;
   height: 16px;
   
-  background-size: cover;
+  background-size: contain;
   background-repeat: no-repeat;
   background-image: url("../img/shop-logo.png");
   transition: filter 250ms cubic-bezier(0.4, 0, 0.2, 1);
