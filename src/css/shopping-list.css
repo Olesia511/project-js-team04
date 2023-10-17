@@ -140,7 +140,7 @@
   width: 32px;
   height: 11px;
 
-  background-size: cover;
+  background-size:contain;
   background-repeat: no-repeat;
   background-image: url('../img/shop-logo-amazon.png');
   transition: filter 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -149,8 +149,8 @@
 .apple-books-logo {
   width: 16px;
   height: 16px;
+  background-size: contain;
 
-  background-size: cover;
   background-repeat: no-repeat;
   background-image: url('../img/shop-logo.png');
   transition: filter 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -185,7 +185,6 @@
 .delete-btn-icon {
   width: 16px;
   height: 16px;
-
   background-size: cover;
   background-repeat: no-repeat;
   background-image: url('../img/trash-03.png');
