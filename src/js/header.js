@@ -8,7 +8,7 @@ const refs = {
 const boDy = document.querySelector(`body`);
 const headerDark = document.querySelector('.header-container');
 const iconClose = document.querySelector('.icon-close');
-const modal = document.querySelector('.modal');
+const modalTheme = document.querySelector('.modal');
 const iconModalClose = document.querySelector('.icon-close-modal');
 const burgerMenu = document.querySelector('.menu-burger-icon');
 const basketIcon = document.querySelector('.basket-icon');
@@ -63,7 +63,7 @@ function changeTheme() {
   basketIcon.classList.add('dark');
   // shopListText.classList.add('dark');
 
-  modal.classList.add('dark');
+  modalTheme.classList.add('dark');
   iconModalClose.classList.add('dark');
 }
 
@@ -75,7 +75,7 @@ function changeDarkTheme() {
   basketIcon.classList.remove('dark');
   // shopListText.classList.remove('dark');
 
-  modal.classList.remove('dark');
+  modalTheme.classList.remove('dark');
   iconModalClose.classList.remove('dark');
 }
 
