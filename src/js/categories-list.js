@@ -78,11 +78,13 @@ function categotySelect(evt) {
       removeCurrent();
       showTopBooksField();
       hideCategoryField();
+      topContainer.addEventListener('click', reMarkup);
     } else {
       removeCurrent();
       hideCategoryField();
       topBooksRequest();
       showTopBooksField();
+      topContainer.addEventListener('click', reMarkup);
     }
   } else {
     removeCurrent();
@@ -91,6 +93,7 @@ function categotySelect(evt) {
     console.log(categoryName);
     bookRequest(categoryName);
     showCategoryField();
+    topContainer.removeEventListener('click', reMarkup);
   }
   curentCategory = evt.target;
   curentCategory.classList.add(`active-list-item`);
@@ -123,15 +126,27 @@ function secFirstTheme() {
   wholeList.map(item => item.classList.add('dark'));
 }
 
-const topContainer = document.querySelector(`.container-books-by-category`);
+const topContainer = document.querySelector(`.container-best-books`);
 console.log();
 
 topContainer.addEventListener('click', reMarkup);
 
 function reMarkup(evt) {
+  // console.log(evt.target);
+
   if (!evt.target.classList.contains(`see-more-btn`)) {
     return;
   }
   const data = evt.target.dataset.category;
-  console.log(data);
+  console.log(typeof data);
+
+  removeCurrent();
+  hideTopBooksField();
+  bookRequest(data);
+  showCategoryField();
+  curentCategory = wholeList.find(
+    ({ textContent }) => textContent === `${data}`
+  );
+  addCurrent();
+  topContainer.removeEventListener('click', reMarkup);
 }
