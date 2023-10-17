@@ -11,7 +11,7 @@ const iconClose = document.querySelector('.icon-close');
 const modal = document.querySelector('.modal');
 const iconModalClose = document.querySelector('.icon-close-modal');
 
-setTimeout(console.log(`++++++`, li), 2000);
+// console.log(`++++++`, );
 
 const LOCAL_KEY = 'theme';
 let theme;
