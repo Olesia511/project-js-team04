@@ -1,6 +1,7 @@
 .categories-list {
   height: 228px;
   width: 335px;
+  padding-right: 28px;
 }
 
 .list-categories-item {
@@ -16,9 +17,16 @@
 }
 
 .list-categories-item:hover,
-.list-categories-item:focus,
-.list-categories-item:active {
+.list-categories-item:focus {
   color: var(--violet-color);
+}
+
+.active-list-item.dark {
+  color: var(--yellow-color);
+}
+.list-categories-item.dark:hover,
+.list-categories-item.dark:focus {
+  color: var(--yellow-color);
 }
 
 .active-list-item {

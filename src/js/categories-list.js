@@ -11,6 +11,8 @@ import { topBooksRequest } from './top-books';
 const categoriesList = document.querySelector(`.categories-list`);
 const byCategoryField = document.querySelector(`.container-books-by-category`);
 const topBooksField = document.querySelector(`.top-books-box`);
+const chekBoxItem = document.querySelector('input[type="checkbox"]');
+
 let curentCategory = null;
 
 topBooksRequest();
@@ -27,8 +29,8 @@ function hideCategoryField() {
 function showCategoryField() {
   byCategoryField.style.display = 'block';
 }
-
-// showTopBooksField();
+let liFromList;
+let wholeList;
 // hideCategoryField();
 
 getCategoryListArr()
@@ -51,8 +53,18 @@ getCategoryListArr()
     // console.log(curentCategory);
 
     addCurrent();
+
+    liFromList = document.querySelectorAll(`.list-categories-item`);
+    console.log(liFromList);
+    wholeList = [...liFromList];
+    console.log(wholeList);
+
+    if (chekBoxItem.checked) {
+      secFirstTheme();
+    }
   })
-  .catch(rej => console.log(`rej`, rej));
+  .catch(rej => console.log(`rej`, rej))
+  .finally(() => {});
 
 categoriesList.addEventListener(`click`, categotySelect);
 
@@ -90,4 +102,23 @@ function addCurrent() {
 
 function removeCurrent() {
   curentCategory.classList.remove(`active-list-item`);
+}
+
+console.log(chekBoxItem);
+
+chekBoxItem.addEventListener('change', classChange);
+
+function classChange(evt) {
+  if (evt.target.checked) {
+    secFirstTheme();
+  } else {
+    setFirstTheme();
+  }
+}
+
+function setFirstTheme() {
+  wholeList.map(item => item.classList.remove('dark'));
+}
+function secFirstTheme() {
+  wholeList.map(item => item.classList.add('dark'));
 }
