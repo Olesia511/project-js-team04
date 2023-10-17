@@ -122,3 +122,16 @@ function setFirstTheme() {
 function secFirstTheme() {
   wholeList.map(item => item.classList.add('dark'));
 }
+
+const topContainer = document.querySelector(`.container-books-by-category`);
+console.log();
+
+topContainer.addEventListener('click', reMarkup);
+
+function reMarkup(evt) {
+  if (!evt.target.classList.contains(`see-more-btn`)) {
+    return;
+  }
+  const data = evt.target.dataset.category;
+  console.log(data);
+}
