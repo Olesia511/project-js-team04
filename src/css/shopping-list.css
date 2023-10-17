@@ -123,25 +123,11 @@
   width: 56px;
 }
 
-.delete-btn {
-  position: absolute;
-  right: 14px;
-  top: 14px;
-
-  width: 28px;
-  height: 28px;
-  padding: 6px;
-  border-radius: 50%;
-  border: none;
-  background-color: var(--violet-color);
-  transition: filter 250ms cubic-bezier(0.4, 0, 0.2, 1);
+.book-cover-img {
+  object-fit: cover;
 }
 
-.delete-btn-icon {
-  fill: var(--violet-color);
-  stroke: var(--primary-text-color-dark-theme);
-}
-
+/*? Icons */
 .apple-icon,
 .amazon-icon {
   filter: grayscale(100%);
@@ -150,12 +136,20 @@
 .amazon-logo {
   width: 32px;
   height: 11px;
+
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: url("../img/shop-logo-amazon.png");
   transition: filter 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .apple-books-logo {
   width: 16px;
   height: 16px;
+  
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: url("../img/shop-logo.png");
   transition: filter 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -171,9 +165,29 @@
   filter: drop-shadow(0px 3px 3px rgba(0, 0, 0, 0.35));
 }
 
-.book-cover-img {
-  object-fit: cover;
+.delete-btn {
+  position: absolute;
+  right: 14px;
+  top: 14px;
+
+  width: 28px;
+  height: 28px;
+  padding: 6px;
+  border-radius: 50%;
+  border: none;
+  background-color: var(--violet-color);
+  transition: filter 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+
+.delete-btn-icon {
+  width: 16px;
+  height: 16px;
+
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: url("../img/trash-03.png");
+}
+
 
 /*? Backgroung and placeholders */
 .book-cover {
@@ -193,6 +207,18 @@
   (min-resolution: 2dppx) {
   .book-cover {
     background-image: url('../img/placeholder-1-2x.png');
+  }
+
+  .amazon-logo {
+    background-image: url("../img/shop-logo-amazon-2x.png");
+  }
+
+  .apple-books-logo {
+    background-image: url("../img/shop-logo-2x.png");
+  }
+
+  .delete-btn-icon {
+    background-image: url("../img/trash-03-x2.png");
   }
 }
 
