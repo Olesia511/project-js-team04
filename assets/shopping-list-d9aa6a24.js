@@ -1,7 +1,7 @@
-import"./support-ukraine-3313d233.js";const d=document.querySelector(".shop-list-list"),p=document.querySelector(".shop-list-placeholder"),a="user-books";function m(){const e=document.querySelector(".js-description"),t=e.textContent,n=document.querySelector(".js-name").textContent,l=document.querySelector(".js-category"),i=l.textContent;if(window.innerWidth<768){const c=t.slice(0,86)+"…";e.textContent=c,n.slice(0,22)+"",e.textContent=c;const r=i.slice(0,34)+"…";l.textContent=r}else if(window.innerWidth>=768&&window.innerWidth<1440){const c=t.slice(0,253)+"…";e.textContent=c,e.textContent=t,l.textContent=i}else e.textContent=t,e.textContent=t,l.textContent=i}let o;localStorage.getItem(a)?o=JSON.parse(localStorage.getItem(a)):o=[];function g(e){const t=e.map(({buy_links:s="null",amazon_product_url:n="null",book_image:l="null",title:i="null",list_name:c="null",description:r="null",author:h,_id:u="null"})=>`<li class="shop-list-item" data-id="${u}">
+import"./support-ukraine-3eae8efc.js";const d=document.querySelector(".shop-list-list"),p=document.querySelector(".shop-list-placeholder"),a="user-books";function m(){const e=document.querySelector(".js-description"),t=e.textContent,n=document.querySelector(".js-name").textContent,l=document.querySelector(".js-category"),i=l.textContent;if(window.innerWidth<768){const c=t.slice(0,86)+"…";e.textContent=c,n.slice(0,22)+"",e.textContent=c;const r=i.slice(0,34)+"…";l.textContent=r}else if(window.innerWidth>=768&&window.innerWidth<1440){const c=t.slice(0,253)+"…";e.textContent=c,e.textContent=t,l.textContent=i}else e.textContent=t,e.textContent=t,l.textContent=i}let o;localStorage.getItem(a)?o=JSON.parse(localStorage.getItem(a)):o=[];function g(e){const t=e.map(({buy_links:s="null",amazon_product_url:n="null",book_image:l="null",title:i="null",list_name:c="null",description:r="null",author:h,_id:u="null"})=>`<li class="shop-list-item" data-id="${u}">
               <button type="button" class="delete-btn">
                 <svg class="delete-btn-icon" width="16" height="16">
-                  <use href="./img/icon.svg#icon-shop-list-delete"></use>
+                  <use href="../img/icon.svg#icon-shop-list-delete"></use>
                 </svg>
               </button>
               <div class="book-cover"><img class="book-cover-img" src="${l}" alt="${i}" /></div>
@@ -16,13 +16,13 @@ import"./support-ukraine-3313d233.js";const d=document.querySelector(".shop-list
                     <picture>
                       <source
                         srcset="
-                          ./img/shop-logo-amazon.png    1x,
-                          ./img/shop-logo-amazon-2x.png 2x
+                          ../img/shop-logo-amazon.png    1x,
+                          ../img/shop-logo-amazon-2x.png 2x
                         "
                       />
                       <img
                         class="amazon-logo"
-                        src="./img/shop-logo-amazon.png"
+                        src="../img/shop-logo-amazon.png"
                         alt="Amazon"
                         width="32"
                         height="11"
@@ -33,13 +33,13 @@ import"./support-ukraine-3313d233.js";const d=document.querySelector(".shop-list
                     <picture>
                       <source
                         srcset="
-                          ./img/shop-logo.png    1x,
-                          ./img/shop-logo-2x.png 2x
+                          ../img/shop-logo.png    1x,
+                          ../img/shop-logo-2x.png 2x
                         "
                       />
                       <img
                         class="apple-books-logo"
-                        src="./img/shop-logo.png"
+                        src="../img/shop-logo.png"
                         alt="Apple Books"
                         width="16"
                         height="16"
