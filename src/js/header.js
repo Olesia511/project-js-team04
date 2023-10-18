@@ -1,7 +1,7 @@
 const refs = {
-  // openBurgerBtn: document.querySelector('.burger-menu'),
+  openBurgerBtn: document.querySelector('.burger-menu'),
   // closeBurgerBtn: document.querySelector('.mobile-menu__button'),
-  // burger: document.querySelector('.mobile-menu-container'),
+  burger: document.querySelector('.mobile-menu-container'),
   themeSwitcher: document.querySelector('input[type="checkbox"]'),
 };
 // console.dir(refs.themeSwitcher);
@@ -96,7 +96,7 @@ function changeDarkTheme() {
   iconModalClose.classList.remove('dark');
 }
 
-// refs.themeSwitcher.addEventListener('change', setTheme);
+refs.themeSwitcher.addEventListener('change', setTheme);
 
 function setTheme(evt) {
   const toggleSwitches = evt.target.checked;
