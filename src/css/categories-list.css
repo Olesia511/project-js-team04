@@ -13,22 +13,22 @@ body.dark .list-container::-webkit-scrollbar-thumb {
   cursor: pointer;
   letter-spacing: -0.02em;
   user-select: none;
+  transition: color var(--transition-time);
 }
 
 .list-categories-item:not(:last-child) {
   margin-bottom: 20px;
 }
 
-.list-categories-item:hover,
-.list-categories-item:focus {
+.list-categories-item:hover {
   color: var(--violet-color);
 }
 
-.active-list-item.dark {
+body.dark .active-list-item {
   color: var(--yellow-color);
 }
-.list-categories-item.dark:hover,
-.list-categories-item.dark:focus {
+body.dark .list-categories-item:hover,
+body.dark .list-categories-item:focus {
   color: var(--yellow-color);
 }
 
