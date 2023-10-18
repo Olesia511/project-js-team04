@@ -89,9 +89,9 @@ function changeTheme() {
   // shopListText.classList.add('dark');
   modalTheme.classList.add('dark');
   iconModalClose.classList.add('dark');
-  amazonDarkTheme.classList.add('dark');
-  amazonShopingDark.classList.add('dark');
-  backGroundShopingDark.classList.add('dark');
+  // amazonDarkTheme.classList.add('dark');
+  // amazonShopingDark.classList.add('dark');
+  // backGroundShopingDark.classList.add('dark');
 }
 
 function changeDarkTheme() {
@@ -104,9 +104,9 @@ function changeDarkTheme() {
   // shopListText.classList.remove('dark');
   modalTheme.classList.remove('dark');
   iconModalClose.classList.remove('dark');
-  amazonDarkTheme.classList.remove('dark');
-  amazonShopingDark.classList.remove('dark');
-  backGroundShopingDark.classList.remove('dark');
+  // amazonDarkTheme.classList.remove('dark');
+  // amazonShopingDark.classList.remove('dark');
+  // backGroundShopingDark.classList.remove('dark');
 }
 
 refs.themeSwitcher.addEventListener('change', setTheme);

@@ -1,3 +1,6 @@
+body.dark .list-container::-webkit-scrollbar-thumb {
+  background-color: #111;
+}
 .categories-list {
   height: 228px;
   width: 335px;
