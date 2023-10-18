@@ -202,11 +202,18 @@
   background-image: url('../img/shop-logo-amazon.png');
 
   filter: grayscale(100%);
-  transition: filter 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 body.dark .img-modal-amazon {
   filter: brightness(0) invert(1);
+}
+
+.hover-img {
+  transition: filter 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+body.dark .hover-img {
+  transition: filter 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 body.dark .hover-img:hover,
@@ -214,19 +221,10 @@ body.dark .hover-img:focus {
   filter: grayscale(100%) drop-shadow(0px 3px 3px rgba(255, 255, 255, 0.35));
 }
 
-/* .img-modal-amazon.dark {
-  filter: brightness(0) invert(1);
-} */
-
-/* .hover-img.dark:hover,
-.hover-img.dark:focus {
-  filter: drop-shadow(0px 3px 3px rgba(255, 255, 255, 0.35));
-} */
-
-/* .hover-img:hover,
+.hover-img:hover,
 .hover-img:focus {
   filter: grayscale(100%) drop-shadow(0px 3px 3px rgba(0, 0, 0, 0.35));
-} */
+}
 
 .img-modal-bookshop {
   width: 33px;
