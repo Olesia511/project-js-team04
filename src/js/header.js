@@ -9,8 +9,8 @@ const boDy = document.querySelector(`body`);
 const headerDark = document.querySelector('.header-container');
 const iconCloseMobile = document.querySelector('.icon-close-mobile');
 const iconCloseBurger = document.querySelector('.icon-close-burger');
-const modalTheme = document.querySelector('.modal');
-const iconModalClose = document.querySelector('.icon-close-modal');
+// const modalTheme = document.querySelector('.modal');
+// const iconModalClose = document.querySelector('.icon-close-modal');
 const burgerMenuIcon = document.querySelector('.menu-burger-icon');
 const basketIcon = document.querySelector('.basket-icon');
 const shopListText = document.querySelector('.shop-list-placeholder');
@@ -46,27 +46,29 @@ let theme;
 // localStorage.setItem(LOCAL_KEY, JSON.stringify(theme));
 const getKey = localStorage.getItem(LOCAL_KEY);
 // console.log(getKey);
+
 if (getKey === null || getKey === undefined) {
   theme = 'light';
   localStorage.setItem(LOCAL_KEY, JSON.stringify(theme));
   refs.themeSwitcher.checked = false;
 }
 
-if (getKey) {
-  const checkKey = localStorage.getItem(LOCAL_KEY);
+(() => {
+  if (getKey) {
+    // const checkKey = localStorage.getItem(LOCAL_KEY);
 
-  if (checkKey === 'dark') {
-    refs.themeSwitcher.checked = true;
-    changeTheme();
+    if (getKey === 'dark') {
+      refs.themeSwitcher.checked = true;
+      changeTheme();
 
-    // console.log('1111111');
-  } else {
-    refs.themeSwitcher.checked = false;
+      // console.log('1111111');
+    } else {
+      refs.themeSwitcher.checked = false;
 
-    // console.log('222222');
+      // console.log('222222');
+    }
   }
-}
-
+})();
 refs.themeSwitcher.addEventListener('change', setTheme);
 // refs.themeSwitcher.checked = true;
 // console.log(themeSwitcher.checked);
@@ -87,8 +89,8 @@ function changeTheme() {
   burgerMenuIcon.classList.add('dark');
   basketIcon.classList.add('dark');
   // shopListText.classList.add('dark');
-  modalTheme.classList.add('dark');
-  iconModalClose.classList.add('dark');
+  // modalTheme.classList.add('dark');
+  // iconModalClose.classList.add('dark');
   // amazonDarkTheme.classList.add('dark');
   // amazonShopingDark.classList.add('dark');
   // backGroundShopingDark.classList.add('dark');
@@ -102,8 +104,8 @@ function changeDarkTheme() {
   burgerMenuIcon.classList.remove('dark');
   basketIcon.classList.remove('dark');
   // shopListText.classList.remove('dark');
-  modalTheme.classList.remove('dark');
-  iconModalClose.classList.remove('dark');
+  // modalTheme.classList.remove('dark');
+  // iconModalClose.classList.remove('dark');
   // amazonDarkTheme.classList.remove('dark');
   // amazonShopingDark.classList.remove('dark');
   // backGroundShopingDark.classList.remove('dark');

@@ -1,7 +1,7 @@
 import { charities } from './support-arr';
 const list = document.querySelector('.list');
 const toggleButton = document.getElementById('toggleButton');
-// const svgIcon = toggleButton.querySelector('svg use');
+const svgIcon = toggleButton.querySelector('svg use');
 const butnSupDown = document.querySelector('.button-sup-svg');
 const butnSupUp = document.querySelector('.button-sup-svg-up');
 let areItemsVisible = true;
@@ -16,8 +16,6 @@ function toggleItemsVisibility() {
   const endIndex = areItemsVisible ? 6 : 9;
 
   charities.slice(startIndex, endIndex).forEach((charity, index) => {
-    // let currentClass = 1;
-
     const item = document.createElement('li');
     const link = document.createElement('a');
     link.target = '_blank';

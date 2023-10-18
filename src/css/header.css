@@ -73,7 +73,7 @@
   opacity: 0;
   pointer-events: none;
   /* display: none; */
-  transition: var(--transition-time);
+  /* transition: var(--transition-time); */
 }
 .mob-menu-close.is-hidden-burger {
   background-color: transparent;
@@ -81,7 +81,7 @@
   opacity: 0;
   pointer-events: none;
   display: none;
-  transition: var(--transition-time);
+  /* transition: var(--transition-time); */
 }
 .mob-menu-close {
   background-color: inherit;
@@ -138,9 +138,10 @@
   display: none;
 }
 
-.header-container.dark {
+body.dark .header-container {
   background-color: var(--black-color);
   color: var(--primary-text-color-dark-theme);
+  border: 1.5px solid var(--background-color-light);
 }
 
 .header-container {
