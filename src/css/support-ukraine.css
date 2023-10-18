@@ -87,20 +87,23 @@
 .sup-list li:not(:last-child) {
   margin-bottom: 20px;
 }
+.link-support {
+  display: block;
+}
 
 /* .sup-list li:not(:last-child) > .white-image {
   height: 32px;
   filter: brightness(0) invert(1);
 } */
 
-.white-image:nth-child(-n + 8) {
+.white-image {
   filter: brightness(0) invert(1);
   height: 32px;
 }
-.white-image:last-child {
+/* .white-image:last-child {
   filter: brightness(0) invert(1);
   height: 10px;
-}
+} */
 
 .button-sup {
   display: block;
