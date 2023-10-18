@@ -94,11 +94,9 @@
   background-color: var(--primary-text-color-dark-theme);
 
   padding: 40px 24px;
-  /* transform: scaleY(1); */
   width: calc(100% - 10px);
   border-radius: 18px;
   border: 2px solid #111;
-  /* background-color: inherit; */
   overflow: hidden;
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -155,7 +153,6 @@ body.dark .icon-close-modal {
   margin-top: 14px;
   font-family: 'DM Sans';
   font-size: 16px;
-
   line-height: 1.13;
   letter-spacing: -0.64px;
 }
@@ -182,7 +179,6 @@ body.dark .icon-close-modal {
   font-weight: 400;
   line-height: 1.29;
   letter-spacing: -0.56px;
-  /* width: 287px; */
   height: auto;
 }
 
@@ -355,6 +351,7 @@ body.dark .hover-img:focus {
   }
 
   .title-book {
+    width: 250px;
     font-size: 24px;
     margin: 0;
     line-height: 1.17;

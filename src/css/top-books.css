@@ -1,3 +1,10 @@
+body,
+.header-container,
+.title {
+  transition: fill var(--transition-time),
+    background-color var(--transition-time);
+}
+
 .highlighted-text {
   color: var(--violet-color);
 }
@@ -105,7 +112,10 @@
   white-space: nowrap;
   transition: background-color 275ms ease;
 }
-
+body.dark .see-more-btn {
+  background-color: transparent;
+  color: #fff;
+}
 .see-more-btn:hover {
   background-color: #4f2ee8;
   color: #ffffff;
