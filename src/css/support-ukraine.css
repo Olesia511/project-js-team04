@@ -1,6 +1,6 @@
-/* img {
-  display: inline-block;
-} */
+.is-hidden-support {
+  display: none;
+}
 .button-sup-svg,
 .button-sup-svg-up {
   stroke: #4f2ee8;
@@ -91,10 +91,6 @@
   display: block;
 }
 
-/* .sup-list li:not(:last-child) > .white-image {
-  height: 32px;
-  filter: brightness(0) invert(1);
-} */
 .white-image {
   height: 32px;
 }
@@ -105,14 +101,6 @@
 .white-image:nth-last-child(-n + 8) {
   height: 10px;
 }
-/* .white-image {
-  filter: brightness(0) invert(1);
-  height: 32px;
-} */
-/* .white-image:last-child {
-  filter: brightness(0) invert(1);
-  height: 10px;
-} */
 
 .button-sup {
   display: block;
