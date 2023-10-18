@@ -88,7 +88,7 @@
   margin-bottom: 20px;
 }
 
-.sup-list li:not(:last-child) > img.white-image {
+.sup-list li:not(:last-child) > .white-image {
   height: 32px;
   filter: brightness(0) invert(1);
 }
