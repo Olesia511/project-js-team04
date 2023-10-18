@@ -9,5 +9,6 @@ import './js/mobile-menu.js';
 import './js/modal.js';
 import './js/top-books.js';
 import './js/support-ukraine.js';
+import "./js/menu-active-js"
 
 // import {} from './partials-js/';
