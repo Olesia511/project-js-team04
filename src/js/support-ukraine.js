@@ -134,7 +134,7 @@ function toggleItemsVisibility() {
     img.srcset = `${charity.img}`;
     // 1x, ${charity.img2x} 2x
     img.alt = charity.title;
-    img.classList.add(`${(currentClass += 1)}`);
+    img.classList.add(`sup-img${currentClass}`);
 
     link.href = charity.url;
 
@@ -145,6 +145,7 @@ function toggleItemsVisibility() {
     item.appendChild(link);
 
     list.appendChild(item);
+    currentClass += 1;
   });
 
   areItemsVisible = !areItemsVisible;
