@@ -55,9 +55,9 @@ getCategoryListArr()
     addCurrent();
 
     liFromList = document.querySelectorAll(`.list-categories-item`);
-    console.log(liFromList);
+    // console.log(liFromList);
     wholeList = [...liFromList];
-    console.log(wholeList);
+    // console.log(wholeList);
 
     // if (chekBoxItem.checked) {
     //   secFirstTheme();
