@@ -1,9 +1,5 @@
-/* body {
-  scroll-behavior: smooth;
-} */
-
 body {
-  scroll-behavior: smooth;
+  /* scroll-behavior: smooth; */
   font-family: 'DM Sans', sans-serif;
   font-weight: 400;
   background-color: var(--background-color-light);
