@@ -1,9 +1,9 @@
 /* img {
   display: inline-block;
 } */
-.button-sup-svg {
-  stroke: green;
-  fill: red;
+.button-sup-svg,
+.button-sup-svg-up {
+  stroke: #4f2ee8;
 }
 .charities-section {
   padding-left: 40px;
