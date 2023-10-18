@@ -73,6 +73,10 @@
   background: var(--primary-text-color-dark-theme);
 }
 
+.shop-list-item.dark {
+  background-color: var(--primary-text-color-light-theme);
+}
+
 .book-name {
   margin-bottom: 4px;
 
@@ -136,11 +140,15 @@
   filter: grayscale(100%);
 }
 
+.amazon-icon.dark {
+  filter: brightness(0) invert(1);
+}
+
 .amazon-logo {
   width: 32px;
   height: 11px;
 
-  background-size:contain;
+  background-size: contain;
   background-repeat: no-repeat;
   background-image: url('../img/shop-logo-amazon.png');
   transition: filter 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -156,12 +164,21 @@
   transition: filter 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.amazon-logo:hover,
+.hover-icons-list.dark:hover,
+.hover-icons-list.dark:focus {
+  filter: drop-shadow(0px 3px 3px rgba(255, 255, 255, 0.35));
+}
+
+.hover-icons-list:hover,
+.hover-icons-list:focus {
+  filter: grayscale(100%) drop-shadow(0px 3px 3px rgba(0, 0, 0, 0.35));
+}
+/* .amazon-logo:hover,
 .amazon-logo:focus,
 .apple-books-logo:hover,
 .apple-books-logo:focus {
   filter: grayscale(100%) drop-shadow(0px 3px 3px rgba(0, 0, 0, 0.35));
-}
+} */
 
 .delete-btn:hover,
 .delete-btn:focus {
