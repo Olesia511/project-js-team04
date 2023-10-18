@@ -127,14 +127,14 @@ function marcup(
  <p class="descr-book">${description}</p>
  <ul class="modal-img-list">
         <li>
-          <a href="${urlAmazon}" target="_blank" rel="noopener noreferrer nofollow">
-          <div class="img-modal-amazon hover-img">
+          <a class="hover-img" href="${urlAmazon}" target="_blank" rel="noopener noreferrer nofollow">
+          <div class="img-modal-amazon">
           </div>
           </a>
         </li>
         <li>
-          <a href="${urlShop}" target="_blank" rel="noopener noreferrer nofollow">
-          <div class="img-modal-bookshop hover-img">
+          <a class="hover-img" href="${urlShop}" target="_blank" rel="noopener noreferrer nofollow">
+          <div class="img-modal-bookshop">
           </div>
           </a>
         </li>
