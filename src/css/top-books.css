@@ -116,13 +116,15 @@ body.dark .see-more-btn {
   background-color: transparent;
   color: #fff;
 }
-.see-more-btn:hover {
+.see-more-btn:hover,
+.see-more-btn:focus {
   background-color: #4f2ee8;
   color: #ffffff;
   background-color: 0 100%;
 }
 
-.see-more-btn:focus {
+body.dark .see-more-btn:hover,
+body.dark .see-more-btn:focus {
   background-color: #4f2ee8;
   color: #ffffff;
   background-color: 0 100%;
