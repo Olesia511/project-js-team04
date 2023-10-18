@@ -148,12 +148,12 @@ function toggleItemsVisibility() {
 
   animationState = 1 - animationState;
 
-  svgIcon.setAttribute(
-    'href',
-    areItemsVisible
-      ? './img/icon.svg#icon-support-ukr-scroll-up'
-      : './img/icon.svg#icon-support-ukr-scroll-down'
-  );
+  // svgIcon.setAttribute(
+  //   'href',
+  //   areItemsVisible
+  //     ? './img/icon.svg#icon-support-ukr-scroll-up'
+  //     : './img/icon.svg#icon-support-ukr-scroll-down'
+  // );
 }
 
 toggleButton.addEventListener('click', toggleItemsVisibility);

@@ -89,6 +89,7 @@
 }
 .white-image {
   filter: brightness(0) invert(1);
+  height: 32px;
 }
 .button-sup {
   display: block;
