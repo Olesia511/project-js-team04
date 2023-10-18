@@ -73,7 +73,7 @@
   background: var(--primary-text-color-dark-theme);
 }
 
-.shop-list-item.dark {
+body.dark .shop-list-item {
   background-color: var(--primary-text-color-light-theme);
 }
 
@@ -140,7 +140,7 @@
   filter: grayscale(100%);
 }
 
-.amazon-icon.dark {
+body.dark .amazon-icon {
   filter: brightness(0) invert(1);
 }
 
@@ -164,21 +164,15 @@
   transition: filter 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.hover-icons-list.dark:hover,
-.hover-icons-list.dark:focus {
-  filter: drop-shadow(0px 3px 3px rgba(255, 255, 255, 0.35));
+body.dark .hover-items-amaz-books:hover,
+body.dark .hover-items-amaz-books:focus {
+  filter: grayscale(100%) drop-shadow(0px 3px 3px rgba(255, 255, 255, 0.35));
 }
 
-.hover-icons-list:hover,
-.hover-icons-list:focus {
+.hover-items-amaz-books:hover,
+.hover-items-amaz-books:focus {
   filter: grayscale(100%) drop-shadow(0px 3px 3px rgba(0, 0, 0, 0.35));
 }
-/* .amazon-logo:hover,
-.amazon-logo:focus,
-.apple-books-logo:hover,
-.apple-books-logo:focus {
-  filter: grayscale(100%) drop-shadow(0px 3px 3px rgba(0, 0, 0, 0.35));
-} */
 
 .delete-btn:hover,
 .delete-btn:focus {
