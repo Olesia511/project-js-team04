@@ -88,19 +88,19 @@
   margin-bottom: 20px;
 }
 
-.sup-list li:not(:last-child) > .white-image {
+/* .sup-list li:not(:last-child) > .white-image {
   height: 32px;
   filter: brightness(0) invert(1);
-}
-
-/* .sup-list li:not(:last-child)> .white-image:nth-child(-n + 8) {
-  filter: brightness(0) invert(1);
-  height: 32px;
 } */
-/* .white-image:last-child {
+
+.white-image:nth-child(-n + 8) {
+  filter: brightness(0) invert(1);
+  height: 32px;
+}
+.white-image:last-child {
   filter: brightness(0) invert(1);
   height: 10px;
-} */
+}
 
 .button-sup {
   display: block;
