@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-import './js/axios-fetch.js';
+import './js/axios-fetch';
 import './js/book-id.js';
 import './js/categories-list.js';
 import './js/header.js';
