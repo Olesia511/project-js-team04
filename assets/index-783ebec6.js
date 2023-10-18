@@ -38,14 +38,14 @@
  <p class="descr-book">${n}</p>
  <ul class="modal-img-list">
         <li>
-          <a href="${o}" target="_blank" rel="noopener noreferrer nofollow">
-          <div class="img-modal-amazon hover-img">
+          <a class="hover-img" href="${o}" target="_blank" rel="noopener noreferrer nofollow">
+          <div class="img-modal-amazon">
           </div>
           </a>
         </li>
         <li>
-          <a href="${r}" target="_blank" rel="noopener noreferrer nofollow">
-          <div class="img-modal-bookshop hover-img">
+          <a class="hover-img" href="${r}" target="_blank" rel="noopener noreferrer nofollow">
+          <div class="img-modal-bookshop">
           </div>
           </a>
         </li>
