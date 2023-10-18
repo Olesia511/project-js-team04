@@ -94,12 +94,18 @@
   stroke: var(--primary-text-color-dark-theme);
 }
 
-/* .icon-close-mobile {
+.icon-close-mobile {
   stroke: var(--primary-text-color-light-theme);
 }
 .icon-close-mobile.dark {
   stroke: var(--primary-text-color-dark-theme);
-} */
+}
+.icon-close-burger {
+  stroke: var(--primary-text-color-light-theme);
+}
+.icon-close-burger.dark {
+  stroke: var(--primary-text-color-dark-theme);
+}
 
 .basket-icon-mob {
   align-self: center;

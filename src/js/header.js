@@ -8,6 +8,7 @@ const refs = {
 const boDy = document.querySelector(`body`);
 const headerDark = document.querySelector('.header-container');
 const iconCloseMobile = document.querySelector('.icon-close-mobile');
+const iconCloseBurger = document.querySelector('.icon-close-burger');
 const modalTheme = document.querySelector('.modal');
 const iconModalClose = document.querySelector('.icon-close-modal');
 const burgerMenu = document.querySelector('.menu-burger-icon');
@@ -75,6 +76,7 @@ function changeTheme() {
   boDy.classList.add('dark');
   headerDark.classList.add('dark');
   iconCloseMobile.classList.add('dark');
+  iconCloseBurger.classList.add('dark');
   burgerMenu.classList.add('dark');
   basketIcon.classList.add('dark');
   // shopListText.classList.add('dark');
@@ -86,6 +88,7 @@ function changeDarkTheme() {
   boDy.classList.remove('dark');
   headerDark.classList.remove('dark');
   iconCloseMobile.classList.remove('dark');
+  iconCloseBurger.classList.remove('dark');
   burgerMenu.classList.remove('dark');
   basketIcon.classList.remove('dark');
   // shopListText.classList.remove('dark');
