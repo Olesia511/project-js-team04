@@ -1,10 +1,10 @@
 const refs = {
   openBurgerBtn: document.querySelector('.burger-menu'),
-  // closeBurgerBtn: document.querySelector('.mobile-menu__button'),
+  closeBurgerBtn: document.querySelector('.mobile-menu__button'),
   burger: document.querySelector('.mobile-menu-container'),
   themeSwitcher: document.querySelector('input[type="checkbox"]'),
 };
-// console.dir(refs.themeSwitcher);
+console.dir(refs.themeSwitcher);
 const boDy = document.querySelector(`body`);
 const headerDark = document.querySelector('.header-container');
 const iconCloseMobile = document.querySelector('.icon-close-mobile');
@@ -79,7 +79,7 @@ function changeTheme() {
   iconCloseBurger.classList.add('dark');
   burgerMenuIcon.classList.add('dark');
   basketIcon.classList.add('dark');
-  shopListText.classList.add('dark');
+  // shopListText.classList.add('dark');
   modalTheme.classList.add('dark');
   iconModalClose.classList.add('dark');
 }
@@ -91,7 +91,7 @@ function changeDarkTheme() {
   iconCloseBurger.classList.remove('dark');
   burgerMenuIcon.classList.remove('dark');
   basketIcon.classList.remove('dark');
-  shopListText.classList.remove('dark');
+  // shopListText.classList.remove('dark');
   modalTheme.classList.remove('dark');
   iconModalClose.classList.remove('dark');
 }
