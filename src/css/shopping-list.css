@@ -45,6 +45,9 @@
   line-height: 1.29;
   letter-spacing: -0.28px;
 }
+body.dark .shop-list-placeholder-text {
+  color: rgba(255, 255, 255, 0.6);
+}
 
 .shop-list-placeholder-img {
   width: 265px;

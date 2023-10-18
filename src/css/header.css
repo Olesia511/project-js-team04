@@ -25,9 +25,11 @@
 .mobile-nav {
   position: absolute;
   top: 0;
-  left: 0;
-  margin-top: 247px;
-  width: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  padding-top: 247px;
+  width: 375px;
+  height: 100vh;
   color: inherit;
 }
 .mobile-list {
@@ -256,12 +258,13 @@ input[type='checkbox']:checked ~ .check::after {
 }
 
 .log-out-btn {
-  display: block;
-  width: 118px;
-  height: 48px;
-  background-color: transparent;
-  padding: 0;
-  border: none;
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  display: flex;
+  gap: 4px;
+  padding: 14px 24px;
+  /* background-color: transparent; */
   border-radius: 18px;
   border: 1.5px solid #111;
   background: #fff;
