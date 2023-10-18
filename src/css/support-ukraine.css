@@ -86,8 +86,11 @@
 }
 .sup-list li:not(:last-child) {
   margin-bottom: 20px;
-  /* filter: brightness(0) invert(1); */
+}
+
+li:not(:last-child) > img.white-image {
   height: 32px;
+  filter: brightness(0) invert(1);
 }
 
 /* .sup-list li:not(:last-child)> .white-image:nth-child(-n + 8) {
