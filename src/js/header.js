@@ -1,6 +1,6 @@
 const refs = {
   openBurgerBtn: document.querySelector('.burger-menu'),
-  closeBurgerBtn: document.querySelector('.mobile-menu__button'),
+  // closeBurgerBtn: document.querySelector('.mobile-menu__button'),
   burger: document.querySelector('.mobile-menu-container'),
   themeSwitcher: document.querySelector('input[type="checkbox"]'),
 };
@@ -21,20 +21,23 @@ const navigMenu = document.querySelector(`.site-nav`);
 const LOCAL_KEY = 'theme';
 let theme;
 
-navigMenu.addEventListener(`click`, activePage);
+// navigMenu.addEventListener(`click`, activePage);
+// headerDark.addEventListener(`click`, activePage);
 
-function activePage(evt) {
-  if (
-    !evt.target.classList.contains(`site-nav-item-home`) ||
-    !evt.target.classList.contains(`site-nav-item-shop`)
-  ) {
-    return;
-  } else if (evt.target.classList.contains(`active`)) {
-    return;
-  } else {
-    console.log(evt.target);
-  }
-}
+// function activePage(evt) {
+//   evt.preventDefault();
+//   console.log(`evt button`, evt.target.value);
+//   if (
+//     !evt.target.classList.contains(`site-nav-item-home`) ||
+//     !evt.target.classList.contains(`site-nav-item-shop`)
+//   ) {
+//     return;
+//   } else if (evt.target.classList.contains(`active`)) {
+//     return;
+//   } else {
+//     console.log('123466549635', evt.target);
+//   }
+// }
 
 // localStorage.setItem(LOCAL_KEY, JSON.stringify(theme));
 const getKey = localStorage.getItem(LOCAL_KEY);
@@ -109,6 +112,8 @@ function setTheme(evt) {
     changeDarkTheme();
   }
 }
+
+// ==== Mobile-menu open /close  ====
 
 (() => {
   const backdrop = document.querySelector('.backdrop-header');

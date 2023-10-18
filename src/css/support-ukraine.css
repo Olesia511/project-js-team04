@@ -1,6 +1,10 @@
 /* img {
   display: inline-block;
 } */
+.button-sup-svg {
+  stroke: green;
+  fill: red;
+}
 .charities-section {
   padding-left: 40px;
   padding-top: 24px;
