@@ -117,6 +117,8 @@ function toggleItemsVisibility() {
   const endIndex = areItemsVisible ? 6 : 9;
 
   charities.slice(startIndex, endIndex).forEach((charity, index) => {
+    let currentClass = 1;
+
     const item = document.createElement('li');
     const link = document.createElement('a');
     link.target = '_blank';
@@ -132,7 +134,7 @@ function toggleItemsVisibility() {
     img.srcset = `${charity.img}`;
     // 1x, ${charity.img2x} 2x
     img.alt = charity.title;
-    img.classList.add('white-image');
+    img.classList.add(`${(currentClass += 1)}`);
 
     link.href = charity.url;
 
