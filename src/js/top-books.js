@@ -1,7 +1,6 @@
 import { getTopBooksArr } from './axios-fetch';
 
 const container = document.querySelector('.container-best-books');
-
 async function topBooksRequest() {
   await getTopBooksArr()
     .then(res => {

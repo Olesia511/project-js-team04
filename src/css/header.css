@@ -328,6 +328,15 @@ input[type='checkbox']:checked ~ .check::after {
     align-items: center;
     text-align: center;
   }
+
+  .site-nav-item-home.active {
+    padding: 8px 16px;
+    font-weight: 700;
+    color: #111;
+    border-radius: 36px;
+    background: #eac645;
+  }
+
   .site-nav-item-home {
     margin-right: 24px;
   }
@@ -344,6 +353,13 @@ input[type='checkbox']:checked ~ .check::after {
     padding-bottom: 7px;
   }
 
+  .site-nav-item-shop.active {
+    font-weight: 700;
+    padding: 8px 16px;
+    color: #111;
+    border-radius: 36px;
+    background: #eac645;
+  }
   .shopping-link {
     display: block;
     margin-right: 8px;
