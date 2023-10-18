@@ -24,6 +24,7 @@
 @import url('./top-books.css');
 @import url('./support-ukraine.css');
 @import url('./toggle-menu.css');
+@import url("./loader.css");
 
 :root {
   /*   використовувати у властивості transition: var(--transition-duration) var(--transition-timing-function);   */
