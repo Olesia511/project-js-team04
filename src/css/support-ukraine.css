@@ -87,10 +87,15 @@
 .sup-list li:not(:last-child) {
   margin-bottom: 20px;
 }
-.white-image {
+.white-image:not(:last-child) {
   filter: brightness(0) invert(1);
   height: 32px;
 }
+.white-image:last-child {
+  filter: brightness(0) invert(1);
+  height: 10px;
+}
+
 .button-sup {
   display: block;
   width: 32px;
