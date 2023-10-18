@@ -16,6 +16,10 @@ const basketIcon = document.querySelector('.basket-icon');
 const shopListText = document.querySelector('.shop-list-placeholder');
 const navigMenu = document.querySelector(`.site-nav`);
 
+const amazonDarkTheme = document.querySelector('.img-modal-amazon');
+const amazonShopingDark = document.querySelector('.amazon-icon');
+const backGroundShopingDark = document.querySelector('.shop-list-item');
+
 // console.log(`++++++`, );
 
 const LOCAL_KEY = 'theme';
@@ -85,6 +89,9 @@ function changeTheme() {
   // shopListText.classList.add('dark');
   modalTheme.classList.add('dark');
   iconModalClose.classList.add('dark');
+  amazonDarkTheme.classList.add('dark');
+  amazonShopingDark.classList.add('dark');
+  backGroundShopingDark.classList.add('dark');
 }
 
 function changeDarkTheme() {
@@ -97,6 +104,9 @@ function changeDarkTheme() {
   // shopListText.classList.remove('dark');
   modalTheme.classList.remove('dark');
   iconModalClose.classList.remove('dark');
+  amazonDarkTheme.classList.remove('dark');
+  amazonShopingDark.classList.remove('dark');
+  backGroundShopingDark.classList.remove('dark');
 }
 
 refs.themeSwitcher.addEventListener('change', setTheme);
