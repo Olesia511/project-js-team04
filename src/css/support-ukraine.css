@@ -86,15 +86,18 @@
 }
 .sup-list li:not(:last-child) {
   margin-bottom: 20px;
-}
-.white-image:nth-child(-n + 8) {
-  filter: brightness(0) invert(1);
+  /* filter: brightness(0) invert(1); */
   height: 32px;
 }
-.white-image:last-child {
+
+/* .sup-list li:not(:last-child)> .white-image:nth-child(-n + 8) {
+  filter: brightness(0) invert(1);
+  height: 32px;
+} */
+/* .white-image:last-child {
   filter: brightness(0) invert(1);
   height: 10px;
-}
+} */
 
 .button-sup {
   display: block;
