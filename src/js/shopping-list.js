@@ -74,11 +74,11 @@ function shopListMarkup(arr) {
                 <p class="book-author">${author}</p>
 
                 <div class="link-container">
-                  <a class="amazon-icon" href="${amazon_product_url}" target="_blank" rel="noopener noreferrer nofollow">
+                  <a class="amazon-icon hover-icons-list" href="${amazon_product_url}" target="_blank" rel="noopener noreferrer nofollow">
                   <div class="amazon-logo">
                   </div>
                   </a>
-                  <a class="apple-icon" href="${buy_links[1].url}" target="_blank" rel="noopener noreferrer nofollow">
+                  <a class="apple-icon hover-icons-list" href="${buy_links[1].url}" target="_blank" rel="noopener noreferrer nofollow">
                   <div class="apple-books-logo">
                   </div>
                   </a>
@@ -119,3 +119,5 @@ function onDelete(evt) {
       shopListMarkup(parsedLocalData);
   }
 }
+
+
