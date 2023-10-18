@@ -68,9 +68,9 @@ refs.themeSwitcher.addEventListener('change', setTheme);
 // refs.openBurgerBtn.addEventListener('click', toggleModal);
 // refs.closeBurgerBtn.addEventListener('click', toggleModal);
 
-// function toggleModal() {
-//   refs.burger.classList.toggle('is-hidden-header');
-// }
+function toggleModal() {
+  refs.burger.classList.toggle('is-hidden-header');
+}
 
 function changeTheme() {
   boDy.classList.add('dark');
