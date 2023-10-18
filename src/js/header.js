@@ -7,7 +7,7 @@ const refs = {
 // console.dir(refs.themeSwitcher);
 const boDy = document.querySelector(`body`);
 const headerDark = document.querySelector('.header-container');
-const iconClose = document.querySelector('.icon-close');
+const iconCloseMobile = document.querySelector('.icon-close-mobile');
 const modalTheme = document.querySelector('.modal');
 const iconModalClose = document.querySelector('.icon-close-modal');
 const burgerMenu = document.querySelector('.menu-burger-icon');
@@ -58,11 +58,10 @@ function toggleModal() {
 function changeTheme() {
   boDy.classList.add('dark');
   headerDark.classList.add('dark');
-  iconClose.classList.add('dark');
+  iconCloseMobile.classList.add('dark');
   burgerMenu.classList.add('dark');
   basketIcon.classList.add('dark');
   // shopListText.classList.add('dark');
-
   modalTheme.classList.add('dark');
   iconModalClose.classList.add('dark');
 }
@@ -70,11 +69,10 @@ function changeTheme() {
 function changeDarkTheme() {
   boDy.classList.remove('dark');
   headerDark.classList.remove('dark');
-  iconModalClose.classList.remove('dark');
+  iconCloseMobile.classList.remove('dark');
   burgerMenu.classList.remove('dark');
   basketIcon.classList.remove('dark');
   // shopListText.classList.remove('dark');
-
   modalTheme.classList.remove('dark');
   iconModalClose.classList.remove('dark');
 }

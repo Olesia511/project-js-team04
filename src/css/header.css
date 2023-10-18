@@ -79,21 +79,28 @@
   transition: var(--transition-time);
 }
 .mob-menu-close {
-  background-color: transparent;
+  background-color: inherit;
   display: flex;
   justify-content: center;
   align-items: center;
   border: none;
   padding: 0;
 }
-.icon-close,
+
 .menu-burger-icon {
   stroke: var(--primary-text-color-light-theme);
 }
-.icon-close.dark,
 .menu-burger-icon.dark {
   stroke: var(--primary-text-color-dark-theme);
 }
+
+/* .icon-close-mobile {
+  stroke: var(--primary-text-color-light-theme);
+}
+.icon-close-mobile.dark {
+  stroke: var(--primary-text-color-dark-theme);
+} */
+
 .basket-icon-mob {
   align-self: center;
   justify-content: center;
@@ -236,7 +243,7 @@ input[type='checkbox']:checked ~ .check::after {
 }
 
 .log-out-btn {
-  display: none;
+  display: block;
   width: 118px;
   height: 48px;
   background-color: transparent;
@@ -262,7 +269,11 @@ input[type='checkbox']:checked ~ .check::after {
 }
 
 @media screen and (min-width: 768px) {
-  .icon-close {
+  .log-out-btn {
+    display: none;
+  }
+
+  .icon-close-mobile {
     display: none;
   }
   .mob-menu {
