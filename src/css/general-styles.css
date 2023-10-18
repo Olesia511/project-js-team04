@@ -31,7 +31,7 @@ body.dark {
 }
 
 .container-categories-support {
-  max-width: 335px;
+  width: 335px;
   height: 728px;
   margin-bottom: 40px;
   display: flex;
@@ -55,7 +55,7 @@ body.dark {
 
   .container-categories-support {
     flex-wrap: nowrap;
-    max-width: 704px;
+    width: 704px;
     height: 474px;
     margin-bottom: 100px;
   }
@@ -74,7 +74,7 @@ body.dark {
   }
 
   .container-categories-support {
-    max-width: 356px;
+    width: 356px;
     height: 1032;
     flex-wrap: wrap;
     margin-right: 40px;
