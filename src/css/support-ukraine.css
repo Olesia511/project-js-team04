@@ -3,15 +3,15 @@
 }
 .button-sup-svg,
 .button-sup-svg-up {
+  width: 20px;
+  height: 20px;
   stroke: #4f2ee8;
 }
 .charities-section {
   padding-left: 40px;
-  padding-top: 24px;
   padding-right: 40px;
+  padding-top: 24px;
   padding-bottom: 20px;
-
-  /* position: relative; */
   width: 335px;
   height: 460px;
   border-radius: 16px;
@@ -48,7 +48,6 @@
   display: flex;
   align-items: center;
   gap: 12px;
-
   margin-bottom: 40px;
 }
 .sup-ukraine-title {
@@ -71,9 +70,7 @@
   font-weight: 400;
   line-height: 18px;
   letter-spacing: -0.56px;
-
   height: 292px;
-
   margin-bottom: 20px;
 }
 .sup-list li {
@@ -103,7 +100,9 @@
 }
 
 .button-sup {
-  display: block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 32px;
   height: 32px;
   border-radius: 50%;
@@ -111,18 +110,34 @@
   fill: #4f2ee8;
   margin-right: auto;
   margin-left: auto;
+  transition: fill var(--transition-time),
+    background-color var(--transition-time);
+}
+.button-sup:hover,
+.button-sup:focus {
+  fill: #fff;
+  background-color: var(--violet-color);
 }
 @media screen and (min-width: 768px) {
   .charities-section {
     height: 474px;
     padding-bottom: 24px;
   }
-  .sup-list li:not(:last-child) {
-    margin-bottom: 24px;
-  }
   .sup-ukraine-title {
     font-size: 24px;
     line-height: 28px;
     letter-spacing: -0.96px;
+  }
+  .sup-list {
+    margin-bottom: 24px;
+  }
+  .button-sup {
+    width: 38px;
+    height: 38px;
+  }
+  .button-sup-svg,
+  .button-sup-svg-up {
+    width: 22px;
+    height: 22px;
   }
 }

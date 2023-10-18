@@ -1,7 +1,7 @@
 import { charities } from './support-arr';
 const list = document.querySelector('.list');
 const toggleButton = document.getElementById('toggleButton');
-const svgIcon = toggleButton.querySelector('svg use');
+// const svgIcon = toggleButton.querySelector('svg use');
 const butnSupDown = document.querySelector('.button-sup-svg');
 const butnSupUp = document.querySelector('.button-sup-svg-up');
 let areItemsVisible = true;
@@ -10,6 +10,7 @@ let animationState = 0;
 function toggleItemsVisibility() {
   butnSupUp.classList.toggle('is-hidden-support');
   butnSupDown.classList.toggle('is-hidden-support');
+
   list.innerHTML = '';
 
   const startIndex = areItemsVisible ? 0 : 3;
@@ -48,13 +49,7 @@ function toggleItemsVisibility() {
   areItemsVisible = !areItemsVisible;
 
   animationState = 1 - animationState;
-
-  // svgIcon.setAttribute(
-  //   'href',
-  //   areItemsVisible
-  //     ? './img/icon.svg#icon-support-ukr-scroll-up'
-  //     : './img/icon.svg#icon-support-ukr-scroll-down'
-  // );
+  toggleButton.blur();
 }
 
 toggleButton.addEventListener('click', toggleItemsVisibility);
