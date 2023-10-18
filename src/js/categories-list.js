@@ -11,7 +11,7 @@ import { topBooksRequest } from './top-books';
 const categoriesList = document.querySelector(`.categories-list`);
 const byCategoryField = document.querySelector(`.container-books-by-category`);
 const topBooksField = document.querySelector(`.top-books-box`);
-const chekBoxItem = document.querySelector('input[type="checkbox"]');
+// const chekBoxItem = document.querySelector('input[type="checkbox"]');
 
 let curentCategory = null;
 
@@ -59,9 +59,9 @@ getCategoryListArr()
     wholeList = [...liFromList];
     console.log(wholeList);
 
-    if (chekBoxItem.checked) {
-      secFirstTheme();
-    }
+    // if (chekBoxItem.checked) {
+    //   secFirstTheme();
+    // }
   })
   .catch(rej => console.log(`rej`, rej))
   .finally(() => {});
@@ -107,17 +107,17 @@ function removeCurrent() {
   curentCategory.classList.remove(`active-list-item`);
 }
 
-console.log(chekBoxItem);
+// console.log(chekBoxItem);
 
-chekBoxItem.addEventListener('change', classChange);
+// chekBoxItem.addEventListener('change', classChange);
 
-function classChange(evt) {
-  if (evt.target.checked) {
-    secFirstTheme();
-  } else {
-    setFirstTheme();
-  }
-}
+// function classChange(evt) {
+//   if (evt.target.checked) {
+//     secFirstTheme();
+//   } else {
+//     setFirstTheme();
+//   }
+// }
 
 function setFirstTheme() {
   wholeList.map(item => item.classList.remove('dark'));
