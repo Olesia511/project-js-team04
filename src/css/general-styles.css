@@ -1,5 +1,4 @@
 body {
-  /* scroll-behavior: smooth; */
   font-family: 'DM Sans', sans-serif;
   font-weight: 400;
   background-color: var(--background-color-light);
@@ -72,7 +71,7 @@ body.dark {
 
   .container-categories-support {
     width: 356px;
-    height: 1032;
+    /* height: 1032px; */
     flex-wrap: wrap;
     margin-right: 40px;
   }

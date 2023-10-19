@@ -120,14 +120,14 @@ body.dark .see-more-btn {
 .see-more-btn:focus {
   background-color: #4f2ee8;
   color: #ffffff;
-  background-color: 0 100%;
+  /* background-color: 0 100%; */
 }
 
 body.dark .see-more-btn:hover,
 body.dark .see-more-btn:focus {
   background-color: #4f2ee8;
   color: #ffffff;
-  background-color: 0 100%;
+  /* background-color: 0 100%; */
 }
 
 @media screen and (min-width: 768px) {
