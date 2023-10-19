@@ -5,10 +5,7 @@ const headerLinkShop = document.querySelector('.site-nav-item-shop');
 const firstLinkMobile = document.querySelector('.home-target');
 const secondLinkMobile = document.querySelector('.shop-target');
 
-document.addEventListener('DOMContentLoaded', function () {
-  setActivePage();
-});
-function setActivePage() {
+function setActivePage(currentPageHash) {
   if (currentPageHash.includes('index')) {
     headerLinkHome.classList.add('active');
     headerLinkShop.classList.remove('active');
@@ -21,13 +18,34 @@ function setActivePage() {
     secondLinkMobile.classList.add('active');
   }
 }
-
 setActivePage(currentPageHash);
 
+document.addEventListener('DOMContentLoaded', function () {
+  setActivePage(currentPageHash);
+});
+
 headerLinkHome.addEventListener('click', () => {
-  setActivePage();
+  setActivePage('index');
 });
 
 headerLinkShop.addEventListener('click', () => {
-  setActivePage();
+  setActivePage('shopping-list');
+});
+
+headerLinkHome.addEventListener('click', evt => {
+  evt.preventDefault();
+  if (!currentPageHash.includes('index')) {
+    setActivePage('index');
+    // Перенаправлення на сторінку home
+    window.location.href = 'index';
+  }
+});
+
+headerLinkShop.addEventListener('click', evt => {
+  evt.preventDefault();
+  if (!currentPageHash.includes('shopping-list')) {
+    setActivePage('shopping-list');
+    // Перенаправлення на сторінку shop
+    window.location.href = 'shopping-list';
+  }
 });
