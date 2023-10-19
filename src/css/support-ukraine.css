@@ -8,6 +8,7 @@
   stroke: #4f2ee8;
 }
 .charities-section {
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
   padding-left: 40px;
   padding-right: 40px;
   padding-top: 24px;
@@ -77,13 +78,13 @@
   display: flex;
   align-items: center;
   gap: 16px;
-
   max-width: 149px;
   height: 32px;
 }
 .sup-list li:not(:last-child) {
   margin-bottom: 20px;
 }
+
 .link-support {
   display: block;
 }

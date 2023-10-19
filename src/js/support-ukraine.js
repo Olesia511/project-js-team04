@@ -19,6 +19,8 @@ function toggleItemsVisibility() {
   charities.slice(startIndex, endIndex).forEach((charity, index) => {
     const item = document.createElement('li');
     const link = document.createElement('a');
+    item.classList.add('show');
+    item.style.opacity = 1;
     link.target = '_blank';
     link.rel = 'noopener noreferrer nofollow';
     link.classList.add('link-support');
