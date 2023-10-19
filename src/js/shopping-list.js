@@ -71,12 +71,12 @@ function shopListMarkup(arr) {
                 <p class="book-author">${author}</p>
 
                 <div class="link-container">
-                  <a class="amazon-icon hover-items-amaz-books" href="${amazon_product_url}" target="_blank" rel="noopener noreferrer nofollow">
-                  <div class="amazon-logo">
+                  <a class="amazon-icon" href="${amazon_product_url}" target="_blank" rel="noopener noreferrer nofollow">
+                  <div class="amazon-logo hover-items-amaz-books">
                   </div>
                   </a>
-                  <a class="apple-icon hover-items-amaz-books" href="${buy_links[1].url}" target="_blank" rel="noopener noreferrer nofollow">
-                  <div class="apple-books-logo">
+                  <a class="apple-icon" href="${buy_links[1].url}" target="_blank" rel="noopener noreferrer nofollow">
+                  <div class="apple-books-logo hover-items-amaz-books">
                   </div>
                   </a>
                 </div>
