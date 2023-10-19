@@ -113,6 +113,6 @@ function setTheme(evt) {
     burgerMenuIcon.classList.remove('is-hidden-burger');
     iconCloseBurger.classList.add('is-hidden-burger');
     openMenuBtn.setAttribute('aria-expanded', false);
-    bodyScrollLock.enableBodyScroll(document.body);
+    // bodyScrollLock.enableBodyScroll(document.body);
   });
 })();
