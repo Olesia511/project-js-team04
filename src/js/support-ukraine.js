@@ -1,7 +1,7 @@
 import { charities } from './support-arr';
+
 const list = document.querySelector('.list');
 const toggleButton = document.getElementById('toggleButton');
-// const svgIcon = toggleButton.querySelector('svg use');
 const butnSupDown = document.querySelector('.button-sup-svg');
 const butnSupUp = document.querySelector('.button-sup-svg-up');
 let areItemsVisible = true;

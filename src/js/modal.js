@@ -8,7 +8,6 @@ const modalBtn = document.querySelector('.btn-add-local');
 const addLocal = document.querySelector('.add-local');
 const removeLocal = document.querySelector('.remove-local');
 const p = document.querySelector('.text-box');
-const iconModalClose = document.querySelector('.icon-close-modal');
 
 const DATA_KEY = 'user-books'; // localStorage
 
@@ -155,10 +154,7 @@ async function onAddLocal(evt) {
   if (text === add) {
     addLocal.hidden = false;
     removeLocal.hidden = true;
-
-    // p.hidden = true;
     p.classList.add('text-off');
-
     modalBtn.blur();
 
     await getBooksById(bookId)
@@ -172,7 +168,6 @@ async function onAddLocal(evt) {
     removeLocal.hidden = false;
     p.classList.remove('text-off');
     modalBtn.blur();
-    // p.hidden = false;
   } else {
     const bookToRemoveId = bookList.findIndex(book => book._id === bookId);
     if (bookToRemoveId !== -1) {
@@ -187,7 +182,3 @@ async function onAddLocal(evt) {
     }
   }
 }
-
-
-
-

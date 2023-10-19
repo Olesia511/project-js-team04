@@ -16,17 +16,16 @@ function handleResize() {
   const categoryLarge = category.textContent;
 
   if (window.innerWidth < 768) {
-    const descriptionShirt = descriptionLarge.slice(0, 86)+'…';
+    const descriptionShirt = descriptionLarge.slice(0, 86) + '…';
     description.textContent = descriptionShirt;
 
-     const titleShirt = titleLarge.slice(0, 22)+'…';
+    const titleShirt = titleLarge.slice(0, 22) + '…';
     description.textContent = descriptionShirt;
 
-     const categoryShirt = categoryLarge.slice(0, 34)+'…';
+    const categoryShirt = categoryLarge.slice(0, 34) + '…';
     category.textContent = categoryShirt;
-
   } else if (window.innerWidth >= 768 && window.innerWidth < 1440) {
-    const descriptionShirt = descriptionLarge.slice(0, 253)+'…';
+    const descriptionShirt = descriptionLarge.slice(0, 253) + '…';
     description.textContent = descriptionShirt;
     description.textContent = descriptionLarge;
     category.textContent = categoryLarge;
@@ -37,10 +36,8 @@ function handleResize() {
   }
 }
 
-
 // ----------- Get data from LS and make markup -----------
 
-// const parsedLocalData = JSON.parse(localStorage.getItem(DATA_KEY));
 let parsedLocalData;
 if (localStorage.getItem(DATA_KEY)) {
   parsedLocalData = JSON.parse(localStorage.getItem(DATA_KEY));
@@ -90,18 +87,16 @@ function shopListMarkup(arr) {
     .join('');
 
   if (parsedLocalData.length !== 0) {
-      placeholder.hidden = true;
+    placeholder.hidden = true;
     savedBooksList.innerHTML = markup;
     handleResize();
-    // window.addEventListener('resize', handleResize);
     const deleteBtns = document.querySelectorAll('.delete-btn');
     deleteBtns.forEach(btn => {
       btn.addEventListener('click', onDelete);
     });
-  }
-  else {
-      placeholder.hidden = false;
-      savedBooksList.innerHTML = "";
+  } else {
+    placeholder.hidden = false;
+    savedBooksList.innerHTML = '';
   }
 }
 
@@ -115,9 +110,7 @@ function onDelete(evt) {
   const bookToRemoveId = parsedLocalData.findIndex(book => book._id === bookId);
   if (bookToRemoveId !== -1) {
     parsedLocalData.splice(bookToRemoveId, 1);
-      localStorage.setItem(DATA_KEY, JSON.stringify(parsedLocalData));
-      shopListMarkup(parsedLocalData);
+    localStorage.setItem(DATA_KEY, JSON.stringify(parsedLocalData));
+    shopListMarkup(parsedLocalData);
   }
 }
-
-

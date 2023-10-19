@@ -5,9 +5,10 @@ const title = document.querySelector('.title-category');
 
 function bookRequest(categoryBookFetch) {
   categoryBook = categoryBookFetch;
+
   getBooks(categoryBookFetch)
     .then(res => {
-      console.log(`Get book by category`, res);
+      
       markUpByCategory(res);
     })
     .catch(rej => console.log(rej));
@@ -20,8 +21,8 @@ function markUpByCategory(array) {
       return `<li data-book-id='${_id}' class="element-books-by-category js-target">
       <div class="cover-wrap">
       <img src="${book_image}" alt="${title}" class="img-books-by-category js-target" />
-       <p class="cover-text">quick view</p>
-       </div>
+      <p class="cover-text">quick view</p>
+      </div>
       <div class="title-container js-target">
       <h3 class="name-books-by-category js-target">${title}</h3>
       <p class="title-books-by-category js-target">${author}</p>
@@ -47,9 +48,8 @@ function markUpByCategory(array) {
 
 function updateTitleLastWordColor(title, categoryBook) {
   const words = categoryBook.split(' ');
-  // console.log('h2', words);
   const lastWord = words[words.length - 1];
-  // console.log('lastWord', lastWord);
+  
   let updatedTitle = '';
 
   words.forEach(word => {

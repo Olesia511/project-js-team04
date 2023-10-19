@@ -1,8 +1,9 @@
 import { getTopBooksArr } from './axios-fetch';
 
 const container = document.querySelector('.container-best-books');
+
 async function topBooksRequest() {
-  container.classList.add("loader");
+  container.classList.add('loader');
   await getTopBooksArr()
     .then(res => {
       const nameCategory = res
@@ -48,11 +49,9 @@ async function topBooksRequest() {
         image.setAttribute('src', image.getAttribute('data-src'));
         image.onload = () => image.removeAttribute('data-src');
       });
-      container.classList.remove("loader");
+      container.classList.remove('loader');
     })
     .catch(rej => console.log(`rej`, rej));
 }
-
-// topBooksRequest();
 
 export { topBooksRequest };

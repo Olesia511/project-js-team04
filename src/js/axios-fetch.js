@@ -1,6 +1,3 @@
-// import axios from 'axios';
-// import axios from './node_modules/.vite/deps/axios';
-// import axios from './node_modules/axios/dist';
 const BASE_URL = 'https://books-backend.p.goit.global/';
 const CATEGORY_LIST = 'books/category-list';
 const TOP_BOOKS = 'books/top-books';
@@ -17,32 +14,19 @@ async function getCategoryListArr() {
   return categoryList;
 }
 
-// getCategoryListArr()
-//   .then(res => {
-//     console.log(`getCategoryListArr`, res);
-//   })
-//   .catch(rej => console.log(`rej`, rej));
-
 // +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 // ==== Отримання списку ТОП книг по категоріям
 
 async function getTopBooksArr() {
-  //  hideLoader();
   const respTopBooks = await axios.get(`${BASE_URL}${TOP_BOOKS}`);
 
   const topBooks = await respTopBooks.data;
-  // localStorage.setItem('category-list', JSON.stringify(categoryList));
   return topBooks;
 }
 
 function hideLoader() {
   elements.loader.style.display = `none`;
 }
-// getTopBooksArr()
-//   .then(res => {
-//     console.log(`getTopBooksArr`, res);
-//   })
-//   .catch(rej => console.log(`rej`, rej));
 
 // +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 // ==== Отримання списку книжок за категорією
@@ -68,13 +52,6 @@ async function getBooksById(id) {
   const bookById = await respBooksId.data;
   return bookById;
 }
-
-// ---- const bookId буде = тій книжці що вибере користувач
-// const bookId = '643282b1e85766588626a0dc';
-
-// getBooksById(bookId)
-//   .then(res => console.log(`bookId`, res))
-//   .catch(rej => console.log(rej));
 
 export {
   getCategoryListArr,
