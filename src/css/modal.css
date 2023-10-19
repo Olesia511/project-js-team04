@@ -6,7 +6,6 @@
 .cover-wrap {
   position: relative;
   overflow: hidden;
-  /* height: 281px; */
   margin-bottom: 14px;
 }
 
@@ -404,7 +403,6 @@ body.dark .hover-img:focus {
     height: 64px;
     font-size: 18px;
     line-height: 1.33;
-    /* margin: 40px auto 40px auto; */
   }
 
   .text-modal {
