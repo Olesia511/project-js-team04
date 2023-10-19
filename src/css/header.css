@@ -10,12 +10,12 @@
   z-index: 500;
 
   /* Ретіна-екран (DPI 2 і більше) */
-  @media only screen and (-webkit-min-device-pixel-ratio: 2),
+  /* @media only screen and (-webkit-min-device-pixel-ratio: 2),
     only screen and (min-resolution: 192dpi) {
     background: url('../img/menu-picture-2x.png') no-repeat left 50% bottom 0,
       linear-gradient(#4f2ee8 0%, #fff 130%) fixed;
     background-size: auto;
-  }
+  } */
 }
 
 .menu-burger-icon.is-hidden-burger {
