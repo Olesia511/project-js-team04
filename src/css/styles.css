@@ -5,9 +5,6 @@
   |============================
 */
 
-/* @import 'modern-normalize/modern-normalize.css'; */
-/* @import url('../node_modules/modern-normalize/modern-normalize.css'); */
-
 @import url('./general-styles.css');
 @import url('./categories-list.css');
 @import url('./fonts.css');
@@ -20,7 +17,7 @@
 @import url('./support-ukraine.css');
 @import url('./toggle-menu.css');
 @import url('./loader.css');
-/* @import url('modern-normalize'); */
+
 :root {
   --transition-time: 350ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
 

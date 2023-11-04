@@ -7,5 +7,3 @@ import './js/modal.js';
 import './js/top-books.js';
 import './js/support-ukraine.js';
 import './js/menu-active.js';
-
-import '../node_modules/modern-normalize';
