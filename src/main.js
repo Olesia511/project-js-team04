@@ -1,4 +1,5 @@
 import './js/axios-fetch';
+import 'axios';
 import './js/categories-list.js';
 import './js/header.js';
 import './js/markup-by-category.js';
